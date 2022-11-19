@@ -3,7 +3,7 @@
 <?php /*HELP: E' possibile modificare la scheda agendo su scheda.css nel tema scelto, oppure sostituendo il codice che segue la voce "Scheda del personaggio"*/ ?>
 
 <?php
-/********* CARICAMENTO PERSONAGGIO ***********/
+/******** CARICAMENTO PERSONAGGIO ***********/
 //Se non e' stato specificato il nome del pg
 if (isset($_REQUEST['pg'])===FALSE){
     echo '<div class="error">'.gdrcd_filter('out',$MESSAGE['error']['unknown_character_sheet']).'</div>';
@@ -103,7 +103,7 @@ if (isset($_REQUEST['op'])===FALSE){
 <div class="page_body">
 
 <?php
-/** * Controllo e avviso che è ora di cambiare password
+/* * Controllo e avviso che è ora di cambiare password
 	* @author Blancks
 */
 if ($PARAMETERS['mode']['alert_password_change']=='ON')
@@ -457,7 +457,7 @@ if ($PARAMETERS['mode']['alert_password_change']=='ON')
   <div class="body_box">
      <?php
 
-		/** * Html, bbcode o entrambi ?
+		/* * Html, bbcode o entrambi ?
 			* @author Blancks
 		*/
 		if ($PARAMETERS['mode']['user_bbcode'] == 'ON')
@@ -494,7 +494,7 @@ if ($PARAMETERS['mode']['alert_password_change']=='ON')
   <div class="body_box">
      <?php
 
-		/** * Html, bbcode o entrambi ?
+		/* * Html, bbcode o entrambi ?
 			* @author Blancks
 		*/
 		if ($PARAMETERS['mode']['user_bbcode'] == 'ON')
@@ -539,7 +539,7 @@ if ($PARAMETERS['mode']['alert_password_change']=='ON')
 <?php }//else
 
 }//else
-/********* CHIUSURA SCHEDA **********/
+/******** CHIUSURA SCHEDA **********/
 	}//else
 
 ?>

@@ -1,12 +1,12 @@
-/** * Skin Advanced
+/* * Skin Advanced
 	* Il presente files regola gli stili CSS della homepage
 	* @author Blancks
 */
 
 
-/** * STILI DEI CONTENUTI DEL SITO */
+/* * STILI DEI CONTENUTI DEL SITO */
 
-/** * Titolo del sito
+/* * Titolo del sito
 */
 h1{
 	margin:0;
@@ -17,14 +17,14 @@ h1{
     width: 440px;
 }
 
-/** * Stile del link sul titolo */
+/* * Stile del link sul titolo */
 h1 a, h1 a:visited, h1 a:hover{
 	color:transparent;
 	text-decoration:none;
 }
 
 
-/** * Sottotitolo
+/* * Sottotitolo
 */
 div.subtitle{
 	margin-left:78px;
@@ -33,7 +33,7 @@ div.subtitle{
 	font-size:12px; 
 }
 
-/** * Stili del form di login
+/* * Stili del form di login
 */
 div.login_form{
 	float:right;
@@ -43,14 +43,14 @@ div.login_form{
     margin-right:280px;
 }
 
-/** * stile che ingloba i gruppi label/input
+/* * stile che ingloba i gruppi label/input
 */
 div.login_form div{
 	text-align:center;
 	margin-bottom:5px;
 }
 
-/** * Stile per le label dei form
+/* * Stile per le label dei form
 */
 span.form_label{
 	text-align:left;
@@ -101,7 +101,7 @@ div.login_form_recupero input{
     margin-left: 25%;
 }
 
-/** * Stile per il bottone del login
+/* * Stile per il bottone del login
 */
 div.login_form input[type='submit']{
 	background: url("imgs/entra.png") no-repeat;
@@ -127,10 +127,10 @@ div.login_form_recupero input[type='submit']{
 }
 
 
-/** * Contenuti principali della pagina
+/* * Contenuti principali della pagina
 */
 
-/** * Titolo della sezione */
+/* * Titolo della sezione */
 h2{
 	font-size:25px;
 	font-weight:normal;
@@ -139,7 +139,7 @@ h2{
 	padding-bottom:4px;
 }
 
-/** * Contenuti testuali */
+/* * Contenuti testuali */
 div.content_body p{
 	font-size:13px;
 	padding:0 10px;
@@ -153,7 +153,7 @@ div.content_body a{
 
 
 
-/** * Menù di navigazione
+/* * Menï¿½ di navigazione
 */
 div.sidecontent ul{
 	margin:20px 0 0 10px;
@@ -169,13 +169,13 @@ div.sidecontent ul{
 	border-radius:5px;
 }
 
-/** * Contenitore delle voci nel menù 
+/* * Contenitore delle voci nel menï¿½ 
 */
 div.sidecontent ul li{
 	margin-bottom:5px;
 }
 
-/** * Link voce menù 
+/* * Link voce menï¿½ 
 */
 div.sidecontent ul li a, div.sidecontent ul li a:visited{
 	float: left;
@@ -188,7 +188,7 @@ div.sidecontent ul li a, div.sidecontent ul li a:visited{
 	background:none;
 }
 
-/** * Link voce menù al passaggio del mouse
+/* * Link voce menï¿½ al passaggio del mouse
 */
 div.sidecontent ul li a:hover{
 	background-color: none;
@@ -196,7 +196,7 @@ div.sidecontent ul li a:hover{
 }
 
 
-/** Stile generico contenitore per altri contenuti nella sidebar 
+/* Stile generico contenitore per altri contenuti nella sidebar 
 */
 div.side_modules{
 	margin:10px 0 0 10px;
@@ -214,7 +214,7 @@ div.side_modules{
 div.side_modules .form_label{font-size:10px; margin-right:2px;}
 
 
-/** * Tabella statistiche */
+/* * Tabella statistiche */
 table.statistics{
 	text-align:right;
 	margin-top:10px;
@@ -223,12 +223,12 @@ table.statistics{
 
 table.statistics td{padding-right:5px;}
 
-/** * Stile di colorazione per definire le righe pari */
+/* * Stile di colorazione per definire le righe pari */
 table.statistics tr.pair{
 	background-color:#c9c9c9;
 }
 
-/** * Stile per definire il titolo del parametro statistico */
+/* * Stile per definire il titolo del parametro statistico */
 table.statistics td.label{
 	font-weight:bolder;
 	text-align:left;
@@ -237,7 +237,7 @@ table.statistics td.label{
 
 
 
-/** * Recupero password */
+/* * Recupero password */
 div.pass_rec{
 	margin-top:10px;
 }
@@ -251,7 +251,7 @@ div.pass_rec input[type='submit']{margin-top:3px;}
 
 
 
-/** * Footer info */
+/* * Footer info */
 div#footer div{
 	background-color: none;
 	padding:5px 0 3px 0;
@@ -267,9 +267,9 @@ div#footer p{
 
 
 
-/** * LAYOUT SITO */
+/* * LAYOUT SITO */
 
-/** * Struttura contenitore di tutto il sito 
+/* * Struttura contenitore di tutto il sito 
 */
 div#main{
 	height:100%;
@@ -279,7 +279,7 @@ div#main{
 }
 
 
-/** * Larghezza della struttura del sito
+/* * Larghezza della struttura del sito
 */
 div#site_width{
 	margin:0 auto;
@@ -288,14 +288,14 @@ div#site_width{
     /*margin-left:10px; --> sposta il box centrale a sinistra*/
 }
 
-/** * Header
+/* * Header
 */
 div#header{
 	height:0px;
 }
 
 
-/** * Corpo contenuti della pagina
+/* * Corpo contenuti della pagina
 */
 div#content{
 	padding:0px 60px 6px 60px;
@@ -305,7 +305,7 @@ div#content{
     margin-left: 33px;
 }
 
-/** * Struttura colonna di lato
+/* * Struttura colonna di lato
 */
 div.sidecontent{
 	margin-top: -27px;
@@ -313,7 +313,7 @@ div.sidecontent{
 	width:700px;
 }
 
-/** * Struttura corpo contenuti pagina 
+/* * Struttura corpo contenuti pagina 
 */
 div.content_body{
 	margin-left: 110px;
@@ -337,7 +337,7 @@ div.social{
 }
 
 
-/** * pie di pagina
+/* * pie di pagina
 */
 
 div#footer{
@@ -351,7 +351,7 @@ div#footer{
     color: #7b859f;
 }
 
-/** * pie di pagina TOK
+/* * pie di pagina TOK
 div#footer{
     margin-left: 10px;
     margin-top: -8px;
@@ -364,4 +364,4 @@ div#footer{
 }
 */
 
-/** *** Fine stili regolatori del layout *** */
+/* *** Fine stili regolatori del layout *** */

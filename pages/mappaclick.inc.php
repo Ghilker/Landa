@@ -47,7 +47,7 @@ if(gdrcd_query($result, 'num_rows') == 0) {
             echo '<h2><img src="imgs/cerchisx.png" height="10px">'.$row['nome_mappa'].'<img src="imgs/cerchidx.png" height="10px"></h2>';
             echo '</div>';
 
-            /** * Abilitazione tooltip
+            /* * Abilitazione tooltip
              * @author Blancks
              */
             if($PARAMETERS['mode']['map_tooltip'] == 'ON') {
@@ -63,7 +63,7 @@ if(gdrcd_query($result, 'num_rows') == 0) {
         }//if 
 
         /*Stampo i link della mappa corrente*/
-        /** * Bug Fix: i link sono ora posizionati in relazione alla mappa
+        /* * Bug Fix: i link sono ora posizionati in relazione alla mappa
          * Features: link a sottomappe e link immagine
          * @author Blancks
          */
@@ -96,7 +96,7 @@ if(gdrcd_query($result, 'num_rows') == 0) {
 
         $fadedesc_link = '';
 
-        /** * Abilitazione tooltip
+        /* * Abilitazione tooltip
          * @author Blancks
          */
         if($PARAMETERS['mode']['map_tooltip'] == 'ON') {

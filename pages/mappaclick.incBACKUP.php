@@ -5,7 +5,7 @@
 if (isset($_GET['map_id'])===TRUE)
 {
 
-	/** * Questa query va spostata in main, anche per dare maggior stabilità al sistema di spostamento fra mappe
+	/* * Questa query va spostata in main, anche per dare maggior stabilità al sistema di spostamento fra mappe
 		* @author Blancks
 	*/
 	#gdrcd_query("UPDATE personaggio SET ultima_mappa=".gdrcd_filter('num',$_GET['map_id']).", ultimo_luogo=-1 WHERE nome = '".$_SESSION['login']."'");
@@ -66,7 +66,7 @@ echo '<div class="pagina_mappaclick">';
 	  if($echoed_title===FALSE){
 
 
-			/** * Abilitazione tooltip
+			/* * Abilitazione tooltip
 				* @author Blancks
 			*/
 			if ($PARAMETERS['mode']['map_tooltip'] == 'ON')
@@ -85,7 +85,7 @@ echo '<div class="pagina_mappaclick">';
 
 
 		/*Stampo i link della mappa corrente*/
-		/** * Bug Fix: i link sono ora posizionati in relazione alla mappa
+		/* * Bug Fix: i link sono ora posizionati in relazione alla mappa
 			* Features: link a sottomappe e link immagine
 			* @author Blancks
 		*/
@@ -127,7 +127,7 @@ echo '<div class="pagina_mappaclick">';
 
 		$fadedesc_link = '';
 
-		/** * Abilitazione tooltip
+		/* * Abilitazione tooltip
 			* @author Blancks
 		*/
 		if ($PARAMETERS['mode']['map_tooltip'] == 'ON')

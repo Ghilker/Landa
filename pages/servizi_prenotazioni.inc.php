@@ -94,7 +94,7 @@ if(isset($_POST['op'])===FALSE){ ?>
 		    gdrcd_query("UPDATE personaggio SET soldi = soldi - ".gdrcd_filter('num',$ore*$id[1])." WHERE nome = '".$_SESSION['login']."' LIMIT 1");
 
 
-			/** * Al fine di conservare i log delle stanze private elimino la query che svuota le azioni mandate nella chat precedente
+			/* * Al fine di conservare i log delle stanze private elimino la query che svuota le azioni mandate nella chat precedente
 				* @author Blancks
 			*/
 			#gdrcd_query("DELETE FROM chat WHERE stanza = ".gdrcd_filter('num',$id[0])."");

@@ -10,7 +10,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 	$confirm_updating = true;
 
 
-	/** * Controllo sul file audio
+	/* * Controllo sul file audio
 		* @author Blancks
 	*/
 	if ($PARAMETERS['mode']['allow_audio'] == 'ON')
@@ -30,7 +30,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 
 
 
-	/** * Se non sono occorsi errori durante i controlli precedenti
+	/* * Se non sono occorsi errori durante i controlli precedenti
 		* @author Blancks
 	*/
 	if ($confirm_updating)
@@ -39,7 +39,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 		if (isset($_POST['op'])===TRUE)
 		{
 
-			/** * Controllo sul bloccaggio dei suoni per l'utente
+			/* * Controllo sul bloccaggio dei suoni per l'utente
 				* @author Blancks
 			*/
 			$blocca_media = (strtolower($_POST['blocca_media'])=='on')? 1 : 0;
@@ -51,7 +51,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 			/*Se l'utente ha richiesto di modificare la propria scheda*/
 			if((gdrcd_filter('get',$_REQUEST['pg'])==$_SESSION['login'])&&(gdrcd_filter('get',$_POST['op'])=='modify'))
 			{
-				/** * Html, BBcode or both ?
+				/* * Html, BBcode or both ?
 					* @author Blancks
 				*/
 				$modifica_affetti = gdrcd_filter('in',$_POST['modifica_affetti']);
@@ -63,7 +63,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 					$modifica_background 	= gdrcd_filter('addslashes', $_POST['modifica_background']);
 				}
 
-				/** * Online status allowed ?
+				/* * Online status allowed ?
 					* @author Blancks
 				*/
 				$online_state = '';
@@ -110,7 +110,7 @@ gdrcd_query("UPDATE personaggio SET cognome = '".gdrcd_filter('in',$_POST['modif
 			/*Se un master o superiore ha richiesto l'arresto del pg*/
 			}elseif (($_SESSION['permessi']>=MASTER)&&(gdrcd_filter('get',$_POST['op'])=='arrest'))
 			{
-				/** * Da implementare */
+				/* * Da implementare */
 
 
 			/*Se un admin o superiore ha richiesto l'esilio dell'utente*/
@@ -174,7 +174,7 @@ gdrcd_query("UPDATE personaggio SET cognome = '".gdrcd_filter('in',$_POST['modif
 
 
 <?php
-		/** * Avatar di chat
+		/* * Avatar di chat
 			* @author Blancks
 		*/
 		if ($PARAMETERS['mode']['chat_avatar']=='ON')

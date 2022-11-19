@@ -1,4 +1,4 @@
-/****************************************************************************/
+/***************************************************************************/
 /* STILE DELLA CHAT E DEI PANNELLI */
 
 /* HELP: Da qui è possibile modificare:
@@ -18,7 +18,7 @@ div.chat_window{
   text-align: center;
 }
 
-/**	* Fix per layout elastico
+/*	* Fix per layout elastico
 	* @author Blancks
 */
 div.chat_box{
@@ -50,11 +50,11 @@ div.pagina_frame_chat div.page_body div.panels_box{
 
 
 }
-/**	* Fine fix */
+/*	* Fine fix */
 
 
 
-/** * Avatar di chat
+/* * Avatar di chat
 	* @author Blancks
 */
 img.chat_avatar{
@@ -67,7 +67,7 @@ img.chat_avatar{
 
 
 
-/***** testo della chat *****/
+/**** testo della chat *****/
 
 
 /* Tipi messaggio: (A azione, P parlato, N PNG, M Master, I Immagine, S sussurro, D dado, C skill check, O uso oggetto) */
@@ -171,7 +171,7 @@ span.chat_master{
 
 
 
-/***** form inserimento *****/
+/**** form inserimento *****/
 
 div.form_row{
   clear: both;
@@ -197,7 +197,7 @@ input#message{
 
 
 
-/****************************************************************************/
+/***************************************************************************/
 
 span.casella_info {
 	

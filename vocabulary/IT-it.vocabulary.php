@@ -3,7 +3,7 @@
 /* HELP:  Modificando i messaggi contenuti in questa pagina è possibile modificare i messaggi visualizzati in tutto il sito. Sono suddivisi in base alla pagina dove compaiono. Se non è specificata la pagina appaiono su più pagine.
 IMPORTANTE! non cancellate alcuna delle righe, ne modificate quanto scritto tra le parentesi quadre, altrimenti il funzionamento del sito potrebbe essere pregiudicato. Limitarsi a modificare o azzerare (='') i messaggi. */
 
-/********** Homepage **********/
+/********* Homepage **********/
 /*Testo centrale homepage*/
 $MESSAGE['homepage']['main_content']['site_title'] = 'GDRCD 5.4 "Optimus"G';
 $MESSAGE['homepage']['main_content']['site_subtitle'] = 'Enhanced by Breaker';
@@ -34,7 +34,7 @@ $MESSAGE['homepage']['updater']['update']='Aggiorna adesso il database.';
 $MESSAGE['homepage']['updater']['no_fields']='Non sono state rilevate mancanze nel database attualmente in uso.';
 
 
-/********** Iscrizione **********/
+/********* Iscrizione **********/
 /* Form */
 $MESSAGE['register']['page_name']='Registrazione';
 $MESSAGE['register']['forms']['accept']='';
@@ -90,14 +90,14 @@ $MESSAGE['register']['error']['email_needed']='Specificare un\'email valida.';
 
 
 
-/********** Pagine utente **********/
+/********* Pagine utente **********/
 /* Logout Page */
 $MESSAGE['logout']['confirmation']='ha lasciato Crossroads.';
 $MESSAGE['logout']['greeting']='Grazie per aver giocato con noi!';
 $MESSAGE['logout']['logbackin']='Per rientrare nel gioco torna alla';
 $MESSAGE['logout']['dot']='.';
 
-/**	* Inserimento degli errori di interfaccia
+/*	* Inserimento degli errori di interfaccia
 	* @Blancks
 */
 
@@ -107,7 +107,7 @@ $MESSAGE['interface']['layout_not_found']='Modulo non trovato';
 
 
 
-/**	* Termine inserimento
+/*	* Termine inserimento
 */
 
 /* Finestra presenti */
@@ -372,7 +372,7 @@ $MESSAGE['interface']['plot']['page_name']="Ambientazione";
 
 
 
-/********** Pagine di gestione **********/
+/********* Pagine di gestione **********/
 /*Generale*/
 $MESSAGE['interface']['administration']['yes']='Si';
 $MESSAGE['interface']['administration']['no']='No';
@@ -446,7 +446,7 @@ $MESSAGE['interface']['administration']['locations']['owner_err']='Nessun gruppo
 $MESSAGE['interface']['administration']['locations']['expiration_date']='Scadenza';
 $MESSAGE['interface']['administration']['locations']['rent']='Costo orario di affitto';
 
-/**	* Denonimazioni relative al link immagine e collegamento mappa
+/*	* Denonimazioni relative al link immagine e collegamento mappa
 	* @author Blancks
 */
 $MESSAGE['interface']['administration']['locations']['image_button'] = 'Link Immagine';
@@ -472,7 +472,7 @@ $MESSAGE['interface']['administration']['maps']['position']='Posizione';
 $MESSAGE['interface']['administration']['maps']['position_info']='Il valore di posizione genera un vicinato di mappe. Le mappe con lo stesso valore presentano, nella propria visualizzazione, un link alle altre, permettendo lo spostamento di un personaggio da una mappa all\'altra.';
 $MESSAGE['interface']['administration']['maps']['image']='Immagine';
 
-/**	* Aggiunta delle nuove definizioni per le implementazioni nel pannello gestionale
+/*	* Aggiunta delle nuove definizioni per le implementazioni nel pannello gestionale
 	* @author Blancks <s.rotondo90@gmail.com
 */
 $MESSAGE['interface']['administration']['maps']['width']='Larghezza';
@@ -480,7 +480,7 @@ $MESSAGE['interface']['administration']['maps']['height']='Altezza';
 $MESSAGE['interface']['administration']['maps']['width_info']='La larghezza in pixel del file immagine della mappa.';
 $MESSAGE['interface']['administration']['maps']['height_info']='Altezza in pixel del file immagine usato per la mappa.';
 
-/**	* Fine
+/*	* Fine
 */
 
 /*Bacheche*/
@@ -624,7 +624,7 @@ $MESSAGE['interface']['administration']['log']['chat']['date']='Data';
 $MESSAGE['interface']['administration']['log']['chat']['text']='Testo';
 $MESSAGE['interface']['administration']['log']['chat']['room']='Luogo';
 $MESSAGE['interface']['administration']['log']['chat']['sender']='Luogo';
-/********** Pagine del menu' utente *********/
+/********* Pagine del menu' utente *********/
 /*Cambio pass*/
 $MESSAGE['interface']['user']['pass']['page_name']='Cambio password';
 $MESSAGE['interface']['user']['pass']['email']='Inserire la EMail di registrazione per conferma';
@@ -678,7 +678,7 @@ $MESSAGE['installer']['install']="Esegui l\'installazione automatica";
 
 
 
-/********** MESSAGGI DI ERRORE **********/
+/********* MESSAGGI DI ERRORE **********/
 $MESSAGE['error']['db_not_found']='Impossibile trovare il database, verificare l\'installazione di GDRCD.';
 $MESSAGE['error']['db_empty']='Il database non contiene tabelle, è necessario effettuare l\'installazione';
 $MESSAGE['error']['db_not_updated']='E\' stata rilevata l\'installazione di Mr Fabers GDRCD5, per aggiornare il database e renderlo compatibile proseguire cliccando sul link sottostante';
@@ -700,16 +700,16 @@ $MESSAGE['error']['unknown_username_warning']='Con 10 fallimenti consecutivi sar
 
 
 
-/********** INFORMAZIONI E SUGGERIMENTI **********/
+/********* INFORMAZIONI E SUGGERIMENTI **********/
 $MESSAGE['warning']['blacklisted']='Questa postazione è stata esclusa dal gioco!';
 
 
-/** * Messaggio visualizzato in caso di connessioni multiple con lo stesso pg
+/* * Messaggio visualizzato in caso di connessioni multiple con lo stesso pg
 	* @author Blancks
 */
 $MESSAGE['warning']['double_connection']='Il personaggio con cui stai tentando di accedere in land è già connesso. Se non sei uscito correttamente usando il tasto "esci", dovrai attendere circa 5 minuti prima di poter accedere nuovamente.';
 
-/** * Messaggio di avviso che è tempo di cambiare password perchè passati 6 mesi
+/* * Messaggio di avviso che è tempo di cambiare password perchè passati 6 mesi
 	* @author Blancks
 */
 $MESSAGE['warning']['changepass']='Attenzione: sono passati più di sei mesi dal tuo ultimo cambio di password. Per la tua sicurezza lo staff del gioco ti consiglia di cambiare la tua password il prima possibile.';
@@ -729,7 +729,7 @@ $MESSAGE['warning']['unactive']='La funzione richiesta non è attiva. Per attiva
 $MESSAGE['warning']['character_exiled']='è stato esiliato fino al';
 $MESSAGE['warning']['pass_not_encripted'] = '** ATTENZIONE ** sul database sono state rivelate password non criptate mentre nel foglio di configurazione di GDRCD5.4 è attualmente settato su ON l\'encript delle password, mediante l\'algoritmo ' . $PARAMETERS['mode']['encriptalgorithm'] . '. Proseguendo tutte le password verranno criptate, il processo è IRREVERSIBILE. Se non vuoi che le password vengano criptate disabilita l\'encript delle password da config.inc.php';
 
-/** * messaggio di errore per media non consentito
+/* * messaggio di errore per media non consentito
 	* @author Blancks
 */
 $MESSAGE['warning']['media_not_allowed']='Il formato del file audio non è consentito, i formati consentiti sono: ';
@@ -740,7 +740,7 @@ foreach ($PARAMETERS['settings']['audiotype'] as $MESSAGE_MEDIA_EXT => $MESSAGE_
 
 
 
-/********** Status del PG ***********/
+/********* Status del PG ***********/
 $MESSAGE['status_pg']['enter']='è entrato nel gioco';
 $MESSAGE['status_pg']['exit']='è uscito dal gioco';
 $MESSAGE['status_pg']['logged']='';
@@ -756,7 +756,7 @@ $MESSAGE['status_pg']['invisible'][1]='Invisibile';
 
 
 
-/********** Chat **********/
+/********* Chat **********/
 $MESSAGE['chat']['type']['info']='Azione';
 $MESSAGE['chat']['type'][0]='Parlato';
 $MESSAGE['chat']['type'][1]='Azione';
@@ -795,7 +795,7 @@ $MESSAGE['chat']['commands']['die']['item']='utilizza';
 
 
 
-/********** Eventi **********/
+/********* Eventi **********/
 $MESSAGE['event'][BLOCKED]='Postazioni bloccate';
 $MESSAGE['event'][LOGGEDIN]='Log in';
 $MESSAGE['event'][ACCOUNTMULTIPLO]='Doppi';
@@ -812,7 +812,7 @@ $MESSAGE['event'][CHANGEDNAME]='Cambi nome';
 
 
 
-/********** Ricorrenti **********/
+/********* Ricorrenti **********/
 /*Forms */
 $MESSAGE['interface']['forms']['modify']='Modifica';
 $MESSAGE['interface']['forms']['submit']='Invia';

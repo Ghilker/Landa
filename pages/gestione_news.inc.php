@@ -1,7 +1,7 @@
 ﻿<div class="pagina_gestione_news">
 <?php /*HELP: */
 
-  	/***
+  	/**
   	* Effettuate modifiche con patch by eLDiabolo
   	*	01/09/2012
   	*

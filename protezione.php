@@ -1,5 +1,5 @@
 <?php
-/*************************************************
+/************************************************
  * Max's Site Protector
  *
  * Version: 1.0
@@ -40,7 +40,7 @@ class maxProtector{
 <?php
     }
 
-    /**
+    /*
      * Checks if the user is logged-in and performs login. If not a login form is shown, if the submit button was pressed it checks if the passowrd is correct and logs the user in.
      */
     function login(){

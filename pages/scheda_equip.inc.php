@@ -525,7 +525,7 @@ gdrcd_query($result, 'free');
 
 
 <?php
-/********* CHIUSURA SCHEDA **********/
+/******** CHIUSURA SCHEDA **********/
 	}//else
 	#gdrcd_query($result, 'free');
 }//else

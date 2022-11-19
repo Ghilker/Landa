@@ -2,7 +2,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/includes/corefunctions.js"></script>
     <?php
-    /** * Abilitazione tooltip
+    /* * Abilitazione tooltip
         * @author Blancks
     */
     if ($PARAMETERS['mode']['map_tooltip'] == 'ON' || $PARAMETERS['mode']['user_online_state'] == 'ON')
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="/includes/tooltip.js"></script>
     <?php
     }
-    /** * Caricamento script per il titolo "lampeggiante" per i nuovi pm
+    /* * Caricamento script per il titolo "lampeggiante" per i nuovi pm
         * @author Blancks
     */
     if ($PARAMETERS['mode']['alert_pm_via_pagetitle']=='ON')
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="/includes/changetitle.js"></script>
     <?php
     }
-    /** * Caricamento script per la scelta popup nel login
+    /* * Caricamento script per la scelta popup nel login
         * @author Blancks
     */
     if ($PARAMETERS['mode']['popup_choise']=='ON')
@@ -64,7 +64,7 @@
 /*Chiudo la connessione al database*/
 gdrcd_close_connection($handleDBConnection);
 
-/**	* Per ottimizzare le risorse impiegate le liberiamo dopo che non ne abbiamo pi� bisogno
+/*	* Per ottimizzare le risorse impiegate le liberiamo dopo che non ne abbiamo pi� bisogno
 	* @author Blancks
 */
 unset($MESSAGE);

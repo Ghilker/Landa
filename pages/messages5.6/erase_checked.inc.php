@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * Elimino i messaggi selezionati
  *
  * ATTENZIONE!: Se non è stato selezionato alcun messaggio, allora questa pagina non viene caricata

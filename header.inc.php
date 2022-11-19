@@ -3,7 +3,7 @@ session_start();
 header('Content-Type:text/html; charset=UTF-8');
 
 
-	/** * Se il personaggio è connesso avvio la gestione dei suoi spostamenti nella land
+	/* * Se il personaggio è connesso avvio la gestione dei suoi spostamenti nella land
 		* Il controllo va messo qui e non in main poichè in main risulterebbe trovarsi dopo l'inclusione del config
 		* dando vita ad un bug sul tastino di aggiornamento della pagina corrente.
 		
@@ -12,7 +12,7 @@ header('Content-Type:text/html; charset=UTF-8');
 	if (!empty($_SESSION['login']))
 	{
 
-		/** * Aggiornamento della posizione nella mappa del pg
+		/* * Aggiornamento della posizione nella mappa del pg
 			* @author Blancks
 		*/
 		if (isset($_REQUEST['map_id']) && is_numeric($_REQUEST['map_id']))
@@ -34,7 +34,7 @@ header('Content-Type:text/html; charset=UTF-8');
 	//Eseguo la connessione al database
 	$handleDBConnection = gdrcd_connect();
 
-	/** * CONTROLLO PER AGGIORNAMENTO DB
+	/* * CONTROLLO PER AGGIORNAMENTO DB
 		* Il controllo viene lanciato solo in index e nelle pagine di installer/upgrade.
 		* Dopo l'aggiornamento non dovrebbe dare noie.
 		* Nel qual caso vogliate risparmiare risorse quando si visita la homepage però è possibile modificare la variabile $check_for_update in index.php e settarla a FALSE.
@@ -45,9 +45,9 @@ header('Content-Type:text/html; charset=UTF-8');
 	{
 		include ('upgrade_details.php');
 	}
-    /** * Fine controllo di update */
+    /* * Fine controllo di update */
 
-    /**	* Caricamento plugins.
+    /*	* Caricamento plugins.
 		* I plugins non sono vitali all'esecuzione dell'engine, per cui si includono col comando include.
 		* @author Blancks
 	*/
@@ -76,7 +76,7 @@ header('Content-Type:text/html; charset=UTF-8');
     <link rel="stylesheet" href="themes/<?php echo $PARAMETERS['themes']['current_theme'];?>/forum.css" type="text/css" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
 <?php
-	/** * Il controllo individua se l'header non è impiegato per il main */
+	/* * Il controllo individua se l'header non è impiegato per il main */
 	if (!isset($check_for_update))
 	{
 ?>
@@ -88,7 +88,7 @@ header('Content-Type:text/html; charset=UTF-8');
         <?php echo $PARAMETERS['info']['site_name']; ?>
     </title>
 <?php 
-		/** * Refresh fix, crossbrowser
+		/* * Refresh fix, crossbrowser
 			* @author Blancks
 		*/
 		if (!empty($_GET['ref']))
@@ -101,7 +101,7 @@ header('Content-Type:text/html; charset=UTF-8');
 
 <?php 
 
-	 /** * CONTROLLO PER AGGIORNAMENTO DB
+	 /* * CONTROLLO PER AGGIORNAMENTO DB
 		* Il controllo viene lanciato solo in index e nelle pagine di installer/upgrade.
 		* Dopo l'aggiornamento non dovrebbe dare noie.
 		* Nel qual caso vogliate risparmiare risorse quando si visita la homepage però è possibile modificare la variabile $check_for_update in index.php e settarla a FALSE.

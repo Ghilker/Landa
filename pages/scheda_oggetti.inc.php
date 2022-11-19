@@ -259,7 +259,7 @@ $result=gdrcd_query($query, 'result');?>
 
 
 <?php
-/********* CHIUSURA SCHEDA **********/
+/******** CHIUSURA SCHEDA **********/
 	}//else
 
 }//else

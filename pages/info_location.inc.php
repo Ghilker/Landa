@@ -6,8 +6,8 @@ $result = gdrcd_query("SELECT mappa.nome, mappa.descrizione, mappa.stato, mappa.
 $record_exists = gdrcd_query($result, 'num_rows');
 $record = gdrcd_query($result, 'fetch');
 
-/** * Fix: quando non si è in una mappa visualizza il nome della chat
-	* Quando si è in una mappa si visualizza il nome della mappa
+/* * Fix: quando non si ï¿½ in una mappa visualizza il nome della chat
+	* Quando si ï¿½ in una mappa si visualizza il nome della mappa
 
 	* @author Blancks
 */
@@ -72,7 +72,7 @@ $mese=strftime("%m");
 $giorno=strftime("%j");
 $caso=((floor($giorno/3))%2)+1;
 
-/**	* Bug FIX: corretta l'assegnazione della $minima
+/*	* Bug FIX: corretta l'assegnazione della $minima
 	* @author Blancks
 */
 switch ($mese)
@@ -91,7 +91,7 @@ switch ($mese)
 	case 12: $minima = $PARAMETERS['date']['base_temperature']+0; break;
 }
 
-/**	* Fine fix */
+/*	* Fine fix */
 
 if($ore<14){$gradi=$minima+(floor($ore/3)*$caso);}
 else{ $gradi=$minima+(4*$caso)-((floor($ore/3)*$caso))+(3*$caso);}
@@ -183,7 +183,7 @@ $_SESSION['winds'] = array("Calma", "Bava di Vento", "Brezza Leggera", "Vento Mo
     Uragano 2% [98 .. 99]
 */
 
-/**
+/*
  * Se sono passate tante ore quante specificate nella variabile
  * $ore_cambio_vento, viene generato un nuovo vento casuale.
  **/

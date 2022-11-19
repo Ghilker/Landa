@@ -136,7 +136,7 @@ if ($allowance === FALSE) {
 		<select name="id_stats" id="id_stats">
 			<option value="no_stats"></option>
 			<?php
-				/** * Questo modulo aggiunge la possibilità di eseguire prove col dado e caratteristica.
+				/* * Questo modulo aggiunge la possibilità di eseguire prove col dado e caratteristica.
 					* Pertanto sono qui elencate tutte le caratteristiche del pg.
 					
 					* @author Blancks
@@ -166,7 +166,7 @@ if ($allowance === FALSE) {
     <select name="dice" id="dice">
 			<option value="no_dice"></option>
 <?php 
-		/** * Tipi di dado personalizzati da config
+		/* * Tipi di dado personalizzati da config
 			* @author Blancks
 		*/
 		

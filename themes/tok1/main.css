@@ -1,8 +1,8 @@
-/** * Skin advanced
+/* * Skin advanced
 	* @author Blancks
 */
 
-/** * Parametri di default nella pagina
+/* * Parametri di default nella pagina
 */
 body{padding:0; margin:0; color:#B6C7D5; font-family:Century Gothic, Sans; font-size:11px; background:url("imgs/pattern.png") top left repeat;}
 /*prima era Verdana*/
@@ -87,7 +87,7 @@ select.day, select.month, select.year{
 	display:inline-block;
 }
 
-/** * Stile dei messaggi d'avviso dell'engine */ 
+/* * Stile dei messaggi d'avviso dell'engine */ 
 div.warning, div.error{
 	background-color:#cf8888;
 	font-size:12px;
@@ -109,7 +109,7 @@ div.link_back{
 
 
 
-/** * Logout */
+/* * Logout */
 div.logout_box{
 	margin:20px auto;
 	padding:230px 0 0 0;
@@ -140,7 +140,7 @@ div.nome_logout {
     
 }
 
-/** * Titoli delle sezioni
+/* * Titoli delle sezioni
 */
 div.innertube h2{
 	font-size:14px;
@@ -217,7 +217,7 @@ img.right{
 
 
 
-/** * Stile dei contenitori grigi con i bordini arrotondati
+/* * Stile dei contenitori grigi con i bordini arrotondati
 */
 div.pagina_info_location{
 	margin: 5px auto;
@@ -294,7 +294,7 @@ div.output{
 }
 
 
-/** Nome PG in cima */
+/* Nome PG in cima */
 div.nome_main{
     text-align: center;
     font-size: 18px;
@@ -335,7 +335,7 @@ div.output_testo{
 }
 
 
-/** * Informazioni con anteprima luogo
+/* * Informazioni con anteprima luogo
 */
 div.info_image{
 	text-align:center;
@@ -412,7 +412,7 @@ div.meteo_date{
     color: #0A1228;
 }
 
-/** * Frame Messaggi 
+/* * Frame Messaggi 
 */
 iframe.iframe_messaggi{
     height: 77px; 
@@ -436,7 +436,7 @@ div.messaggio_forum_nuovo a, div.messaggio_forum_nuovo a:visited{
 }
 
 
-/** * Men� di gioco
+/* * Men� di gioco
 */
 select#gotomap{
 	display:block;
@@ -487,9 +487,9 @@ div.link_menu a.sprite:hover {
 }
 
 
-/** * Mappa cliccabile */
+/* * Mappa cliccabile */
 
-/** * Posizionamento mappa cliccabile 
+/* * Posizionamento mappa cliccabile 
 */
 div.mappaclick_map{
 	/*margin:20px auto;*/
@@ -500,13 +500,13 @@ div.mappaclick_map{
 }
 
 
-/** * Link testuali sulla mappa */
+/* * Link testuali sulla mappa */
 div.mappaclick_map a{
 	font-size:13px;
 	font-weight:bolder;
 }
 
-/** * stile della tooltip di descrizione sulla mappa 
+/* * stile della tooltip di descrizione sulla mappa 
 */
 div#descriptionLoc{
 	position:absolute; 
@@ -530,7 +530,7 @@ div#descriptionLoc{
 }
 
 
-/** * Stili relativi all'elenco delle mappe in basso
+/* * Stili relativi all'elenco delle mappe in basso
 */
 div.mappaclick_more{
 	padding-top:10px;
@@ -552,7 +552,7 @@ div.mappaclick_more a{
 
 
 
-/** * Messages center
+/* * Messages center
 */
 div.elenco_record_gioco{
 	padding:4px 6px 5px 5px;
@@ -633,7 +633,7 @@ div.controllo_elenco input[type='image']{
 }
 
 
-/** * Ambientazione/Regolamento */
+/* * Ambientazione/Regolamento */
 div.user_ambientazione div.elementi_elenco, div.servizi_abilita div.elementi_elenco{
 	text-align:left;
 	padding:5px;
@@ -648,7 +648,7 @@ div.user_ambientazione td.casella_titolo div.elementi_elenco, div.servizi_abilit
 
 
 
-/** * Generico per elenchi, bacheche, regolamento, ambientazione etc */
+/* * Generico per elenchi, bacheche, regolamento, ambientazione etc */
 div.capitolo_elenco{
 	font-weight:bolder;
 	font-size:13px;
@@ -731,20 +731,20 @@ div.elementi_elenco a:hover{
 
 
 
-/** * Stile tabelle nei moduli di gestione */
+/* * Stile tabelle nei moduli di gestione */
 div.elenco_record_gestione table{
 	width:95%;
 	margin:10px auto;
 }
 
 
-/** * Accorgimenti Layout */
+/* * Accorgimenti Layout */
 
-/** * Allineamento verticale delle colonne 
+/* * Allineamento verticale delle colonne 
 */
 #framecontentLeft, #framecontentRight { display:table; }
 
-/** * margine delle colonne */
+/* * margine delle colonne */
 div.innertube{
 	margin:0;
 	display:table-cell;

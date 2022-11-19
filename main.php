@@ -1,5 +1,5 @@
 <?php
-/**	* Fix Require al posto di include
+/*	* Fix Require al posto di include
 	* Require blocca l'esecuzione dello script se il file è assente
 	* dal momento che il file in questione è fondamentale è buona norma applicarlo
 
@@ -11,7 +11,7 @@ gdrcd_controllo_sessione(); /*Se si è tentato di accedere senza un'autenticazio
 
 $strInnerPage = "";
 
-	/** * Bug fix del mapwise: la gestione dello spostamento della mappa va gestita da main e non da mappaclick
+	/* * Bug fix del mapwise: la gestione dello spostamento della mappa va gestita da main e non da mappaclick
 		* @author Blancks
 	*/
 	if (!empty($_GET['map_id']))
@@ -43,7 +43,7 @@ $strInnerPage = "";
 		//$_SESSION['luogo']=gdrcd_filter_get($_REQUEST['dir']);
 
 
-	/**	* Caso di fix
+	/*	* Caso di fix
 		* se non ci sono variabili via url, si ripristinano dei valori di default
 		* @author Blancks
 	*/
@@ -52,7 +52,7 @@ $strInnerPage = "";
 		$strInnerPage = 'mappaclick.inc.php';
 		$_REQUEST['id_map'] = $_SESSION['mappa'];
 	}
-	/**	* Fine caso di Fix */
+	/*	* Fine caso di Fix */
 
 
 	if (gdrcd_controllo_esilio($_SESSION['login']) === TRUE)

@@ -5,14 +5,14 @@
 <?php
 
 
-/** * Abilitazione tooltip
+/* * Abilitazione tooltip
 * @author Blancks
 */
 if ($PARAMETERS['mode']['user_online_state'] == 'ON')
 echo '<div id="descriptionLoc"></div>';
 
 //Carico la lista presenti.
-/** * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando il pg non è più connesso
+/* * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando il pg non è più connesso
 * @author Blancks
 */
 
@@ -94,7 +94,7 @@ echo '<li class="luogo">'.gdrcd_filter('out',$luogo_corrente).'</li>';
 
 
 
-/** * Parametro di personalizzazione di uno stato online via tooltip
+/* * Parametro di personalizzazione di uno stato online via tooltip
 * @author Blancks
 */
 $online_state = '';

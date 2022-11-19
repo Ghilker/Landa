@@ -132,7 +132,7 @@ if ($_SESSION['permessi']<ADMIN){
 		  </div>
 		
 			<!-- 
-				/** * Funzionalità che permette di sostituire il link testuale con un immagine
+				/* * Funzionalità che permette di sostituire il link testuale con un immagine
 					* @author Blancks
 				*/
 			-->
@@ -169,7 +169,7 @@ if ($_SESSION['permessi']<ADMIN){
 		  </div>
 		  
 		  <!-- 
-				/** * Funzionalità che permette di collegare il link ad un altra mappa
+				/* * Funzionalità che permette di collegare il link ad un altra mappa
 					* @author Blancks
 				*/
 			-->

@@ -1,12 +1,12 @@
-/** * Skin Advanced
+/* * Skin Advanced
 	* Il presente files regola gli stili CSS della homepage
 	* @author Blancks
 */
 
 
-/** * STILI DEI CONTENUTI DEL SITO */
+/* * STILI DEI CONTENUTI DEL SITO */
 
-/** * Titolo del sito
+/* * Titolo del sito
 */
 h1{
 	margin:0;
@@ -15,14 +15,14 @@ h1{
 	font-family:Myriad Pro,Myriad Web Pro Regular,Lucida Grande,Geneva,Trebuchet MS,sans-serif;
 }
 
-/** * Stile del link sul titolo */
+/* * Stile del link sul titolo */
 h1 a, h1 a:visited, h1 a:hover{
 	color:#222;
 	text-decoration:none;
 }
 
 
-/** * Sottotitolo
+/* * Sottotitolo
 */
 div.subtitle{
 	margin-left:78px;
@@ -31,7 +31,7 @@ div.subtitle{
 	font-size:12px; 
 }
 
-/** * Stili del form di login
+/* * Stili del form di login
 */
 div.login_form{
 	float:right;
@@ -40,13 +40,13 @@ div.login_form{
 	margin-top:60px;
 }
 
-/** * stile che ingloba i gruppi label/input
+/* * stile che ingloba i gruppi label/input
 */
 div.login_form div{
 	margin-bottom:4px;
 }
 
-/** * Stile per le label dei form
+/* * Stile per le label dei form
 */
 span.form_label{
 	text-align:left;
@@ -58,7 +58,7 @@ div.login_form input{
 	margin:0;
 }
 
-/** * Stile per il bottone del login
+/* * Stile per il bottone del login
 */
 div.login_form input[type='submit']{
 	display:block;
@@ -69,10 +69,10 @@ div.login_form input[type='submit']{
 
 
 
-/** * Contenuti principali della pagina
+/* * Contenuti principali della pagina
 */
 
-/** * Titolo della sezione */
+/* * Titolo della sezione */
 h2{
 	font-size:25px;
 	font-weight:normal;
@@ -81,7 +81,7 @@ h2{
 	border-bottom:solid 1px #d9d9d9;
 }
 
-/** * Contenuti testuali */
+/* * Contenuti testuali */
 div.content_body p{
 	font-size:13px;
 	padding:0 10px;
@@ -95,7 +95,7 @@ div.content_body a{
 
 
 
-/** * Menù di navigazione
+/* * Menï¿½ di navigazione
 */
 div.sidecontent ul{
 	margin:20px 0 0 10px;
@@ -111,13 +111,13 @@ div.sidecontent ul{
 	border-radius:5px;
 }
 
-/** * Contenitore delle voci nel menù 
+/* * Contenitore delle voci nel menï¿½ 
 */
 div.sidecontent ul li{
 	margin-bottom:5px;
 }
 
-/** * Link voce menù 
+/* * Link voce menï¿½ 
 */
 div.sidecontent ul li a, div.sidecontent ul li a:visited{
 	color:#f1f1f1;
@@ -128,7 +128,7 @@ div.sidecontent ul li a, div.sidecontent ul li a:visited{
 	background-color:none;
 }
 
-/** * Link voce menù al passaggio del mouse
+/* * Link voce menï¿½ al passaggio del mouse
 */
 div.sidecontent ul li a:hover{
 	background-color:#b2b2b2;
@@ -136,7 +136,7 @@ div.sidecontent ul li a:hover{
 }
 
 
-/** Stile generico contenitore per altri contenuti nella sidebar 
+/* Stile generico contenitore per altri contenuti nella sidebar 
 */
 div.side_modules{
 	margin:10px 0 0 10px;
@@ -154,7 +154,7 @@ div.side_modules{
 div.side_modules .form_label{font-size:10px; margin-right:2px;}
 
 
-/** * Tabella statistiche */
+/* * Tabella statistiche */
 table.statistics{
 	text-align:right;
 	margin-top:10px;
@@ -163,12 +163,12 @@ table.statistics{
 
 table.statistics td{padding-right:5px;}
 
-/** * Stile di colorazione per definire le righe pari */
+/* * Stile di colorazione per definire le righe pari */
 table.statistics tr.pair{
 	background-color:#c9c9c9;
 }
 
-/** * Stile per definire il titolo del parametro statistico */
+/* * Stile per definire il titolo del parametro statistico */
 table.statistics td.label{
 	font-weight:bolder;
 	text-align:left;
@@ -177,7 +177,7 @@ table.statistics td.label{
 
 
 
-/** * Recupero password */
+/* * Recupero password */
 div.pass_rec{
 	margin-top:10px;
 }
@@ -190,7 +190,7 @@ div.pass_rec input[type='submit']{margin-top:3px;}
 
 
 
-/** * Footer info */
+/* * Footer info */
 div#footer div{
 	background-color:#d9d9d9;
 	padding:5px 0 3px 0;
@@ -206,9 +206,9 @@ div#footer p{
 
 
 
-/** * LAYOUT SITO */
+/* * LAYOUT SITO */
 
-/** * Struttura contenitore di tutto il sito 
+/* * Struttura contenitore di tutto il sito 
 */
 div#main{
 	height:100%;
@@ -218,7 +218,7 @@ div#main{
 }
 
 
-/** * Larghezza della struttura del sito
+/* * Larghezza della struttura del sito
 */
 div#site_width{
 	margin:0 auto;
@@ -226,28 +226,28 @@ div#site_width{
 	text-align:left;
 }
 
-/** * Header
+/* * Header
 */
 div#header{
 	height:180px;
 }
 
 
-/** * Corpo contenuti della pagina
+/* * Corpo contenuti della pagina
 */
 div#content{
 	padding:0 60px 10px 60px;
 	background:url("imgs/body.png") repeat-y left top;
 }
 
-/** * Struttura colonna di lato
+/* * Struttura colonna di lato
 */
 div.sidecontent{
 	width:200px;
 	float:left;
 }
 
-/** * Struttura corpo contenuti pagina 
+/* * Struttura corpo contenuti pagina 
 */
 div.content_body{
 	width:620px;
@@ -256,7 +256,7 @@ div.content_body{
 }
 
 
-/** * pie di pagina
+/* * pie di pagina
 */
 div#footer{
 	height:68px;
@@ -265,4 +265,4 @@ div#footer{
 }
 
 
-/** *** Fine stili regolatori del layout *** */
+/* *** Fine stili regolatori del layout *** */

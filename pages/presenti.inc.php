@@ -88,7 +88,7 @@ gdrcd_query($result, 'free');
 
 
 //Carico la lista presenti (Usciti).
-/** * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando un pg fa logout
+/* * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando un pg fa logout
 	* @author Blancks
 */
 $query = "SELECT personaggio.nome, personaggio.cognome, personaggio.permessi, personaggio.sesso, personaggio.id_razza, razza.sing_m, razza.sing_f, razza.icon, personaggio.disponibile, personaggio.is_invisible FROM personaggio LEFT JOIN razza ON personaggio.id_razza = razza.id_razza WHERE (personaggio.ora_uscita > personaggio.ora_entrata AND DATE_ADD(personaggio.ora_uscita, INTERVAL 1 MINUTE) > NOW()) OR (personaggio.ora_uscita < personaggio.ora_entrata AND DATE_ADD(personaggio.ultimo_refresh, INTERVAL 4 MINUTE) > NOW() AND DATE_ADD(personaggio.ultimo_refresh, INTERVAL 3 MINUTE) < NOW()) ORDER BY personaggio.ultimo_refresh, personaggio.nome";
@@ -140,7 +140,7 @@ while ($record = gdrcd_query($result, 'fetch')){
 gdrcd_query($result, 'free');
 
 //Carico la lista presenti (In luogo).
-/** * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando il pg non è più connesso
+/* * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando il pg non è più connesso
 	* @author Blancks
 */
 $query = "SELECT personaggio.nome, personaggio.cognome, personaggio.permessi, personaggio.sesso, personaggio.id_razza, razza.sing_m, razza.sing_f, razza.icon, personaggio.disponibile, personaggio.is_invisible, mappa.stanza_apparente, mappa.nome as luogo FROM personaggio LEFT JOIN mappa ON personaggio.ultimo_luogo = mappa.id LEFT JOIN razza ON personaggio.id_razza = razza.id_razza WHERE (personaggio.ora_entrata > personaggio.ora_uscita AND DATE_ADD(personaggio.ultimo_refresh, INTERVAL 4 MINUTE) > NOW()) AND personaggio.ultimo_luogo = ".$_SESSION['luogo']." AND personaggio.ultima_mappa= ".$_SESSION['mappa']." ORDER BY personaggio.is_invisible, personaggio.ultimo_luogo, personaggio.nome";

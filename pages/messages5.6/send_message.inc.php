@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * In base alla tipologia di richiesta, eseguo le relative operazioni di invio messaggio
  *
  * La tipologia di richiesta viene determinata all'interno di $_POST['multipli'],
@@ -11,7 +11,7 @@
 $opRequest = gdrcd_filter('get', $_POST['multipli']);
 
 switch($opRequest) {
-    /**
+    /*
      * INVIO MESSAGGIO STANDARD
      * In caso di invio messaggio a destinatari multipli, occorre separare i destinatari da virgola
      */
@@ -21,7 +21,7 @@ switch($opRequest) {
         // Rimuovo eventuale sporcizia nella scrittura dei nomi dei Personaggi
         $destinatari = array_map('trim', $destinatari);
 
-        /**
+        /*
          * Controllo che i destinatari siano effettivamente dei personaggi
          * I personaggi vengono concatenati nel seguente formato:
          *
@@ -71,7 +71,7 @@ switch($opRequest) {
 
         break;
 
-    /**
+    /*
      * INVIO MESSAGGIO A TUTTI I PRESENTI
      */
     case 'presenti':
@@ -92,7 +92,7 @@ switch($opRequest) {
         break;
 
 
-    /**
+    /*
      * INVIO MESSAGGIO A TUTTI
      */
     case 'broadcast':

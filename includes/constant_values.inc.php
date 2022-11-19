@@ -53,7 +53,7 @@ define('COLLO', 9);
 /*Stati della mappa*/
 define('INVIAGGIO', -1);
 
-/**
+/*
  * Livelli di filtro html
  */
 define('HTML_FILTER_BASE',0);

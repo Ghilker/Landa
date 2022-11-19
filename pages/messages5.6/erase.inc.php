@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * Elimino un messaggio
  */
 

@@ -12,7 +12,7 @@ $handleDBConnection=gdrcd_connect();
 $login1	= gdrcd_filter('get', $_POST['login1']);
 $pass1	= gdrcd_filter('get', $_POST['pass1']);
 
-/** * Fix per il funzionamento in locale dell'engine
+/* * Fix per il funzionamento in locale dell'engine
 	* @author Blancks
 */
 switch ($_SERVER['REMOTE_ADDR'])
@@ -23,7 +23,7 @@ switch ($_SERVER['REMOTE_ADDR'])
 	default:		$host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 		break;
 }
-/** * Fine Fix
+/* * Fine Fix
 */
 
 /*Controllo se la postazione non sia stata esclusa dal sito*/
@@ -46,7 +46,7 @@ $Maiusc=substr($login1,0,1);
 $Maiusc=strtoupper($Maiusc);
 $login1=$Maiusc.substr($login1,1);
 */
-/**	* Magari però facciamolo meglio ;-)
+/*	* Magari però facciamolo meglio ;-)
 	* @author Blancks
 */
 $login1 = ucwords(strtolower(trim($login1)));
@@ -55,7 +55,7 @@ $login1 = ucwords(strtolower(trim($login1)));
 $record = gdrcd_query("SELECT personaggio.pass, personaggio.nome, personaggio.cognome, personaggio.permessi, personaggio.sesso, personaggio.ultima_mappa, personaggio.ultimo_luogo, personaggio.id_razza, personaggio.ultimo_messaggio, personaggio.blocca_media, personaggio.ora_entrata, personaggio.ora_uscita, personaggio.ultimo_refresh, razza.sing_m, razza.sing_f, razza.icon AS url_img_razza FROM personaggio LEFT JOIN razza ON personaggio.id_razza = razza.id_razza WHERE nome = '".gdrcd_filter('in',$login1)."' LIMIT 1");
 
 /*Se esiste un personaggio corrispondente al nome ed alla password specificati*/
-/** * Aggiunti i controlli sugli orari di connessione e disconnessione per impedire i doppi login con gli stessi account
+/* * Aggiunti i controlli sugli orari di connessione e disconnessione per impedire i doppi login con gli stessi account
 	* Se si esce non correttamente dal gioco, sarà possibile entrare dopo 5 minuti dall'ultimo refresh registrato
 
 	*@author Blancks
@@ -67,13 +67,13 @@ if (!empty($record) and gdrcd_password_check($pass1,$record['pass']) && ($record
 	$_SESSION['permessi'] = $record['permessi'];
 	$_SESSION['sesso'] = $record['sesso'];
 
-	/** * Controllo sul bloccaggio dei suoni per l'utente
+	/* * Controllo sul bloccaggio dei suoni per l'utente
 		* @author Blancks
 	*/
 	$_SESSION['blocca_media'] = $record['blocca_media'];
 
 
-	/** * Archiviazione dato utile per capire quanti nuovi topic in bacheca ci sono rispetto all'ultima visita
+	/* * Archiviazione dato utile per capire quanti nuovi topic in bacheca ci sono rispetto all'ultima visita
 		* @author Blancks
 	*/
 	$_SESSION['ultima_uscita'] = $record['ora_uscita'];

@@ -1,12 +1,12 @@
 <?php
-        /**
+        /*
          * CONFIGURAZIONE DI GDRCD 5.4 "Optimus"
          * @author MrFaber
          * @author Blancks
          * @author Breaker
          */
 
-        /**
+        /*
          * HELP [-- IMPORTANTE!!! --]: Il corrente file contiene un elenco di parametri essenziali alla configurazione ed al funzionamento di GDRCD. E' richiesto che vengano configurati i parametri alla voce "parametri di connessione" per eseguire una corretta connessione al database, altrimenti GDRCD non è in grado di operare. I parametri alle voci successive hanno la funzione di personalizzare il sito in funzione delle esigenze del proprio gioco. In particolare è possibile selezionare il tema dell'interfaccia del sito, personalizzare alcuni nomi chiave all'interno del gioco, e selezionare quali funzioni attivare o disattivare tra le opzioni di gioco disponibile. Per ogni voce è presente un help esaustivo. Nel dubbio, leggerlo con attenzione.
          */
 
@@ -55,7 +55,7 @@
         //$PARAMETERS['themes']['current_theme'] = 'medieval';
 
 
-        /**
+        /*
          * SCELTA DEL TIPO DI LAYOUT
          * Tutti i layout sono cross-browser, compatibili cioè con tutti i browser.
          * Il css di ogni singolo layout è disponibile nel file del layout nella cartella "layouts"
@@ -226,14 +226,14 @@
         $PARAMETERS['settings']['view_logs'] = 10; //Numero di log visualizzato.
 
 
-        /** * Abilitazione dell'audio in land
+        /* * Abilitazione dell'audio in land
          * @author Blancks
          */
         $PARAMETERS['mode']['allow_audio'] = 'ON';
         //ON:abilita l'audio per le missive e nella scheda dei personaggi
         //OFF: disabilita l'uso dell'audio
 
-        /** * Tipi di file audio concessi in land, la lista è semplice: [estensione_file] = mimetype
+        /* * Tipi di file audio concessi in land, la lista è semplice: [estensione_file] = mimetype
          * Per disabilitare i suoni sugli utenti mettere su OFF la voce relativa nei gruppi di abilitazione poco più sotto
          * @author Blancks
          */
@@ -243,7 +243,7 @@
         $PARAMETERS['settings']['audiotype']['.wav'] = 'audio/x-wav';
 
 
-        /** * nome del file audio usato per il suono dei nuovi messaggi in arrivo
+        /* * nome del file audio usato per il suono dei nuovi messaggi in arrivo
          * il file DEVE trovarsi nella cartella sounds
          * il file DEVE essere in uno dei formati concessi per l'uso
          * per non usare file audio per le nuove missive, semplicemente lasciare vuoto il campo
@@ -252,7 +252,7 @@
         $PARAMETERS['settings']['audio_new_messagges'] = 'japan.mp3';
 
 
-        /**    * Dadi che compaiono nella tendina, solo se i dadi sono abilitati!
+        /*    * Dadi che compaiono nella tendina, solo se i dadi sono abilitati!
          * @author Blancks
          */
         $PARAMETERS['mode']['dices'] = 'ON';
@@ -268,10 +268,10 @@
         $PARAMETERS['settings']['skills_dices']['d100'] = 100;
         $PARAMETERS['settings']['skills_dices']['d20'] = 20;*/
         $PARAMETERS['settings']['skills_dices']['Fortuna'] = 2;
-       /**    * Fine dadi */
+       /*    * Fine dadi */
 
 
-        /**    * Configurazione avatar da chat
+        /*    * Configurazione avatar da chat
          * @author Blancks
          */
         $PARAMETERS['mode']['chat_avatar'] = 'ON';
@@ -282,7 +282,7 @@
         $PARAMETERS['settings']['chat_avatar']['height'] = 90;    # Dimensione in pixel dell'altezza dell'imagine consentita
 
 
-        /** * uso di una tooltip di preview per le descrizioni sulla mappa
+        /* * uso di una tooltip di preview per le descrizioni sulla mappa
          * @author Blancks
          */
         $PARAMETERS['mode']['map_tooltip'] = 'ON';
@@ -293,7 +293,7 @@
         $PARAMETERS['settings']['map_tooltip']['offset_x'] = 20;    # offset orizzontale della tip dalla posizione del cursore
 
 
-        /** * Parametri per l'incremento dell'esperienza tramite caratteri scritti
+        /* * Parametri per l'incremento dell'esperienza tramite caratteri scritti
          */
         $PARAMETERS['mode']['exp_by_chat'] = 'ON';
         //ON: abilita l'incremento dei punti esperienza tramite i caratteri scritti in chat.
@@ -304,7 +304,7 @@
         /*$PARAMETERS['settings']['exp_by_chat']['max_exp'] = '1'; ///< Esperienza massima giornaliera;*/
 
 
-        /** * Parametri per il BBCode
+        /* * Parametri per il BBCode
          */
         $PARAMETERS['mode']['user_bbcode'] = 'ON';
         //ON:abilita l'uso del bbcode obbligatorio per la formattazione delle area affetti e background della scheda
@@ -316,14 +316,14 @@
         # NOTA: nel forum o si sceglie il bbd o la funzione nativa di GDRCD5.1. Non è possibile includere html filtrato.
 
 
-        /** * Le seguenti impostazioni sono valide solo se il bbcode viene abilitato.
+        /* * Le seguenti impostazioni sono valide solo se il bbcode viene abilitato.
          * @author Blancks
          */
         $PARAMETERS['settings']['user_bbcode']['type'] = 'bbd';
         // bbd : viene abilitato l'uso del plugin "BBDecoder" per la funzionalità del bbcode
         // native : viene usato la scarna formattazione bbcode di base del gdrcd
 
-        /** * I seguenti parametri di configurazione sono validi se viene selezionato il modulo 'bbd' e il bbcode è attivo
+        /* * I seguenti parametri di configurazione sono validi se viene selezionato il modulo 'bbd' e il bbcode è attivo
          * @author Blancks
          */
         $PARAMETERS['settings']['bbd']['free_html'] = 'ON';
@@ -334,7 +334,7 @@
         //ON: accetta SOLO i link per le immagini derivanti da imageshack
         //OFF: accetta link per le immagini da tutti gli indirizzi
 
-        /** * HELP: NON TUTTI I SERVIZI DI HOSTING SUPPORTANO IL RIDIMENSIONAMENTO DELLE IMMAGINI.
+        /* * HELP: NON TUTTI I SERVIZI DI HOSTING SUPPORTANO IL RIDIMENSIONAMENTO DELLE IMMAGINI.
          * IN QUESTO CASO IL RIDIMENSIONAMENTO NON SARA' APPLICATO.
          */
         $PARAMETERS['settings']['bbd']['image_max_width'] = 600; /*era 400*/
@@ -348,7 +348,7 @@
         //OFF: non consente l'uso
 
 
-        /** * Tipi di estensioni consentiti per le immagini che i giocatori possono caricare in scheda o nel forum tramite il bbd.
+        /* * Tipi di estensioni consentiti per le immagini che i giocatori possono caricare in scheda o nel forum tramite il bbd.
          * @author Blancks
          */
         $PARAMETERS['settings']['bbd']['images_ext'][] = 'jpg';
@@ -357,7 +357,7 @@
         $PARAMETERS['settings']['bbd']['images_ext'][] = 'gif';
 
 
-        /**
+        /*
          * Parametri per tutti i casi in cui viene usato HTML filtrato
          * Controlla quanto pesantemente filtrare il codice HTML per ragioni di sicurezza. Ci sono 2 livelli:
          * HTML_FILTER_BASE: filtra solo le cose più pericolose, come gli iframe, gli object e javascript
@@ -365,14 +365,14 @@
          */
         $PARAMETERS['settings']['html'] = HTML_FILTER_HIGH;
 
-        /** * Avviso periodico di cambio pass, funzione pel ready (H)
+        /* * Avviso periodico di cambio pass, funzione pel ready (H)
          * @author Blancks
          */
         $PARAMETERS['mode']['alert_password_change'] = 'ON';
         //ON: ogni sei mesi l'utente è avvisato mediante un messaggio nel suo profilo personale a cambiare password
         //OFF: nessuna segnalazione di avviso di cambio password ogni tot periodo
 
-        /** * Solo se 'alert_password_change' è impostato su ON:
+        /* * Solo se 'alert_password_change' è impostato su ON:
          */
         $PARAMETERS['settings']['alert_password_change']['alert_from_signup'] = 'OFF';
         //ON: fa comparire l'avviso di cambio password anche se appena iscritti, così da invitare a modificare la password generata autonomamente per l'iscrizione
@@ -484,7 +484,7 @@
         /* HELP: Decommentare (rimuovere //) una coppia immagine-testo, fra quelle elencate sopra, fa apparire il corrispondente simbolo PEGI in homepage. E' necessario decommentare sia la riga corrispondente all'immagine che quella corrispondente al testo */
 
 
-        /**
+        /*
          * HELP [-- IMPORTANTE!!! --]:
          * Le seguenti voci configurano i menu' opzioni interni al gioco. Specificare un diverso testo visualizzato (text)
          * o un immagine (image_file) modifica l'aspetto del menu, ma alterare l'indirizzo di riferimento (url)
@@ -501,7 +501,7 @@
          * .css): di default sono impostate a 50x50px
          */
 
-        /**
+        /*
          * MENU MULTIPLI: è possibile configurare più menù nella pagina principale del gioco. Per farlo è sufficiente
          * richiamare più volte la pagina link_menu nella configurazione del layout, specificando però una classe
          * differente e aggiungendo il parametro menu_key per indicare al sistema dove recuperare le informazioni sul
