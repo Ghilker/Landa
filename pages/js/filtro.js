@@ -1,2 +1,2 @@
-let str=document.getElementById("filtro").value;
+let str = document.getElementById("filtro").value;
 console.log(str);
