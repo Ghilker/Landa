@@ -1,0 +1,196 @@
+/****************************************************************************/
+/* STILE DELLA CHAT E DEI PANNELLI */
+
+/* HELP: Da qui è possibile modificare:
+- I font ed i colori della chat
+- Le dimensioni e la posizione della chat
+- Lo sfondo della chat*/
+
+
+
+iframe.iframe_chat{
+   border: none;
+   width: 1px;
+   height: 1px;
+   margin: 0px;
+}
+div.chat_window{
+  text-align: center;
+}
+
+/**	* Fix per layout elastico
+	* @author Blancks
+*/
+div.chat_box{
+	position:absolute;
+	top:50px;
+	bottom:120px;
+	left:10px;
+	right:10px;
+	
+	overflow: auto;
+	font-size: 16px;
+	text-align:left;
+}
+
+div.pagina_frame_chat div.page_body div.panels_box{
+	position:absolute;
+	bottom:9px;
+	left:5px;
+	right:5px;
+}
+/**	* Fine fix */
+
+
+
+/** * Avatar di chat
+	* @author Blancks
+*/
+img.chat_avatar{
+	margin:8px 8px 8px 0;
+    display: block;
+    float: left;
+    position: relative;
+}
+
+
+
+
+/***** testo della chat *****/
+
+
+/* Tipi messaggio: (A azione, P parlato, N PNG, M Master, I Immagine, S sussurro, D dado, C skill check, O uso oggetto) */
+
+div.chat_row_A{margin-top: 3px; color: #B6C7D5;}
+
+div.chat_row_A	span.color2{margin-top: 3px; color:#B6C7D5; font-weight:bolder;}   
+
+div.chat_row_P{margin-top: 3px; color: #B6C7D5;}
+
+div.chat_row_P	span.color2{margin-top: 3px; color:#B6C7D5; font-weight:bolder;}
+
+div.chat_row_M{ 
+margin-top: 3px;
+
+   border-width: 1px;
+   border-color: #b6c7d5;
+   border-style: solid;
+   background-color: #7b859f;
+   text-align: center;
+   color: #0a1228;
+   font-size: 13px;
+   font-weight:bold;
+}
+
+div.chat_row_N{border: 1px solid #7b859f; margin-top: 3px; padding: 3px; /**width: 98.5%**/}
+
+div.chat_row_N	
+   span.color2{color:#000; font-weight:bolder;}
+
+div.chat_row_I{
+	margin-top: 3px;
+    text-align: center;
+}
+
+div.chat_row_S{margin-top: 3px;
+   border-width: 2px;
+   border-color: #7b859f;
+   border-style: dotted;
+   background-color: #273956;
+   color: #b6c7d5;
+   font-style:italic;
+}
+
+div.chat_row_D{
+margin-top: 3px;
+ border-width: 2px;
+   border-color: #7b859f;
+   border-style: solid;
+   background-color: #273956;
+   color: #b6c7d5;
+}
+
+div.chat_row_C{
+margin-top: 3px;
+  border-width: 2px;
+   border-color: #7b859f;
+   border-style: solid;
+   background-color: #273956;
+   color: #b6c7d5;
+}
+
+div.chat_row_O{
+margin-top: 3px;
+  border-width: 2px;
+   border-color: #7b859f;
+   border-style: solid;
+   background-color: #273956;
+   color: #b6c7d5;
+}
+
+div.chat_row_C{
+margin-top: 3px;
+
+ border-width: 2px;
+   border-color: #7b859f;
+   border-style: solid;
+      color: #b6c7d5;
+
+}
+
+span.chat_time{
+   font-size: 10px;
+   font-weight: bolder;
+   margin-right: 3px;
+}
+
+span.chat_name{
+   font-weight: bolder;   
+   font-size: 13px;
+   color: #718ea6;
+}
+
+span.nome_chat{
+	color:#d3e3f0;
+    font-size: 13px;
+	font-weight: bolder; 
+}
+
+span.chat_msg{
+	color:#B6C7D5;
+	font-size:12px;
+}
+
+span.chat_master{ }
+
+
+
+/***** form inserimento *****/
+
+div.form_row{
+  clear: both;
+  height: 20px;
+}
+div.casella_chat{
+  float: left;  
+  margin-bottom: 6px
+
+}
+
+/*Casella Tag*/
+input#tag{
+   width: 126px;
+     background-color: #7B859F;
+     border: 1px solid #3D424F;
+}
+/*Casella Messaggio*/
+input#message{
+   width: 470px;
+     background-color: #7B859F;
+     border: 1px solid #3D424F;
+}
+
+
+
+
+/****************************************************************************/

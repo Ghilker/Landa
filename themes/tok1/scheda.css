@@ -1,0 +1,488 @@
+/****************************************************************************/
+/* STILE DELLA SCHEDA DEL PERSONAGGIO */
+
+/* HELP: Da qui Ã¨ possibile modificare:
+- I font ed i colori della scheda del personaggio
+- Le dimensioni, l'aspetto e la posizione degli elementi della scheda
+- Lo sfondo della scheda */
+
+div.pagina_scheda{
+   margin-left: auto;
+   margin-right: auto;
+   width: 600px;
+}
+
+div.pagina_scheda div.pagebody{
+}
+
+div.pagina_scheda a{
+   /*font-weight: normal;*/
+  	margin: 0px 1px 0px 1px;
+	padding: 0 2px 0 2px;*/
+	/*border: 1px dotted #000000;*/
+}
+
+div.pagina_scheda div.form_info{
+   font-style: italic;
+}
+
+/*Titoli dei box*/
+div.pagina_scheda div.titolo_box{
+  	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+	margin: 20px 0px 10px 0px; /*HDY: 0px 0px 7px 0px;*/
+	padding-bottom: 3px;
+	color: #031127;
+	background-image: url(imgs/divisorio-presenti.png);
+	background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*Box nome,ritratto,iscritto da, ultimo ingresso, scrivi a*/
+div.ritratto{
+  margin: 0px 5px 50px 5px;
+  float: right;
+  font-size: 12px;
+  width: 215px;
+  height: 500px;
+  text-align: center;
+
+}
+
+/*Nome PG*/
+div.ritratto {
+   
+}
+
+div.ritratto_nome {
+  margin: auto;
+  font-size: 16px; /*era 13px*/
+  font-weight: bold; 
+  	/*color: #031127;
+	background-image: url(imgs/divisorio-presenti.png);
+	background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px 0px 10px 0px;
+	 text-transform: uppercase;*/
+     padding-bottom: 3px;
+    text-align: center;
+    color: #273956;
+    font-style: italic;
+} 
+
+/*Immagine*/
+div.ritratto div.ritratto_avatar{
+  width: 215px;
+  height: 500px;
+  /* margin: 0 7px 0 7px; */
+  overflow: hidden;
+  
+}
+
+div.ritratto_avatar img{
+   max-width: 215px;
+   max-height:500px;
+}
+
+/*Link invia messaggio*/
+div.ritratto_invia_messaggio{
+   margin: 10px 0 0 0;
+   border: none;
+   
+}
+
+/*Box punteggi, razza, gilda, ruolo off*/
+div.profilo{
+  margin: 5px 0px 40px 0;
+  float: left;
+  font-size: 12px;
+  width: 365px; /*320px 360px;*/
+  height: 530px; /*443px;*/
+  /* border: 1px dashed #606; */
+}
+
+div.profilo div.profilo_voce{
+   text-align: justify; 
+   clear: both;
+   height: 20px;
+}
+
+/*Nome campo*/
+div.profilo_voce div.profilo_voce_label{
+  width: 30%;
+  float: left;
+  /*margin-left: 5px;*/
+  /*font-weight: bold;*/
+  /*background-color: #c0bbd1;*/
+  border-radius: 6px;
+  font-size: 13px;
+  font-style: italic;
+   
+}
+
+/*Valore campo*/
+div.profilo_voce div.profilo_voce_valore{
+   text-align: center;
+   width: 60%; /*era 68%*/
+   float: right;
+   /*margin-right: 5px;*/
+   /*background-color: #273956; /*#263243 #7B859F; #b6b5d4;*/ 
+   /*background-image: url(imgs/divisorio-luoghi.png);
+   	background-position: center;
+    background-repeat: no-repeat;*/
+   color: #7B859F; /*#031127*/
+   /*border-radius: 6px*/
+       border: 1px dashed #273956;
+   font-size: 13px;
+}
+
+/*Icone gilda*/
+img.profilo_img_gilda{
+   height: 15px;
+   width: 15px;
+}
+
+/*Box status*/
+div.profilo_status{
+  margin: 15px 0px 5px 0px;
+  clear: both;
+  height: 160px; /*era 100*/
+  text-align: justify;
+  background-color: #273956; /*#263243 #7B859F; #c0bbd1;*/
+  color: #7B859F; /*#031127*/
+  /* border-radius: 6px; */
+   
+}
+
+div.profilo_status_label{ 
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 5px 5px 5px 0;
+   font-size: 13px;
+   font-style: italic;
+   
+}
+
+div.profilo_status_valore{
+  /* text-align: left; */
+  /* margin-top: 5px; */
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: auto;
+  font-size: 11px;
+
+}
+
+
+div.profilo_status2{
+  margin: 15px 0px 5px 0px;
+  clear: both;
+  height: 160px; /*era 100*/
+  text-align: justify;
+  background-color: #273956; /*#263243 #7B859F; #c0bbd1;*/
+  color: #7B859F; /*#031127*/
+  /* border-radius: 6px; */
+
+   
+}
+
+div.profilo_status2_label{ 
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 5px 5px 5px 0;
+   font-size: 13px;
+   font-style: italic;
+   
+}
+
+div.profilo_status2_valore{
+  /* text-align: left; */
+  /* margin-top: 5px; */
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: auto;
+  font-size: 11px;
+
+}
+
+
+/*Casella PF nei controlli master*/
+div.form_field input.healt_input{
+   width: 28px;
+}
+
+/*Box storia pg, box affetti*/
+div.background{
+   margin: auto;
+   clear: both;
+   overflow: hidden;
+   width: 600px;
+   
+}
+
+div.background img{
+   max-width: 600px;
+   
+}
+
+/*Menu' interno scheda*/
+div.menu_scheda{
+  margin:auto;
+  float: center;
+  text-align: center;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #B6C7D5;
+  
+}
+
+div.menu_scheda a:hover {
+   color: #B6C7D5;
+  
+}
+
+div.menu_scheda a {
+   color: #000
+}
+
+
+/*Box abilitÃ */
+div.elenco_abilita{
+   margin: 10px auto 5px auto;
+   clear: both;
+ 
+}
+div.elenco_abilita table{
+   margin: 2px auto 5px auto;
+ 
+}
+
+div.elenco_abilita td{
+   vertical-align: top;
+}
+div.abilita_scheda_nome{ 
+  width: 110px;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #897ECE;
+  
+}
+div.abilita_scheda_car{
+  width: 70px;
+  font-size: 12px;
+  
+}
+div.abilita_scheda_tank{
+  width: 20px;
+  font-size: 12px;
+  
+}
+div.abilita_scheda_sub{
+  width: 65px;
+  font-size: 12px;
+  
+}
+
+/****************************************************************************/
+
+/****************************************************************************/
+/* STILE DELLA PAGINA DI MODIFICA SCHEDA */
+
+div.modifica_scheda{
+   margin: 10px;
+}
+
+/****************************************************************************/
+
+/****************************************************************************/
+/* STILE DELLA PAGINA DI EQUIPAGGIAMENTO */
+
+div.omino_bianco_box{
+   margin-left: auto;
+   margin-right: auto;
+   width: 450px;
+   height: 300px;
+    text-align: center;
+}
+
+img.omino_bianco_img{
+   margin-top: 40px;
+   width: 300px;
+   height: 226px;
+}
+
+div.omino_bianco_armdx{
+   width: 50px;
+   height: 50px;
+   border: 1px dotted #b8a7cc;
+   margin-top: 5px;
+}
+div.omino_bianco_armdx img{
+   width: 50px;
+   height: 50px;
+}
+
+
+div.omino_bianco_armsx{
+   width: 50px;
+   height: 50px;
+   border: 1px dotted #b8a7cc; 
+   margin-top: 5px;
+   margin-right: 0px;
+}
+div.omino_bianco_armsx img{
+   width: 50px;
+   height: 50px;
+}
+
+div.omino_bianco_chest{
+   width: 50px;
+   height: 50px;
+   border: 1px dotted #b8a7cc; 
+   margin-top: 5px;
+   margin-right: 0px;
+}
+div.omino_bianco_chest img{
+   width: 50px;
+   height: 50px;
+}
+
+div.omino_bianco_legs{
+   width: 50px;
+   height: 50px;
+   border: 1px dotted #b8a7cc; 
+   margin-top: 5px;
+   margin-right: 0px;
+}
+div.omino_bianco_legs img{
+   width: 50px;
+   height: 50px;
+   margin-right: 0px;
+}
+
+div.omino_bianco_feet{
+   width: 50px;
+   height: 50px;
+   border: 1px dotted #b8a7cc; 
+   margin-top: 5px;
+   margin-right: 0px;
+}
+
+div.omino_bianco_feet img{
+   width: 50px;
+   height: 50px;
+}
+
+div.omino_bianco_head{
+   width: 45px;
+   height: 45px;
+   border: 1px dotted #b8a7cc;
+   margin-top: 5px;
+}
+
+div.omino_bianco_head img{
+   width: 45px;
+   height: 45px;
+}
+
+div.omino_bianco_neck{
+   width: 45px;
+   height: 45px;
+   border: 1px dotted #b8a7cc;
+   margin-top: 5px;
+}
+
+div.omino_bianco_neck img{
+   width: 45px;
+   height: 45px;
+}
+
+div.omino_bianco_ring{
+   width: 30px;
+   height: 30px;
+   border: 1px dotted #b8a7cc;
+   margin-top: 5px;
+}
+
+div.omino_bianco_ring img{
+   width: 30px;
+   height: 30px;
+}
+
+/*Inventario*/
+div.pagina_scheda_equip { }
+div.pagina_scheda_oggetti { }
+div.pagina_scheda_oggetti td.casella_elemento,
+div.pagina_scheda_equip td.casella_elemento{  
+  font-size: 12px;
+  
+  padding: 3px;
+}
+div.pagina_scheda_oggetti div.inventario_img img,
+div.pagina_scheda_equip div.inventario_img img{
+  height: 120px;
+  width: 120px;
+}
+div.pagina_scheda_oggetti div.inventario_img,
+div.pagina_scheda_equip div.inventario_img{
+  width: 122px;
+}
+div.pagina_oggetti_equip div.inventario_nome,
+div.pagina_scheda_equip div.inventario_nome{
+  width: 122px;
+}
+div.pagina_scheda_oggetti div.inventario_quantita,
+div.pagina_scheda_equip div.inventario_quantita{
+  width: 122px;
+}
+div.pagina_scheda_oggetti div.inventario_nome,
+div.pagina_scheda_equip div.inventario_nome{
+  font-size: 12px;
+  text-transform: uppercase;
+}
+div.pagina_scheda_oggetti div.form_label,
+div.pagina_scheda_equip div.form_label{
+  font-size: 12px;
+  margin: 0;
+}
+div.pagina_scheda_oggetti input,
+div.pagina_scheda_equip input{
+  font-size: 12px;
+  margin: 0;
+}
+div.inventario_riga_proprieta{
+  width: 80px;
+}
+div.pagina_scheda_equip form,
+div.pagina_scheda_oggetti form{ 
+ text-align: center;
+ margin: 0 0 4px 0;
+}
+
+/****************************************************************************/
+
+div.inventario_riga_commento {
+
+  font-style: italic;
+
+}
+
+div.inventario_riga_descrizione{
+
+
+}
+
+div.iscritto_da {
+font-size: 10px;
+
+}
+
+
+div.ultimo_ingresso {
+float: auto;
+font-size: 10px;
+
+}
+
+

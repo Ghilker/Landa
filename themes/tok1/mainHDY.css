@@ -1,0 +1,880 @@
+/** * Skin advanced
+	* @author Blancks
+*/
+
+/** * Parametri di default nella pagina
+*/
+body{padding:0; margin:0; color:#222; font-family:Verdana,Sans; font-size:11px; background:url("imgs/bg.gif") top left repeat;}
+
+body.transparent_body{background-color:transparent; background-image:none;}
+
+div, ul, li{margin:0; padding:0;}
+
+.blank{clear:both;}
+
+a, a:visited{
+	color:#333;
+	text-decoration:none;
+	
+}
+
+a:hover{
+	color: #906;
+	/*font-weight:bolder;*/
+	text-decoration:none;
+	
+}
+
+div.form_field table{
+	margin:5px auto;
+}
+
+input, textarea, select{
+	width:90%;
+	margin-bottom:10px;
+}
+
+input[type='submit']{
+	width:auto;
+	/*margin:0px 0 15px 10px;*/
+}
+
+textarea{
+	height:100px;
+}
+
+div.form_label{
+	font-size:13px;
+	font-weight:bolder;
+	margin-top:5px;
+}
+
+div.form_info{
+	font-size:12px;
+	margin-bottom:15px;
+	text-align:center;
+    font-style: italic;
+}
+
+select.day, select.month, select.year{
+	width:60px;
+	display:inline-block;
+}
+
+
+
+/** * Stile dei messaggi d'avviso dell'engine */
+
+div.warning_ok{
+	background-color: #a7cf88;
+    font-size: 12px; !important
+    text-align: center;
+    margin: 15px;
+    font-weight: bolder;
+    padding: 10px;
+    border: solid 1px #5aa31c;
+    color: #444;
+}
+
+ 
+div.warning, div.error{
+	background-color:#cf8888;
+	font-size:12px; !important
+	text-align:center;
+	margin:15px;
+	font-weight:bolder;
+	padding:10px;
+	border:solid 1px #800;
+	color:#970b0b;
+}
+
+div.warning_banca{
+background-color: #bdb4c9;
+    font-size: 12px; !important
+    width: 650px;
+    text-align: center;
+    margin: auto;
+	width: 300px;
+    margin-top: 30px;
+    font-weight: bolder;
+    padding: 10px;
+    border: solid 1px #b8a7cc;
+    color: #5a2769;
+}
+
+
+div.link_back, div.panels_link{
+	font-size: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+    text-shadow: 1px 1px 1px #897ECE;
+
+}
+
+
+
+/** * Logout */
+div.logout_box{
+	/*margin: 200px auto;
+    padding-top: 160px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 0px;
+    background: url(/themes/advanced/imgs/librologout.png) no-repeat top;
+    height: 649px;
+	text-shadow: 1px 1px 1px #fff;*/
+	 position:absolute;
+     width:650px;
+     height:450px;
+     z-index:15;
+     top:50%;
+     left:50%;
+     margin:-225px 0 0 -325px;
+	 background-image: url(/themes/advanced/imgs/librologout.png);
+	 line-height: 0px;	 
+}
+
+
+div.logout_box_testo {
+	padding-top: 160px;
+	text-align: center;
+   	font-size: 15px;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+body.logout_body{
+	position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+div.logout_box a{
+	text-decoration:underline;
+	font-style:italic;
+}
+
+span.logout_text_name{
+	font-style:italic;
+	font-weight: bolder;
+	font-size: 27px;
+}
+
+
+
+/** * Titoli delle sezioni
+*/
+div.innertube h2, div.output h2, div.page_title h2{
+	font-color: #000000;
+	font-size:14px;
+	font-weight:bolder;
+	padding-bottom: 4px;
+    margin-top:0;
+	text-align:center;
+}
+
+
+/** * Stile dei contenitori grigi con i bordini arrotondati
+*/
+div.pagina_info_location, div.menu, div.output{
+	margin:5px auto;
+	padding:5px;
+	width:180px;
+	text-align:center;
+	background-color: rgba(255, 255, 255, 0.9);
+	border:solid 1px #222;
+	-moz-border-radius:5px;		/* Bordi arrotondati */
+	-webkit-border-radius:5px;
+	-khtml-border-radius: 5px;
+	border-radius:5px;
+}
+div.presenti{
+	margin: 5px auto;
+	padding: 10px;
+	width: 180px;
+	background-color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.9);
+	border: solid 1px #444;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+	
+	
+div.page_title_presenti h2 {
+    font-size: 13px;
+    font-weight: bolder;
+    /* border-bottom: 1px solid #000000; */
+    /* border-top: 1px solid #000000; */
+    background-image: url(/themes/advanced/imgs/tot-presenti.png);
+    padding: 2px 0px 3px 0px;
+    margin-top: 0;
+    text-align: center;
+
+}
+
+div.output{
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0px;
+	left:0px;
+	width:auto;
+	overflow:auto;
+	text-align:center;
+	background:#cccdd5;
+}
+
+
+
+/** * Informazioni con anteprima luogo
+*/
+div.info_image{
+	text-align:center;
+}
+
+div.box_stato_luogo{
+	margin-bottom:5px;
+	background-image: url(/imgs/locations/nome-luogo.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    
+}
+
+div.meteo, div.meteo_date{
+	padding-top:2px;
+	height:33px;
+	text-align:center;
+	font-size:12px;
+}
+
+/** * Frame Messaggi 
+*/
+iframe.iframe_messaggi{
+    height: 75px;
+    width: 180px;
+/*background-color:#cccdd5;
+border:solid 1px #5a2769 ;
+-moz-border-radius:12px;		/* Bordi arrotondati
+	-webkit-border-radius:12px;
+	-khtml-border-radius: 12px;
+	border-radius:12px;*/
+
+}
+
+div.pagina_messaggi{text-align:center;
+	}
+
+div.pagina_messaggi a, div.pagina_messaggi a:visited{
+	text-align:center;	
+	}
+
+div.messaggio_forum_nuovo a, div.messaggio_forum_nuovo a:visited{
+	text-align:center;
+}
+
+div.msgs {
+	margin: 5px auto;
+	padding: 2px 10px 5px 10px;
+	width: 180px;
+	background-image: url(/themes/advanced/imgs/menu/sfondo_msg_prv.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	
+
+}
+
+
+/** * Men� di gioco
+*/
+select#gotomap{
+	display: block;
+    width: 160px;
+    margin: 0 auto 15px auto;
+    border-radius: 10px;
+}
+
+
+div.link_menu{
+
+	padding:0 0 0 2px;
+	font-size:14px;
+}
+
+div.link_menu a{
+	display:block;
+	padding:3px;
+	text-align:left;
+
+}
+
+div.link_menu a:hover{
+	/*background-color:#D8CBDD;
+	text-decoration:none;
+	-moz-border-radius:12px;		/* Bordi arrotondati 
+	-webkit-border-radius:12px;
+	-khtml-border-radius: 12px;
+	border-radius:12px;
+	border:solid 1px #5a2769;*/
+	font-weight:bolder;
+
+}
+
+
+
+/** * Mappa cliccabile */
+
+/** * Posizionamento mappa cliccabile 
+*/
+div.mappaclick_map{
+	margin:5px auto;
+       margin-right:110px auto;
+}
+
+
+/** * Link testuali sulla mappa */
+div.mappaclick_map a{
+	font-size:12px;
+	font-weight:bolder;
+
+}
+
+/** * stile della tooltip di descrizione sulla mappa 
+*/
+div#descriptionLoc{
+	position:absolute; 
+	width:200px;
+	background-color:#E5E5EB;
+	padding:20px;
+	font-size:12px;
+	border:solid 1px #5a2769;
+	font-family:Verdana,Sans;
+	text-align:left;
+	
+	-moz-border-radius:5px;		/* Bordi arrotondati */
+	-webkit-border-radius:5px;
+	-khtml-border-radius: 5px;
+	border-radius:5px;
+	
+	display:none;/*NON TOCCARE* Di configurazione: nasconde la tip in partenza */
+	z-index:9999;/*NON TOCCARE* Di configurazione: mostra la tooltip sopra gli altri link */
+}
+
+
+/** * Stili relativi all'elenco delle mappe in basso
+*/
+div.mappaclick_more{
+	padding-top:25px;
+	float:left;
+}
+
+div.mappaclick_more a{
+	padding: 10px;
+    margin-right: 8px;
+    border: 1px dashed #897ece;
+}
+
+
+/** * Messages center
+*/
+div.elenco_record_gioco{
+	padding:5px;
+	/*text-align:justify;*/
+}
+
+div.elenco_record_gioco table{
+	width:100%;
+	/*background-color:#AAAAAA;*/
+
+	-moz-border-radius:12px;		/* Bordi arrotondati */
+	-webkit-border-radius:12px;
+	-khtml-border-radius: 12px;
+	border-radius:12px;
+}
+
+div.elementi_elenco{
+	padding-top:5px;
+	text-align:center;
+}
+
+td.elementi_elenco_gilde, tr.elementi_elenco_gilde, div.elementi_elenco_gilde{
+	padding-top:5px;
+	text-align:center;
+	background-color:#F4F5F5;
+	font-size:12px;
+}
+
+div.titoli_elenco{
+	font-size:13px;
+	font-weight:bolder;
+}
+
+img.colonna_elengo_messaggi_icon{
+	width:30px;
+	height:30px;
+}
+
+div.controlli_elenco{
+	/*width:60px;*/
+    width: 123px;
+	padding: 5px;
+}
+
+div.controllo_elenco{
+	/*width:20px;
+	float:left;*/
+    width: 10px;
+	float: left;
+	margin: 0 10px 0 10px;
+}
+
+div.controllo_elenco input[type='image']{
+	width:15px;
+}
+
+
+/** * Ambientazione/Regolamento */
+div.user_ambientazione, div.elementi_elenco div.elementi_elenco, td.casella_titolo div.elementi_elenco{
+	text-align:center;
+	padding:5px;
+    font-size:11px;
+
+}
+
+
+
+
+div.user_regolamento, div.user_documenti div.elementi_elenco div.servizi_abilita, td.casella_titolo div.elementi_elenco{
+	text-align:center;
+	padding:5px;
+    font-size:11px;
+
+}
+
+
+
+td.casella_titolo, div.elementi_elenco div.servizi_abilita, td.casella_titolo div.elementi_elenco{
+	font-size:14px;
+	font-weight:bolder;
+	padding:2px 0 2px 10px;
+	font-size: 13px;
+    text-align: left;
+    padding: 5px 5px 5px 20px;
+    background-color: #BDB9DE;
+    border: dotted 1px #5a2769;
+}
+
+
+
+
+div.user_regolamento, div.user_documenti, td.casella_titolo div.elementi_elenco div.servizi_abilita, td.casella_titolo div.elementi_elenco {
+	font-size:14px;
+	font-weight:bolder;
+	padding:2px 0 2px 10px;
+}
+
+
+
+
+/** * Generico per elenchi, bacheche, regolamento, ambientazione etc */
+div.capitolo_elenco{
+	padding:5px 5px 5px 20px;
+}
+
+div.capitolo_forum{
+	padding:5px 5px 5px 20px;
+	font-weight:bolder;
+	text-align:left;
+	font-size:13px;
+	background-color:#BDB9DE;
+	border:dotted 1px #5a2769;	
+}
+
+div.elementi_elenco{
+	min-height:25px;
+	font-size:12px;
+}
+
+td.casella_elemento{
+	font-size:12px;
+	background-color:#F4F5F5;
+}
+
+
+td.casella_elemento_forum{
+	font-size:12px;
+	background-color:#F4F5F5;
+}
+
+td.casella_elemento_forum:hover{
+	transition: all 0.3s ease 0s;
+	background-color: #e5e5eb;
+}
+
+
+div.controllo_elenco input[type='image']{
+	height:15px;
+	width:15px;
+	display:block;
+	margin: 2px 5px;
+}
+
+
+div.elementi_elenco a{
+	font-weight:bolder;
+	transition: all 0.8s ease 0s;
+}
+
+
+div.elementi_elenco a:hover{
+	text-decoration:none;
+	transition: all 0.8s ease 0s;
+}
+
+
+
+/** * Stile tabelle nei moduli di gestione */
+div.elenco_record_gestione table{
+	width:95%;
+	margin:10px auto;
+}
+
+
+/** * Accorgimenti Layout */
+
+/** * Allineamento verticale delle colonne 
+*/
+#framecontentLeft, #framecontentRight { display:table; }
+
+/** * margine delle colonne */
+div.innertube{
+	margin:00px;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+div.pagina_quest_info{
+	margin: 5px auto;
+	padding: 10px;
+	width: 180px;
+	height: 160pt;
+	background-color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.9);
+	border: solid 1px #444;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	overflow: auto;
+
+}
+
+
+/** * Descrizione Lavori */
+
+div.elementi_elenco_descrizionelavori{
+	padding:27px;
+	text-align:center;
+}
+
+div.elementi_elenco_descrizione{
+	font-size:12px;
+	background-color:#BDB4C9 ; 
+	
+}
+
+td.casella_elemento_descrizione{
+	padding-bottom:20px;
+	text-align:justify;
+
+}
+
+td.casella_elemento_img_lavori{
+	padding-right:20px;
+}
+
+
+td.casella_titolo_descrizione{
+	background-color: #BDB4C9;
+	
+}
+
+td.casella_controlli_lavori{
+	
+	text-align: center;
+	background-color: #E5E5EB
+	
+}
+
+/** * Anagrafe */
+
+div.titoli_elenco-anagrafe{
+	font-size: 13px;
+  	font-weight: bolder;
+  	padding-top: 1px;
+  	width: 300px;
+}
+
+
+td.casella_elemento_anagrafe{
+	font-size: 15px;
+	/*padding: 0px 110px 0px 110px;*/
+	border: 1px dotted #5F20A3;
+	margin-right: 50px;
+}
+
+div.elementi_elenco_anagrafe{
+	font-size:13px;
+	padding: 0px 10px 0px 10px;
+	width: 300px;
+		
+}
+
+td.casella_titolo_anagrafe {
+	font-size: 14px;
+	font-weight: bolder;
+	padding: 2px 0 2px 10px;
+	background-color: #B8A7CC;
+	border: 1px dotted;
+	}
+
+
+/** * Titolo di gestione
+*/
+
+div.page_title_gestione{
+	/*font-size:46px;
+	font-weight:bolder;
+	border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 4px;
+    margin-top:0;*/
+	height: 165px;
+	margin-bottom: 15px;
+	background-image: url(/themes/advanced/imgs/gestione.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/** * Titolo di documenti
+*/
+div.page_title_documenti {
+	height: 165px;
+	background-image: url(/themes/advanced/imgs/documenti.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/** * Titolo di utility
+*/
+div.page_title_utility {
+	height: 165px;
+	background-image: url(/themes/advanced/imgs/utility.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/** * Titolo del Forum
+*/
+div.page_title_forum_new{
+	/*font-size:46px;
+	font-weight:bolder;
+	border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 4px;
+    margin-top:0;*/
+	height: 165px;
+	background-image: url(imgs/forum.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/*NOME visibile*/
+
+div.nome_visibile{
+	text-align: center;
+	font-size: 17px;
+	margin-top: 5px;
+	font-style: oblique;
+	background-image: url(imgs/divisorio-nome.png);
+	background-repeat: no-repeat;
+	background-position: center;font-weight: bolder;
+	color: #5D5789;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #897ECE;	
+}
+
+/*NOTE*/
+
+div.controllo_elenco_nota{
+	width:18px;
+	margin: auto;
+}
+
+
+/** * Titolo di PRESENTI
+*/
+div.page_title_presenti_B{
+	font-size: 14px;
+   	font-weight: bold;
+	height: 20px;
+   	text-transform: uppercase;
+   	text-align: center;
+  	margin-left: auto ;
+  	margin-right: auto ;
+	background-image: url(imgs/title_presenti.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+}
+
+/** * Titolo di NOVITA'
+*/
+div.page_title_novita{
+	font-size: 14px;
+   	font-weight: bold;
+	height: 20px;
+   	text-transform: uppercase;
+   	text-align: center;
+  	margin-left: auto ;
+  	margin-right: auto ;
+	background-image: url(imgs/title_novita.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+
+/** * NUOVO CSM PER ARTICOLI REGOLAMENTO AMBIENTAZIONE
+*/
+
+
+td.casella_titolo_regolamento{
+	font-size:14px;
+	font-weight:bolder;
+	/*padding:2px 0 2px 10px;*/
+}
+
+
+div.elementi_elenco_titolo{
+	text-align: left;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: 5px 0px 5px 0;
+    padding: 5px;
+    color: #FFF;
+    background-image: url(imgs/divisorio-reg.png);
+    background-position: center;
+}
+
+
+div.elementi_elenco_articolo{
+	font-size: 12px;
+    /* color: #5f20a3; */
+    text-align: right;
+    text-shadow: 1px 1px 1px #897ECE;
+    /* width: 5px; */
+    padding: 5px;
+    color: #FFF;
+    background-image: url(imgs/divisorio-reg.png);
+    /* background-position: center; */
+}
+
+
+td.casella_elemento_testo{
+	font-size:12px;
+	font-weight: normal;
+}
+
+div.elementi_elenco_testo{
+	text-align:justify;    
+    font-size: 12px;
+	padding: 5px;
+}
+
+div.elementi_elenco_immaginerazza{
+	border-top: 1px dashed #5f20a3;
+	padding-top: 20px;
+}
+
+
+div.status_bancario{
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px #897ECE;
+    margin: 20px 0 20px 0;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    top: -13px;
+    background-color: #bdbdcf;
+    border: 1px solid #6f6d7a;
+    padding: 10px;
+}
+
+
+
+/*BANCA*/
+
+
+
+td.banca_tabella{
+	padding: 5px;
+}
+
+textarea.banca_tabella{
+	padding: 5px;
+}
+    
+	
+
+/*BOTTONE BANCA*/
+
+
+.fade-button {
+    background: #b8a7cc;
+    color: #5a2769;
+    font-size: 12px;
+    padding: 5px 20px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.fade-button:hover {
+  background: #5a2769;
+  color: #FFF;
+
+}
+
+/*bottoni torna indietro*/
+
+td.link_back_button a, div.link_back_button a {
+    font-size: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+    text-shadow: 1px 1px 1px #897ECE;
+	}
+
+
+td.link_back_button a:hover, div.link_back_button a:hover {
+    text-shadow: 1px 1px 1px #f4f5f5;
+}
+
+td.link_back_button_red a{
+    font-size: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+    text-shadow: 1px 1px 1px #d06f6f;
+	}
+	
+td.link_back_button red a:hover{
+    text-shadow: 1px 1px 1px #e91e1ec7;
+}

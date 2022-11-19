@@ -1,0 +1,379 @@
+/** * Skin Advanced
+	* Il presente files regola gli stili CSS della homepage
+	* @author Blancks
+*/
+
+
+/** * STILI DEI CONTENUTI DEL SITO */
+
+/** * Titolo del sito
+*/
+h1{
+	margin:0;
+	padding:20px 0 0 40px;
+	font-size:70px;
+	font-family:Myriad Pro,Myriad Web Pro Regular,Lucida Grande,Geneva,Trebuchet MS,sans-serif;
+    position: absolute;
+    width: 440px;
+}
+
+/** * Stile del link sul titolo */
+h1 a, h1 a:visited, h1 a:hover{
+	color:transparent;
+	text-decoration:none;
+}
+
+
+/** * Sottotitolo
+*/
+div.subtitle{
+	margin-left:78px;
+	color:#666;
+	font-family:Verdana,Sans; 
+	font-size:12px; 
+}
+
+/** * Stili del form di login
+*/
+div.login_form{
+	float:right;
+	width:140px;
+	padding:10px;
+	margin-top:20px;
+    margin-right:280px;
+}
+
+/** * stile che ingloba i gruppi label/input
+*/
+div.login_form div{
+	text-align:left;
+	margin-bottom:5px;
+}
+
+/** * Stile per le label dei form
+*/
+span.form_label{
+	text-align:center;
+	font-weight:bolder; 
+}
+
+div.login_form input{
+	color: #b6c7d5 !important;
+	border: 1px solid #041328;
+	background-color: transparent;
+	display: block ;
+	/*TOK: width:211px;
+    height:19px;
+	margin:1px;*/
+    width:203px;
+    height:17px;
+	margin:1px;
+    margin-top:-3px;
+    margin-left:6px;
+    margin-bottom: 11px;
+}
+
+@-webkit-keyframes autofill {
+        to {
+            color: #b6c7d5;
+            background: transparent;
+            border: 1px solid #041328;
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-animation-name: autofill;
+        -webkit-animation-fill-mode: both;
+    }
+
+div.login_form_recupero input{
+	color: #b6c7d5;
+	border: 1px solid #041328;
+    background-color: #7b859f; opacity: 0.4;/*#1D3A57*/
+	/*background-image: url("imgs/backgroundrecupero.png");*/
+    background-size: 263px 25px;
+	display: block ;
+	width:211px;
+    height:19px;
+	text-align: left;
+    margin-left: 25%;
+}
+
+/** * Stile per il bottone del login
+*/
+div.login_form input[type='submit']{
+	background: url("imgs/entra.png") no-repeat;
+    background-size: 71px 20px;
+	display:block;
+	float:left;
+	width:73px;
+    height: 22px;
+    float: right;
+    margin-right: -75px;
+    margin-top:3px;
+}
+
+div.login_form_recupero input[type='submit']{
+	background: url("imgs/invia.png") no-repeat;
+    opacity: 1;
+    background-size: 71px 20px;
+	display:block;
+	float:left;
+	width:73px;
+    height: 22px;
+    margin-left: 43%;
+    margin-top:3px;
+}
+
+
+/** * Contenuti principali della pagina
+*/
+
+/** * Titolo della sezione */
+h2{
+	font-size:25px;
+	font-weight:normal;
+	margin:0;
+    margin-top:10px; /*aggiunto io*/
+	padding-bottom:4px;
+}
+
+/** * Contenuti testuali */
+div.content_body p{
+	font-size:13px;
+	padding:0 10px;
+}
+
+
+div.content_body a{
+	color:#B6C7D5; /*#999;*/
+	text-decoration:underline;
+}
+
+
+
+/** * Menù di navigazione
+*/
+div.sidecontent ul{
+	margin:20px 0 0 10px;
+	padding:20px 10px 20px 10px;
+	
+	background-color:none;
+	
+	list-style-type:none;
+	
+	-moz-border-radius:5px;		/* Bordi arrotondati */
+	-webkit-border-radius:5px;
+	-khtml-border-radius: 5px;
+	border-radius:5px;
+}
+
+/** * Contenitore delle voci nel menù 
+*/
+div.sidecontent ul li{
+	margin-bottom:5px;
+}
+
+/** * Link voce menù 
+*/
+div.sidecontent ul li a, div.sidecontent ul li a:visited{
+	float: left;
+    margin-top:10px;
+	margin-left: 3px;
+	color:#947455;
+	text-decoration:none;
+	display:block;
+	font-size:17px;
+	padding:2px;
+	background:none;
+}
+
+/** * Link voce menù al passaggio del mouse
+*/
+div.sidecontent ul li a:hover{
+	background-color: none;
+	color:#444;
+}
+
+
+/** Stile generico contenitore per altri contenuti nella sidebar 
+*/
+div.side_modules{
+	margin:10px 0 0 10px;
+	background-color:#b9b9b9;
+	font-color:#333;
+	padding:10px;
+	text-align:center;
+	
+	-moz-border-radius:5px;		/* Bordi arrotondati */
+	-webkit-border-radius:5px;
+	-khtml-border-radius: 5px;
+	border-radius:5px;
+}
+
+div.side_modules .form_label{font-size:10px; margin-right:2px;}
+
+
+/** * Tabella statistiche */
+table.statistics{
+	text-align:right;
+	margin-top:10px;
+	font-size:10px;
+}
+
+table.statistics td{padding-right:5px;}
+
+/** * Stile di colorazione per definire le righe pari */
+table.statistics tr.pair{
+	background-color:#c9c9c9;
+}
+
+/** * Stile per definire il titolo del parametro statistico */
+table.statistics td.label{
+	font-weight:bolder;
+	text-align:left;
+	padding:2px;
+}
+
+
+
+/** * Recupero password */
+div.pass_rec{
+	margin-top:10px;
+}
+
+input#passrecovery{
+	width:261px;
+    height: 23px;
+}
+
+div.pass_rec input[type='submit']{margin-top:3px;}
+
+
+
+/** * Footer info --> position, bottom e width fissano il footer in fondo al sito */
+div#footer div{
+	background-color: none;
+	padding:5px 0 3px 0;
+ }
+
+div#footer p{
+    font-size:10px;
+    margin-bottom:0px; /*prima era margin:0*/
+    padding:0 15px 2px 15px;
+    text-align:center;
+    /*position: fixed;
+    bottom: 0px; 
+    width: 100%;*/
+	
+}
+
+
+
+
+/** * LAYOUT SITO */
+
+/** * Struttura contenitore di tutto il sito 
+*/
+div#main{
+	height:100%;
+	width:100%;
+	background: none;
+	text-align:center;
+}
+
+
+/** * Larghezza della struttura del sito
+*/
+div#site_width{
+	margin:0 auto;
+	width:1008px;
+	text-align:left;
+    /*margin-left:10px; --> sposta il box centrale a sinistra*/
+}
+
+/** * Header
+*/
+div#header{
+	height:0px;
+}
+
+
+/** * Corpo contenuti della pagina
+*/
+div#content{
+	padding:0px 60px 6px 60px;
+	background:url("imgs/sfondoBOX2.png") left top no-repeat;
+    background-size: 80%;
+    margin-top: 0px; /*sposta il box in alto --> tok = -5px*/
+    margin-left: 33px;
+}
+
+/** * Struttura colonna di lato
+*/
+div.sidecontent{
+	margin-top: -27px;
+	margin-left: 106px;
+	width:700px;
+}
+
+/** * Struttura corpo contenuti pagina 
+*/
+div.content_body{
+	margin-left: 120px;
+	margin-top: 100px; /*tok = 80px*/
+	height: 370px; /*tok = 333px e 433px*/
+	width:560px;
+	overflow: auto;
+	padding:10px;
+	float:left;
+	
+}
+
+div.social{
+	float: left;
+    width: 60px;
+    height: 500px;
+    margin-top: 32px;
+    margin-left: 715px;
+    position: absolute;
+    display: block;
+}
+
+
+/** * pie di pagina
+*/
+
+div#footer{
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: -20px;
+    height:10px;
+    padding:44px 10px 0px 5px;
+    background:url("imgs/footer.png") no-repeat top center; 
+    background-size: 592px 75px;
+    color: #7b859f;
+}
+
+/** * pie di pagina TOK
+div#footer{
+    margin-left: 10px;
+    margin-top: -8px;
+    margin-bottom: 0px;
+    height:10px;
+    padding:44px 10px 0px 5px;
+    background:url("imgs/footer.png") no-repeat top center;
+    background-size: 592px 30px;
+    color: #7b859f;
+}
+*/
+
+/** *** Fine stili regolatori del layout *** */
