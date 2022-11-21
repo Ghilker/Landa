@@ -41,7 +41,7 @@ if((gdrcd_filter_get($_REQUEST['chat'])=='yes')&&(empty($_SESSION['login'])===FA
 
 				if ($PARAMETERS['mode']['dices']=='ON')
 				{
-					mt_srand((double)microtime()*1000000);
+					mt_srand((double)microtime()*10000);
 					$die = mt_rand(1,(int)$_POST['dice']);
 
 					$chat_dice_msg =  gdrcd_filter('in', $MESSAGE['chat']['commands']['use_skills']['die']).' '.gdrcd_filter('num',$die).',';
