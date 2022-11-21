@@ -65,9 +65,9 @@ if (empty ($PARAMETERS['names']['private_message']['image_file'])===FALSE){
 </div>
 
 <?php	if ($PARAMETERS['mode']['alert_pm_via_pagetitle']=='ON'){ ?>
-<script type="text/javascript">
-stop_blinking_title();
-</script>
+   <script type="text/javascript" src="/includes/changetitle.js">
+      parent.stop_blinking_title();
+   </script>
 <?php	} ?>
 
 <?php
