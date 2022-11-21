@@ -57,9 +57,7 @@
         $('#dialog-'+name).dialog({width: width, height: height});
     }
     </script>
-    <script type="text/javascript">
-        setTimeout("self.location.reload();", <?php echo (int)$_GET['ref'] * 10000; ?>);
-    </script>
+    <script type="text/javascript">setTimeout("self.location.href.reload();", <?php echo (int)$_GET['ref'] * 1000; ?>);</script>
 <!--</body>
 </html>-->
 <?php
