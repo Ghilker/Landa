@@ -14,7 +14,7 @@
 /*
  * Connettore al database MySql
  */
-function gdrcd_connect(): bool|mysqli
+function gdrcd_connect(): mysqli
 {
 	static $db_link	= false;
 
