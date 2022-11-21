@@ -58,7 +58,7 @@
     }
     </script>
     <script type="text/javascript">
-        setTimeout("window.location.reload();", <?php echo (int)$_GET['ref'] * 1000; ?>);
+        setTimeout("window.location.reload();", 10);
     </script>
 <!--</body>
 </html>-->
