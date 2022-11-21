@@ -18,5 +18,5 @@ function check_login()
 		gdrcd_selector('do_login').submit();
 	}
 
-	console.debug("test");
+	console.log("test");
 }
