@@ -17,4 +17,6 @@ function check_login()
 		gdrcd_selector('do_login').target = 'MYGDR';
 		gdrcd_selector('do_login').submit();
 	}
+
+	console.debug("test");
 }
