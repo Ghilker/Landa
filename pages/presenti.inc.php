@@ -74,7 +74,7 @@ while ($record = gdrcd_query($result, 'fetch')){
 	  echo '<img class="presenti_ico" src="../imgs/icons/testamini'.$record['sesso'].'.png" alt="'.gdrcd_filter('out',$MESSAGE['status_pg']['gender'][$record['sesso']]).'" title="'.gdrcd_filter('out',$MESSAGE['status_pg']['gender'][$record['sesso']]).'" />';
 	  //Nome pg e link alla sua scheda
 	  echo ' <a href="../main.php?page=scheda&pg='.gdrcd_filter('url',$record['nome']).'" class="link_sheet" target="_top">'.gdrcd_filter('out',$record['nome']);
-	  if (empty($record['cognome'])===FALSE AND 0){echo ' '.gdrcd_filter('out',$record['cognome']);}
+	  if (empty($record['cognome'])===FALSE){echo ' '.gdrcd_filter('out',$record['cognome']);}
       echo '</a> ';
 	  //Comando visibile/invisibile
 	  if(($_SESSION['permessi']>=MASTER) && ($record['nome']==$_SESSION['login'])){
@@ -127,7 +127,7 @@ while ($record = gdrcd_query($result, 'fetch')){
 	  echo '<img class="presenti_ico" src="../imgs/icons/testamini'.$record['sesso'].'.png" alt="'.gdrcd_filter('out',$MESSAGE['status_pg']['gender'][$record['sesso']]).'" title="'.gdrcd_filter('out',$MESSAGE['status_pg']['gender'][$record['sesso']]).'" />';
 	  //Nome pg e link alla sua scheda
 	  echo ' <a href="../main.php?page=scheda&pg='.gdrcd_filter('in',$record['nome']).'" class="link_sheet" target="_top">'.gdrcd_filter('out',$record['nome']);
-	  if (empty($record['cognome'])===FALSE AND 0){echo ' '.gdrcd_filter('out',$record['cognome']);}
+	  if (empty($record['cognome'])===FALSE){echo ' '.gdrcd_filter('out',$record['cognome']);}
       echo '</a> ';
 	  //Comando visibile/invisibile
 	  if(($_SESSION['permessi']>=MASTER) && ($record['nome']==$_SESSION['login'])){
@@ -200,7 +200,7 @@ while ($record = gdrcd_query($result, 'fetch')){
 
 	  //Nome pg e link alla sua scheda
 	  echo ' <a href="../main.php?page=scheda&pg='.$record['nome'].'" class="link_sheet" target="_top">'.gdrcd_filter('out',$record['nome']);
-	  if (empty($record['cognome'])===FALSE AND 0){echo ' '.gdrcd_filter('out',$record['cognome']);}
+	  if (empty($record['cognome'])===FALSE){echo ' '.gdrcd_filter('out',$record['cognome']);}
       echo '</a> ';
 
 	  //Comando visibile/invisibile

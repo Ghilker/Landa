@@ -21,14 +21,14 @@ if (isset($_REQUEST['pg'])===FALSE){
 		$bonus_oggetti = gdrcd_query("SELECT SUM(oggetto.bonus_car0) AS BO0, SUM(oggetto.bonus_car1) AS BO1, SUM(oggetto.bonus_car2) AS BO2, SUM(oggetto.bonus_car3) AS BO3, SUM(oggetto.bonus_car4) AS BO4, SUM(oggetto.bonus_car5) AS BO5 FROM oggetto JOIN clgpersonaggiooggetto ON oggetto.id_oggetto = clgpersonaggiooggetto.id_oggetto WHERE clgpersonaggiooggetto.nome = '".gdrcd_filter('in',$_REQUEST['pg'])."' AND clgpersonaggiooggetto.posizione > ".ZAINO."");
 
         /*Controllo esilio, se esiliato non visualizzo la scheda*/
-		if($record['esilio']>date('%Y-%m-%d')){
+		if($record['esilio']>date('d/m/Y H:M')){
            echo '<div class="warning">'.gdrcd_filter('out',$record['nome']).' '.gdrcd_filter('out',$record['cognome']).' '.gdrcd_filter('out',$MESSAGE['warning']['character_exiled']).' '.gdrcd_format_date($record['esilio']).' ('.$record['motivo_esilio'].' - '.$record['autore_esilio'].')</div>';
            if ($_SESSION['permessi']>=MASTER){?>
               <div class="panels_box"><div class="form_gioco">
               <form action="main.php?page=scheda_modifica&pg=<?php echo gdrcd_filter('url',$_REQUEST['pg']) ?>" method="post">
-			      <input type="hidden" value="<?php echo date('%Y'); ?>" name="year" />
-			      <input type="hidden" value="<?php echo date('%m'); ?>" name="month" />
-			      <input type="hidden" value="<?php echo date('%d'); ?>" name="day" />
+			      <input type="hidden" value="<?php echo date('Y'); ?>" name="year" />
+			      <input type="hidden" value="<?php echo date('m'); ?>" name="month" />
+			      <input type="hidden" value="<?php echo date('d'); ?>" name="day" />
 				  <input type="hidden" value="<?php gdrcd_filter('out',$MESSAGE['interface']['sheet']['modify_form']['unexile']); ?>" name="causale" />
 			      <input type="hidden" value="exile" name="op" />
 				  <div class="form_label">

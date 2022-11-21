@@ -19,7 +19,7 @@ if ($info['privata']==1) {
 	$allowance=FALSE;
 
     if ( (($info['proprietario']==gdrcd_capital_letter($_SESSION['login'])) || (strpos($_SESSION['gilda'], $info['proprietario'])!=FALSE) || (strpos($info['invitati'], gdrcd_capital_letter($_SESSION['login']))!=FALSE) ||
-	   (($PARAMETERS['mode']['spyprivaterooms']=='ON')&&($_SESSION['permessi']>ADMIN))) && ($info['scadenza']>date('%Y-%m-%d %H:%M:%S')) ) {$allowance=TRUE;}
+	   (($PARAMETERS['mode']['spyprivaterooms']=='ON')&&($_SESSION['permessi']>ADMIN))) && ($info['scadenza']>date('d/m/Y H:M')) ) {$allowance=TRUE;}
 
 
 } else {$allowance=TRUE;}

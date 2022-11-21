@@ -65,11 +65,11 @@ if (empty($record['nome'])===FALSE) { $nome_luogo=$record['nome']; }
 if($PARAMETERS['mode']['auto_meteo']=='ON'){
 
 /* Meteo */
-$ore=date("%H");
-$minuti=date("%M");
+$ore=date("H");
+$minuti=date("M");
 
-$mese=date("%m");
-$giorno=date("%j");
+$mese=date("m");
+$giorno=date("j");
 $caso=((floor($giorno/3))%2)+1;
 
 /*	* Bug FIX: corretta l'assegnazione della $minima
@@ -124,7 +124,7 @@ $meteo=$meteo_cond.""; //.Tempo();
 </div>
 <div class="sfondo">
 <div class="meteo_date">
-   <?php echo  date('%d').'/'.date('%m').'/'.(date('%Y')+$PARAMETERS['date']['offset']);?>
+   <?php echo  date('d').'/'.date('m').'/'.(date('Y')+$PARAMETERS['date']['offset']);?>
 </div>
 
 <div class="inline">
@@ -166,9 +166,9 @@ session_start();
 $_SESSION['oldH'] = 0;
 
 /* ora corrente */
-$currentH = date("%H");
+$currentH = date("H");
 /* giorno corrente, serve per generare il random seed */
-$giorno = date("%j");
+$giorno = date("j");
 
 /* Randomizza in base alle percentuali di incidenza. */
 $_SESSION['winds'] = array("Calma", "Bava di Vento", "Brezza Leggera", "Vento Moderato", "Vento Forte", "Burrasca", "Uragano");

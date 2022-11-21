@@ -15,7 +15,7 @@
             echo gdrcd_list('personaggi');
 
             // Controllo sui permessi per gli invii particolari
-            if($_SESSION['permessi'] >= GUILDMODERATOR) {
+            if($_SESSION['permessi'] >= CAPOGILDA) {
                 ?>
                 <div class="form_field">
                     <select name="multipli" required>

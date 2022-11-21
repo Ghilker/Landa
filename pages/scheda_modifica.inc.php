@@ -315,18 +315,18 @@ gdrcd_query("UPDATE personaggio SET cognome = '".gdrcd_filter('in',$_POST['modif
 			  <!-- Giorno -->
 			  <select name="day" class="day">
 				 <?php for($i=1; $i<=31; $i++){?>
-			     <option value="<?php echo $i;?>" <?php if(date('%d')==$i){echo 'selected';}?>><?php echo $i;?></option>
+			     <option value="<?php echo $i;?>" <?php if(date('d')==$i){echo 'selected';}?>><?php echo $i;?></option>
 				 <?php }//for ?>
 			  </select>
 			  <!-- Mese -->
 		      <select name="month" class="month">
 			     <?php for($i=1; $i<=12; $i++){?>
-			     <option value="<?php echo $i;?>" <?php if(date('%m')==$i){echo 'selected';}?>><?php echo $i;?></option>
+			     <option value="<?php echo $i;?>" <?php if(date('m')==$i){echo 'selected';}?>><?php echo $i;?></option>
 			     <?php }//for ?>
 			  </select>
 			  <!-- Anno -->
 			  <select name="year" class="year">
-			     <?php for($i=date('%Y'); $i<=date('%Y')+20; $i++){?>
+			     <?php for($i=date('Y'); $i<=date('Y')+20; $i++){?>
 			     <option value="<?php echo $i;?>"><?php echo $i;?></option>
 			     <?php }//for ?>
 			  </select>

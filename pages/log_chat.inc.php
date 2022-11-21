@@ -93,7 +93,7 @@ if (($_SESSION['permessi']<MASTER)||($PARAMETERS['mode']['spymessages']!='ON')){
 			  </select>
 			  <!-- Anno -->
 			  <select name="year_b" class="year">
-			     <?php for($i=2010; $i<=date('%Y')+20; $i++){?>
+			     <?php for($i=2010; $i<=date('Y')+20; $i++){?>
 			     <option value="<?php echo $i;?>"><?php echo $i;?></option>
 			     <?php }//for ?> 
 			  </select> - 
@@ -128,7 +128,7 @@ if (($_SESSION['permessi']<MASTER)||($PARAMETERS['mode']['spymessages']!='ON')){
 			  </select>
 			  <!-- Anno -->
 			  <select name="year_e" class="year">
-			     <?php for($i=2010; $i<=date('%Y')+20; $i++){?>
+			     <?php for($i=2010; $i<=date('Y')+20; $i++){?>
 			     <option value="<?php echo $i;?>"><?php echo $i;?></option>
 			     <?php }//for ?> 
 			  </select> - 

@@ -355,7 +355,7 @@ if ($_SESSION['permessi']<ADMIN){
 			  </select>
 			  <!-- Anno -->
 			  <select name="year" class="year">
-			     <?php for($i=date('%Y'); $i<=date('%Y')+20; $i++){?>
+			     <?php for($i=date('Y'); $i<=date('Y')+20; $i++){?>
 			     <option value="<?php echo $i;?>" <?php if($expiration[0]==$i){echo 'selected';}?>><?php echo $i;?></option>
 			     <?php }//for ?> 
 			  </select>

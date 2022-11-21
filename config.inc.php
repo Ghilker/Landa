@@ -725,4 +725,4 @@ IL CAMBIO PASSWORD PRIMA ERA QUI
         SUPERUSER: Gestore
         MODERATORE: Admin.
         MASTER: Master.
-        GUILDMODERATOR: Capogilda.*/
+        CAPOGILDA: Capogilda.*/

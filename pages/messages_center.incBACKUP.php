@@ -118,7 +118,7 @@ include_once('../header.inc.php');
  			    value="<?php echo gdrcd_filter('get',$_REQUEST['reply_dest']); ?>" />
          </div>
 <?php
-     if($_SESSION['permessi']>=GUILDMODERATOR)
+     if($_SESSION['permessi']>=CAPOGILDA)
     {
  ?>
          <div class="form_field">

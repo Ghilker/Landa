@@ -97,7 +97,7 @@ if((isset($_POST['op'])===TRUE)&&($_POST['op']=='bonifico')){
 	* Un grazie a Dyrr per la segnalazione.
 	* @author Blancks
 */
-if((isset($_POST['op'])===TRUE)&&($_POST['op']=='incassa')&&($ultimo != date("%Y-%m-%d"))){ 
+if((isset($_POST['op'])===TRUE)&&($_POST['op']=='incassa')&&($ultimo != date("d/m/Y H:M"))){ 
 	     echo '<div class="warning">'.gdrcd_filter('out',$MESSAGE['interface']['bank']['done']).'</div>';
 	     gdrcd_query("UPDATE personaggio SET banca = banca + ".$stipendio.", ultimo_stipendio = NOW() WHERE nome = '".$_SESSION['login']."' AND ultimo_stipendio < NOW() LIMIT 1");
 
@@ -228,7 +228,7 @@ if((isset($_POST['op'])===TRUE)&&($_POST['op']=='incassa')&&($ultimo != date("%Y
 	<!-- Stipendio -->
 	
 	<?php
-	   if ($ultimo >= date("%Y-%m-%d")){ echo  gdrcd_filter('out',$MESSAGE['interface']['bank']['credit_no']);}
+	   if ($ultimo >= date("d/m/Y H:M")){ echo  gdrcd_filter('out',$MESSAGE['interface']['bank']['credit_no']);}
 	   else if ($stipendio > 0) {?>
 	<div class="form_gioco">
 	<form 
