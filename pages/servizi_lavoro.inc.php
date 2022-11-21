@@ -2,7 +2,7 @@
 $disoccupato=1;
 $lavoro=-1;
 $jobsn=0;
-$ultimolavoro=strftime("%Y-%m-%d");
+$ultimolavoro=date("%Y-%m-%d");
 $query="SELECT clgpersonaggioruolo.id_ruolo, clgpersonaggioruolo.scadenza, ruolo.gilda FROM clgpersonaggioruolo LEFT JOIN ruolo ON clgpersonaggioruolo.id_ruolo = ruolo.id_ruolo WHERE clgpersonaggioruolo.personaggio = '".$_SESSION['login']."' ORDER BY ruolo.gilda";
 $result=gdrcd_query($query, 'result');
 
@@ -55,7 +55,7 @@ if(isset($_POST['op'])===FALSE){
 			    <div class="controllo_elenco">
 				<form method="post"
 			          action="main.php?page=servizi_lavoro">
-			    <?php if ($ultimolavoro <= strftime("%Y-%m-%d")){ 
+			    <?php if ($ultimolavoro <= date("%Y-%m-%d")){ 
 				         if($lavoro==$row['id_ruolo']){ ?>
 				  <input type="submit"
     					 value="<?php echo gdrcd_filter('out',$MESSAGE['interface']['job']['submit']['quit']); ?>"/>

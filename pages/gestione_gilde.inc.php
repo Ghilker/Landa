@@ -283,8 +283,7 @@ if ($_SESSION['permessi']<ADMIN){
     </div>
 
     <div class="page_body">
-       <?php  if (0){$id_gilda_padre=-1;}
-	          else {$id_gilda_padre=gdrcd_filter('get',$_REQUEST['id_record']);} ?>
+       <?php  $id_gilda_padre=gdrcd_filter('get',$_REQUEST['id_record']); ?>
        <!-- Nuovo ruolo -->
        <form action="main.php?page=gestione_gilde"
 	         method="post"

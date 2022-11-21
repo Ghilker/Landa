@@ -243,7 +243,7 @@ $totaleresults = gdrcd_query(gdrcd_query($sqlMessages, 'result'), 'num_rows');
     </a>
 </div>
 <script type="text/javascript">
-    /**
+    /*
      * Metodo per la creazione della lista dei messaggi da eliminare con checkbox
      * Quando viene inviata l'operazione sul submit, vengono presi tutti i checkbox message_check selezionati
      * e vengono copiati sotto al form multiple_delete e solo poi si passa alla cancellazione

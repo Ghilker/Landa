@@ -31,7 +31,7 @@ if(isset($_REQUEST['id_gilda'])===FALSE){
 	<tr><td colspan="3">
 	<div class="capitolo_elenco">
 	  <?php 
-			/** * Ometto la dicitura "Allineamento:" così che il campo consenta più libertà di modifica.
+			/* * Ometto la dicitura "Allineamento:" cosï¿½ che il campo consenta piï¿½ libertï¿½ di modifica.
  				* @author Blancks
 			*/
 			#echo gdrcd_filter('out',$PARAMETERS['names']['guild_name']['type']).": "; 

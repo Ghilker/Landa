@@ -1,4 +1,4 @@
-/** * La funzione permette di aprire la land in popup direttamente dal login
+/* * La funzione permette di aprire la land in popup direttamente dal login
 	* @author Blancks
 */
 function check_login()

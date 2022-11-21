@@ -1,15 +1,15 @@
-/** * Libreria javascript di base
+/* * Libreria javascript di base
 	* @author Blancks
 */
 
-/** * Funzione selettore rapido per JS
+/* * Funzione selettore rapido per JS
 	* @author Blancks
 */
 function gdrcd_selector(id){
 	return document.getElementById(id);
 }
 
-/** * Gestore del fade in/out
+/* * Gestore del fade in/out
 	* @author Blancks
 */
 function start_fade(id, op)

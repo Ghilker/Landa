@@ -1,5 +1,5 @@
 <?php
-/** * Questo files contiene i dettagli per l'upgrade del database della vecchia versione alla nuova.
+/* * Questo files contiene i dettagli per l'upgrade del database della vecchia versione alla nuova.
 	* Il modulo è riutilizzabile anche per il futuro, i campi vengono aggiunti solo se non ci sono nel db
 	* @author Blancks
 */
@@ -19,7 +19,7 @@
 			$updating_queryes = array();
 			$updating_password = false;
 	
-			/** * Elenco dei campi da aggiornare
+			/* * Elenco dei campi da aggiornare
 				* @author Blancks
 			*/
 			$tables = array();
@@ -51,7 +51,7 @@
 			}
 			
 			
-			/** * Controllo se da configurazione è abilitato l'encript delle password e se le password non sono criptate nel db
+			/* * Controllo se da configurazione è abilitato l'encript delle password e se le password non sono criptate nel db
 				* @author Blancks
 			*/
 			if ($PARAMETERS['mode']['encriptpassword']=='ON')

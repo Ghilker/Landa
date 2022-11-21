@@ -1,5 +1,5 @@
 <?php
-  	/***
+  	/**
   	* Begin patch by eLDiabolo ed Eriannen
   	*	01/09/2012
 	*   	
@@ -16,7 +16,7 @@
 
 
 <?php /*HELP: */
-	 /***
+	 /**
   	* End patch by eLDiabolo ed Eriannen
   	**/
 
@@ -29,7 +29,7 @@
 
         <div class="panels_box">
         	<?php
-					/**
+					/*
 					*	Patch by eLDiabolo ed Eriannen
 					* 01/09/2012
 					* se non si vuol utilizzare nessuna icona accanto ad ogni titolo di news per questo box

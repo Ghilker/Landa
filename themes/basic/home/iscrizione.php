@@ -6,7 +6,7 @@
 
 
 
-<?php /**** Fase 0 ****/
+<?php /*** Fase 0 ****/
 if (isset($_POST['fase'])===FALSE){ ?>
 
 <div class="panels_box">
@@ -40,7 +40,7 @@ if (isset($_POST['fase'])===FALSE){ ?>
 
 
 
-<?php /**** Fase 1 ****/
+<?php /*** Fase 1 ****/
 if (gdrcd_filter('get',$_POST['fase'])==1){ ?>
 
 <div class="panels_box">
@@ -205,7 +205,7 @@ if (gdrcd_filter('get',$_POST['fase'])==1){ ?>
 
 
 
-<?php /***** Fase 2 *****/
+<?php /**** Fase 2 *****/
 if (gdrcd_filter('get',$_POST['fase'])==2){ 
 	
 $ok=TRUE;
@@ -356,7 +356,7 @@ if($_POST['genere']=='m'){ $r_gen='m'; } else { $r_gen='f'; }
 
 
 
-<?php /***** Fase 3 *****/
+<?php /**** Fase 3 *****/
 if ($_POST['fase']==3){ 
 
 if ((gdrcd_filter('num',$_POST['car0'])+gdrcd_filter('num',$_POST['car1'])+gdrcd_filter('num',$_POST['car2'])+gdrcd_filter('num',$_POST['car3'])+gdrcd_filter('num',$_POST['car4'])+gdrcd_filter('num',$_POST['car5']))!=$PARAMETERS['settings']['cars_sum']){
@@ -365,13 +365,13 @@ if ((gdrcd_filter('num',$_POST['car0'])+gdrcd_filter('num',$_POST['car1'])+gdrcd
 
 $pass=gdrcd_genera_pass();
 
-/** * Se deve scattare l'avviso di cambio password fin dall'iscrizione non segno cambiamenti
+/* * Se deve scattare l'avviso di cambio password fin dall'iscrizione non segno cambiamenti
 	* @author Blancks
 */
 $lastpasschange_field = "";
 $lastpasschange_value = "";
 
-/** * Se NON deve scattare l'avviso di cambio password fin dall'iscrizione aggiorno la data di ultimo cambio ad ora
+/* * Se NON deve scattare l'avviso di cambio password fin dall'iscrizione aggiorno la data di ultimo cambio ad ora
 	* @author Blancks
 */	
 if ($PARAMETERS['mode']['alert_password_change']=='ON' && $PARAMETERS['settings']['alert_password_change']['alert_from_signup']=='OFF')

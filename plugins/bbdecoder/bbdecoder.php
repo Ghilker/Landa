@@ -1,6 +1,6 @@
 <?php ############################## File Description #######################################
 
-/**		Board Bullettin Decoder.
+/*		Board Bullettin Decoder.
 	*	Il file contiene una funzione di implementazione per il BBCode; pone al primo posto
 	*	sicurezza e flessibilità di formattazione mediante le BBTags.
 	*
@@ -14,7 +14,7 @@
 
 ##################################### File Functions ########################################
 
-/** 	Funzione di formattazione di tutte le bbtags.
+/* 	Funzione di formattazione di tutte le bbtags.
 	*	Il parametro opzionale va settato su "true" se la stringa che si sta passando alla
 	*	funzione ha già subito un escape con htmlentities() o htmlspecialchars().
 	*
@@ -82,7 +82,7 @@ function bbdecoder($str, $escaped = false)
 }
 
 
-/** 	Funzione di formattazione basilare del testo.
+/* 	Funzione di formattazione basilare del testo.
 	*	Se la si vuol applicare singolarmente bisogna passare la stringa prima ad un htmlentities.
 	*
 	*	Features:
@@ -183,7 +183,7 @@ function baseformat($str)
 
 
 
-/** 	Funzione per includere immagini da link.
+/* 	Funzione per includere immagini da link.
 	*	Può essere richiamata anche separatamente, ma prima bisogna filtrare la stringa con htmlentities().
 	*
 	*	Features:

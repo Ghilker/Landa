@@ -138,7 +138,7 @@ if ($_SESSION['permessi']<ADMIN){
 
 		  
 <!--
-		/**	* Aggiunta delle funzionalità per le mappe
+		/*	* Aggiunta delle funzionalità per le mappe
 			* @author Blancks
 		*/
 

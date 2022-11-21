@@ -38,7 +38,7 @@ if(isset($_POST['op'])===FALSE){ ?>
 		  <select name="id">
 		  <?php 
 		   while ($row=gdrcd_query($result, 'fetch')){ ?>
-              <?php if($row['scadenza']>strftime('%Y-%m-%d %H:%M:%S')){ ?>
+              <?php if($row['scadenza']>date('%Y-%m-%d %H:%M:%S')){ ?>
               <option value="" disabled>
                  <?php echo gdrcd_filter('out',$row['luogo'].', '.$row['nome']).' ('.$row['proprietario'].', '.gdrcd_format_time($row['scadenza']).') '; ?>
 			  </option>
@@ -94,7 +94,7 @@ if(isset($_POST['op'])===FALSE){ ?>
 		    gdrcd_query("UPDATE personaggio SET soldi = soldi - ".gdrcd_filter('num',$ore*$id[1])." WHERE nome = '".$_SESSION['login']."' LIMIT 1");
 
 
-			/** * Al fine di conservare i log delle stanze private elimino la query che svuota le azioni mandate nella chat precedente
+			/* * Al fine di conservare i log delle stanze private elimino la query che svuota le azioni mandate nella chat precedente
 				* @author Blancks
 			*/
 			#gdrcd_query("DELETE FROM chat WHERE stanza = ".gdrcd_filter('num',$id[0])."");

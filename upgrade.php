@@ -15,14 +15,14 @@ if (!isset($updating_queryes[0]) || empty($updating_queryes[0]))
 }else
 {
 
-	/** * Aggiornamento delle tabelle
+	/* * Aggiornamento delle tabelle
 		* @author Blancks
 	*/
 	foreach ($updating_queryes as $query)
 			gdrcd_query($query);
 			
 	
-	/** * Aggiornamento delle password
+	/* * Aggiornamento delle password
 		* @author Blancks
 	*/
 	if ($PARAMETERS['mode']['encriptpassword']=='ON')

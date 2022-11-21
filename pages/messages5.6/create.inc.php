@@ -25,7 +25,7 @@
                         <option value="presenti">
                             <?php echo gdrcd_filter('out', $MESSAGE['interface']['messages']['multiple']['options']['online']); ?>
                         </option>
-                        <?php if($_SESSION['permessi'] >= MODERATOR) { ?>
+                        <?php if($_SESSION['permessi'] >= MODERATORE) { ?>
                             <option value="broadcast">
                                 <?php echo gdrcd_filter('out', $MESSAGE['interface']['messages']['multiple']['options']['all']); ?>
                             </option>
@@ -61,7 +61,7 @@
         </div>
         <div class='form_field'>
  	  	    <textarea type="textbox" name="testo" required><?php
-                /**    * Fix per evitare le parentesi quadre vuote quando si compone un nuovo messaggio
+                /*    * Fix per evitare le parentesi quadre vuote quando si compone un nuovo messaggio
                  * @author Blancks
                  */
                 if(isset($_POST['testo'])) {

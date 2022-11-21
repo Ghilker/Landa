@@ -24,7 +24,7 @@ $iscriz=$iscriz['0'];
 if($_POST['op']=='new'){
 	if (($email==gdrcd_filter_email($_POST['email']))&&
 		($pass==gdrcd_encript($_POST['new_pass']))&&
-		($iscriz>=strftime('%Y-%m-%d'))&&
+		($iscriz>=date('%Y-%m-%d'))&&
 		(empty($_POST['new_name'])===FALSE)){
 
 		$query="SELECT nome FROM personaggio WHERE nome ='".gdrcd_filter('in',$_POST['new_name'])."'";
@@ -135,7 +135,7 @@ if(gdrcd_filter('get',$_POST['op'])=='force'){
 
 <?php /*Visualizzazione di base*/
 if(isset($_POST['op'])===FALSE){  
-if ($iscriz>=strftime('%Y-%m-%d')){ ?>
+if ($iscriz>=date('%Y-%m-%d')){ ?>
 <div class="panels_box"> 
 
   <div class="form_gioco">

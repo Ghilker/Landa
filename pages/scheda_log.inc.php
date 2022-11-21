@@ -204,7 +204,7 @@ if (gdrcd_query($result, 'num_rows')>0){
 
 
 <?php
-/********* CHIUSURA SCHEDA **********/
+/******** CHIUSURA SCHEDA **********/
 	}//else
 	gdrcd_query($result, 'free');
 }//else

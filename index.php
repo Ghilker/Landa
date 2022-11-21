@@ -11,14 +11,14 @@ require 'protezione.php';
 
 
 
-/** * Definizione pagina da visualizzare */
+/* * Definizione pagina da visualizzare */
 if (!empty($_GET['page']))
 		$page = gdrcd_filter('include',$_GET['page']);
 else
 		$page = 'index';
 		
 		
-/** * Definizione dell'eventuale contenuto interno
+/* * Definizione dell'eventuale contenuto interno
 	* Utile se si vuol mantenere la struttura della homepage quando si aprono i link
 */
 if (!empty($_GET['content']))
@@ -27,15 +27,15 @@ else
 		$content = 'home';
 
 
-/** * Algoritmi di base della homepage
+/* * Algoritmi di base della homepage
 */
 
-	/** * Conteggio utenti online
+	/* * Conteggio utenti online
 	*/
 	$users = gdrcd_query("SELECT COUNT(nome) AS online FROM personaggio WHERE ora_entrata > ora_uscita AND DATE_ADD(ultimo_refresh, INTERVAL 4 MINUTE) > NOW()");
 	
 	
-	/** * Procedura di recupero Password
+	/* * Procedura di recupero Password
 	*/
 	$RP_response = '';
 
@@ -65,7 +65,7 @@ else
 		}		
 	
 	}
-	/** * Fine Recupero Password */
+	/* * Fine Recupero Password */
 
 
 

@@ -29,7 +29,7 @@ else
 	   		/*Eseguo l'aggiornamento*/ 
 	   		gdrcd_query("DELETE FROM log WHERE DATE_SUB(NOW(), INTERVAL ".gdrcd_filter('num',$_POST['mesi'])." MONTH) > data_evento");
 	   
-	   		/**  * Ottimizziamo la tabella dopo averne svuotato i dati, è come se equivalesse ad una deframmentazione.
+	   		/*  * Ottimizziamo la tabella dopo averne svuotato i dati, è come se equivalesse ad una deframmentazione.
 			* @author Blancks
 			*/
 	   		gdrcd_query("OPTIMIZE TABLE log");

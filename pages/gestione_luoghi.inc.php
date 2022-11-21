@@ -132,7 +132,7 @@ if ($_SESSION['permessi']<ADMIN){
 		  </div>
 		
 			<!-- 
-				/** * Funzionalità che permette di sostituire il link testuale con un immagine
+				/* * Funzionalità che permette di sostituire il link testuale con un immagine
 					* @author Blancks
 				*/
 			-->
@@ -169,7 +169,7 @@ if ($_SESSION['permessi']<ADMIN){
 		  </div>
 		  
 		  <!-- 
-				/** * Funzionalità che permette di collegare il link ad un altra mappa
+				/* * Funzionalità che permette di collegare il link ad un altra mappa
 					* @author Blancks
 				*/
 			-->
@@ -355,7 +355,7 @@ if ($_SESSION['permessi']<ADMIN){
 			  </select>
 			  <!-- Anno -->
 			  <select name="year" class="year">
-			     <?php for($i=strftime('%Y'); $i<=strftime('%Y')+20; $i++){?>
+			     <?php for($i=date('%Y'); $i<=date('%Y')+20; $i++){?>
 			     <option value="<?php echo $i;?>" <?php if($expiration[0]==$i){echo 'selected';}?>><?php echo $i;?></option>
 			     <?php }//for ?> 
 			  </select>

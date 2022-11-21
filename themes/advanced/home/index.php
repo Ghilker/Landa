@@ -1,5 +1,5 @@
 <?php 
-/** * Skin Advanced
+/* * Skin Advanced
 	* Markup e procedure della homepage
 	* @author Blancks
 */
@@ -95,7 +95,7 @@
 	
 			<div>
 				<p><?php echo gdrcd_filter('out',$PARAMETERS['info']['site_name']), ' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['webm']), ': ', gdrcd_filter('out',$PARAMETERS['info']['webmaster_name']), ' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['dbadmin']),': ', gdrcd_filter('out', $PARAMETERS['info']['dbadmin_name']) ,' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['email']), ': <a href="mailto:', gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']), '">', gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']), '</a>.'; ?></p>
-				<p><?php echo $CREDITS, ' ', $LICENCE ?></p>
+				<p><?php echo CREDITS, ' ', LICENCE ?></p>
 			</div>
 			
 		</div>

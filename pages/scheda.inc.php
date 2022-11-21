@@ -3,7 +3,7 @@
 <?php /*HELP: E' possibile modificare la scheda agendo su scheda.css nel tema scelto, oppure sostituendo il codice che segue la voce "Scheda del personaggio"*/ ?>
 
 <?php
-/********* CARICAMENTO PERSONAGGIO ***********/
+/******** CARICAMENTO PERSONAGGIO ***********/
 //Se non e' stato specificato il nome del pg
 if (isset($_REQUEST['pg'])===FALSE){
     echo '<div class="error">'.gdrcd_filter('out',$MESSAGE['error']['unknown_character_sheet']).'</div>';
@@ -21,14 +21,14 @@ if (isset($_REQUEST['pg'])===FALSE){
 		$bonus_oggetti = gdrcd_query("SELECT SUM(oggetto.bonus_car0) AS BO0, SUM(oggetto.bonus_car1) AS BO1, SUM(oggetto.bonus_car2) AS BO2, SUM(oggetto.bonus_car3) AS BO3, SUM(oggetto.bonus_car4) AS BO4, SUM(oggetto.bonus_car5) AS BO5 FROM oggetto JOIN clgpersonaggiooggetto ON oggetto.id_oggetto = clgpersonaggiooggetto.id_oggetto WHERE clgpersonaggiooggetto.nome = '".gdrcd_filter('in',$_REQUEST['pg'])."' AND clgpersonaggiooggetto.posizione > ".ZAINO."");
 
         /*Controllo esilio, se esiliato non visualizzo la scheda*/
-		if($record['esilio']>strftime('%Y-%m-%d')){
+		if($record['esilio']>date('%Y-%m-%d')){
            echo '<div class="warning">'.gdrcd_filter('out',$record['nome']).' '.gdrcd_filter('out',$record['cognome']).' '.gdrcd_filter('out',$MESSAGE['warning']['character_exiled']).' '.gdrcd_format_date($record['esilio']).' ('.$record['motivo_esilio'].' - '.$record['autore_esilio'].')</div>';
            if ($_SESSION['permessi']>=MASTER){?>
               <div class="panels_box"><div class="form_gioco">
               <form action="main.php?page=scheda_modifica&pg=<?php echo gdrcd_filter('url',$_REQUEST['pg']) ?>" method="post">
-			      <input type="hidden" value="<?php echo strftime('%Y'); ?>" name="year" />
-			      <input type="hidden" value="<?php echo strftime('%m'); ?>" name="month" />
-			      <input type="hidden" value="<?php echo strftime('%d'); ?>" name="day" />
+			      <input type="hidden" value="<?php echo date('%Y'); ?>" name="year" />
+			      <input type="hidden" value="<?php echo date('%m'); ?>" name="month" />
+			      <input type="hidden" value="<?php echo date('%d'); ?>" name="day" />
 				  <input type="hidden" value="<?php gdrcd_filter('out',$MESSAGE['interface']['sheet']['modify_form']['unexile']); ?>" name="causale" />
 			      <input type="hidden" value="exile" name="op" />
 				  <div class="form_label">
@@ -103,7 +103,7 @@ if (isset($_REQUEST['op'])===FALSE){
 <div class="page_body">
 
 <?php
-/** * Controllo e avviso che è ora di cambiare password
+/* * Controllo e avviso che è ora di cambiare password
 	* @author Blancks
 */
 if ($PARAMETERS['mode']['alert_password_change']=='ON')
@@ -457,7 +457,7 @@ if ($PARAMETERS['mode']['alert_password_change']=='ON')
   <div class="body_box">
      <?php
 
-		/** * Html, bbcode o entrambi ?
+		/* * Html, bbcode o entrambi ?
 			* @author Blancks
 		*/
 		if ($PARAMETERS['mode']['user_bbcode'] == 'ON')
@@ -494,7 +494,7 @@ if ($PARAMETERS['mode']['alert_password_change']=='ON')
   <div class="body_box">
      <?php
 
-		/** * Html, bbcode o entrambi ?
+		/* * Html, bbcode o entrambi ?
 			* @author Blancks
 		*/
 		if ($PARAMETERS['mode']['user_bbcode'] == 'ON')
@@ -539,7 +539,7 @@ if ($PARAMETERS['mode']['alert_password_change']=='ON')
 <?php }//else
 
 }//else
-/********* CHIUSURA SCHEDA **********/
+/******** CHIUSURA SCHEDA **********/
 	}//else
 
 ?>
@@ -556,8 +556,13 @@ if ($PARAMETERS['mode']['alert_password_change']=='ON')
 ?>
 
 
-<object data="<?php echo $record['url_media']; ?>" type="<?php echo $PARAMETERS['settings']['audiotype']['.'.strtolower(end(explode('.', $record['url_media'])))]; ?>" autostart="true">
-		<embed src="<?php echo $record['url_media']; ?>" autostart="true" hidden="true" />
+<object data="<?php echo $record['url_media']; ?>" type="
+		<?php
+			$variable_to_pass = explode('.', $record['url_media']);
+			echo $PARAMETERS['settings']['audiotype']['.'.strtolower(end($variable_to_pass))]; 
+		?>
+	" autostart="true">
+	<embed src="<?php echo $record['url_media']; ?>" autostart="true" hidden="true" />
 </object>
 
 <!--[if IE9]>

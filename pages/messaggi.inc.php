@@ -101,8 +101,13 @@ parent.blink_title("(<?php echo $MESSAGE['interface']['forums']['topic']['new_po
 ?>
 
 
-<object data="../sounds/<?php echo $PARAMETERS['settings']['audio_new_messagges']; ?>" type="<?php echo $PARAMETERS['settings']['audiotype']['.'.strtolower(end(explode('.', $PARAMETERS['settings']['audio_new_messagges'])))]; ?>" autostart="true" style="width:1px; height:0px;">
-		<embed src="../sounds/<?php echo $PARAMETERS['settings']['audio_new_messagges']; ?>" autostart="true" hidden="true" hidden="true" style="width:1px; height:0px;" />
+<object data="../sounds/<?php echo $PARAMETERS['settings']['audio_new_messagges']; ?>" type="
+      <?php 
+         $variable_to_pass = explode('.', $PARAMETERS['settings']['audio_new_messagges']);
+         echo $PARAMETERS['settings']['audiotype']['.'.strtolower(end($variable_to_pass))]; 
+      ?>
+   " autostart="true" style="width:1px; height:0px;">
+	<embed src="../sounds/<?php echo $PARAMETERS['settings']['audio_new_messagges']; ?>" autostart="true" hidden="true" hidden="true" style="width:1px; height:0px;" />
 </object>
 
 <!--[if IE 9]>

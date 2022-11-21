@@ -139,7 +139,7 @@
 <td class="home_bottom" colspan ="3">
 <div class="homepage_info_box">
     <?php include 'includes/credits.inc.php'; ?>
-    <?php echo gdrcd_filter('out',$PARAMETERS['info']['site_name']).' - '.gdrcd_filter('out',$MESSAGE['homepage']['info']['webm']).': '.gdrcd_filter('out',$PARAMETERS['info']['webmaster_name']).' - '.gdrcd_filter('out',$MESSAGE['homepage']['info']['email']).': <a href="mailto:'.gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']).'">'.gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']).'</a>. <br />'.$CREDITS.' '.$LICENCE;  ?>
+    <?php echo gdrcd_filter('out',$PARAMETERS['info']['site_name']).' - '.gdrcd_filter('out',$MESSAGE['homepage']['info']['webm']).': '.gdrcd_filter('out',$PARAMETERS['info']['webmaster_name']).' - '.gdrcd_filter('out',$MESSAGE['homepage']['info']['email']).': <a href="mailto:'.gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']).'">'.gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']).'</a>. <br />'.CREDITS.' '.LICENCE;  ?>
 </div>
 
 </td>

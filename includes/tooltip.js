@@ -1,8 +1,8 @@
-/** * Script per tooltip
+/* * Script per tooltip
 	* @author Blancks
 */
 
-/** * Gestore del box di descrizione
+/* * Gestore del box di descrizione
 */
 function show_desc(e, txt)
 {

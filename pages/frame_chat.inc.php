@@ -19,7 +19,7 @@ if ($info['privata']==1) {
 	$allowance=FALSE;
 
     if ( (($info['proprietario']==gdrcd_capital_letter($_SESSION['login'])) || (strpos($_SESSION['gilda'], $info['proprietario'])!=FALSE) || (strpos($info['invitati'], gdrcd_capital_letter($_SESSION['login']))!=FALSE) ||
-	   (($PARAMETERS['mode']['spyprivaterooms']=='ON')&&($_SESSION['permessi']>ADMIN))) && ($info['scadenza']>strftime('%Y-%m-%d %H:%M:%S')) ) {$allowance=TRUE;}
+	   (($PARAMETERS['mode']['spyprivaterooms']=='ON')&&($_SESSION['permessi']>ADMIN))) && ($info['scadenza']>date('%Y-%m-%d %H:%M:%S')) ) {$allowance=TRUE;}
 
 
 } else {$allowance=TRUE;}
@@ -136,7 +136,7 @@ if ($allowance === FALSE) {
 		<select name="id_stats" id="id_stats">
 			<option value="no_stats"></option>
 			<?php
-				/** * Questo modulo aggiunge la possibilità di eseguire prove col dado e caratteristica.
+				/* * Questo modulo aggiunge la possibilità di eseguire prove col dado e caratteristica.
 					* Pertanto sono qui elencate tutte le caratteristiche del pg.
 					
 					* @author Blancks
@@ -166,7 +166,7 @@ if ($allowance === FALSE) {
     <select name="dice" id="dice">
 			<option value="no_dice"></option>
 <?php 
-		/** * Tipi di dado personalizzati da config
+		/* * Tipi di dado personalizzati da config
 			* @author Blancks
 		*/
 		

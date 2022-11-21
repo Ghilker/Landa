@@ -1,4 +1,4 @@
-/** 
+/* 
  * Funziona di modifica ciclica del titolo per la segnalazione dei nuovi pm
  * @author Blancks
  * @author Breaker

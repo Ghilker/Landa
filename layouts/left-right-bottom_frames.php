@@ -1,5 +1,5 @@
 <?php
-/** * Pagina di layout.
+/* * Pagina di layout.
 	* E' selezionabile come layout principale per il proprio gdr semplicemente da config.inc.php
 	* Contiene il css che viene richiamato separatamente come file esterno e il markup
 	*

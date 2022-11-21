@@ -10,13 +10,13 @@ if (isset($_REQUEST['pg'])===FALSE){
 	$confirm_updating = true;
 
 
-	/** * Controllo sul file audio
+	/* * Controllo sul file audio
 		* @author Blancks
 	*/
 	if ($PARAMETERS['mode']['allow_audio'] == 'ON')
 	{
-
-		if (!empty($_POST['modifica_url_media']) && !isset($PARAMETERS['settings']['audiotype']['.'.strtolower(end(explode('.', $_POST['modifica_url_media'])))]))
+		$variable_to_pass = explode('.', $_POST['modifica_url_media']);
+		if (!empty($_POST['modifica_url_media']) && !isset($PARAMETERS['settings']['audiotype']['.'.strtolower(end($variable_to_pass))]))
 		{
 			echo '<div class="warning">'.gdrcd_filter('out',$MESSAGE['warning']['media_not_allowed']).'</div>';
 			$confirm_updating = false;
@@ -30,7 +30,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 
 
 
-	/** * Se non sono occorsi errori durante i controlli precedenti
+	/* * Se non sono occorsi errori durante i controlli precedenti
 		* @author Blancks
 	*/
 	if ($confirm_updating)
@@ -39,7 +39,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 		if (isset($_POST['op'])===TRUE)
 		{
 
-			/** * Controllo sul bloccaggio dei suoni per l'utente
+			/* * Controllo sul bloccaggio dei suoni per l'utente
 				* @author Blancks
 			*/
 			$blocca_media = (strtolower($_POST['blocca_media'])=='on')? 1 : 0;
@@ -51,7 +51,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 			/*Se l'utente ha richiesto di modificare la propria scheda*/
 			if((gdrcd_filter('get',$_REQUEST['pg'])==$_SESSION['login'])&&(gdrcd_filter('get',$_POST['op'])=='modify'))
 			{
-				/** * Html, BBcode or both ?
+				/* * Html, BBcode or both ?
 					* @author Blancks
 				*/
 				$modifica_affetti = gdrcd_filter('in',$_POST['modifica_affetti']);
@@ -63,7 +63,7 @@ if (isset($_REQUEST['pg'])===FALSE){
 					$modifica_background 	= gdrcd_filter('addslashes', $_POST['modifica_background']);
 				}
 
-				/** * Online status allowed ?
+				/* * Online status allowed ?
 					* @author Blancks
 				*/
 				$online_state = '';
@@ -110,7 +110,7 @@ gdrcd_query("UPDATE personaggio SET cognome = '".gdrcd_filter('in',$_POST['modif
 			/*Se un master o superiore ha richiesto l'arresto del pg*/
 			}elseif (($_SESSION['permessi']>=MASTER)&&(gdrcd_filter('get',$_POST['op'])=='arrest'))
 			{
-				/** * Da implementare */
+				/* * Da implementare */
 
 
 			/*Se un admin o superiore ha richiesto l'esilio dell'utente*/
@@ -174,7 +174,7 @@ gdrcd_query("UPDATE personaggio SET cognome = '".gdrcd_filter('in',$_POST['modif
 
 
 <?php
-		/** * Avatar di chat
+		/* * Avatar di chat
 			* @author Blancks
 		*/
 		if ($PARAMETERS['mode']['chat_avatar']=='ON')
@@ -303,24 +303,6 @@ gdrcd_query("UPDATE personaggio SET cognome = '".gdrcd_filter('in',$_POST['modif
 
 </form>
 
-<!-- INVIO BOX2
-<form action="main.php?page=scheda_modifica" method="post">
-    <div class='form_label'>
-          <?/*php echo gdrcd_filter('out',$MESSAGE['interface']['sheet']['modify_form']['status2']); ?>
-    </div>
-    <div class='form_field'>
-        <textarea type="textbox" name="modifica_status" class="form_textarea"><?php echo gdrcd_filter('out',$record['stato2']); ?></textarea>
-    </div>
-
-    <div class='form_submit'>
-         <input type="submit" value="<?php echo $MESSAGE['interface']['forms']['submit']; ?>" />
-         <input type="hidden"
-                value="<?php echo gdrcd_filter('get',$_REQUEST['pg']); */?>"
-                name="pg" />
-     </div>
-</form>-->
-
-
 <!-- Form master esilio -->
 <form action="main.php?page=scheda_modifica" method="post">
 
@@ -333,18 +315,18 @@ gdrcd_query("UPDATE personaggio SET cognome = '".gdrcd_filter('in',$_POST['modif
 			  <!-- Giorno -->
 			  <select name="day" class="day">
 				 <?php for($i=1; $i<=31; $i++){?>
-			     <option value="<?php echo $i;?>" <?php if(strftime('%d')==$i){echo 'selected';}?>><?php echo $i;?></option>
+			     <option value="<?php echo $i;?>" <?php if(date('%d')==$i){echo 'selected';}?>><?php echo $i;?></option>
 				 <?php }//for ?>
 			  </select>
 			  <!-- Mese -->
 		      <select name="month" class="month">
 			     <?php for($i=1; $i<=12; $i++){?>
-			     <option value="<?php echo $i;?>" <?php if(strftime('%m')==$i){echo 'selected';}?>><?php echo $i;?></option>
+			     <option value="<?php echo $i;?>" <?php if(date('%m')==$i){echo 'selected';}?>><?php echo $i;?></option>
 			     <?php }//for ?>
 			  </select>
 			  <!-- Anno -->
 			  <select name="year" class="year">
-			     <?php for($i=strftime('%Y'); $i<=strftime('%Y')+20; $i++){?>
+			     <?php for($i=date('%Y'); $i<=date('%Y')+20; $i++){?>
 			     <option value="<?php echo $i;?>"><?php echo $i;?></option>
 			     <?php }//for ?>
 			  </select>

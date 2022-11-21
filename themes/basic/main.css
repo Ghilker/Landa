@@ -1,4 +1,4 @@
-/****************************************************************************/
+/***************************************************************************/
 /* STILE DELLA PAGINA CONTENITORE */
 
 /* HELP: Da qui è possibile modificare:
@@ -18,9 +18,9 @@ body.main_body{
    font-size: 12px;
 }
 
-/****************************************************************************/
+/***************************************************************************/
 
-/****************************************************************************/
+/***************************************************************************/
 /* STILE DELLA FINESTRA PRINCIPALE */
 
 /* HELP: Da qui è possibile gestire il posizionamento e la dimensione degli
@@ -28,7 +28,7 @@ elementi presenti sull'interfaccia. Per eliminare un elemento indesiderato è
 sufficiente munirlo della proprietà display: none;. Variando i valori di left
 e top viene modificato il posizionamento.*/
 
-/** * Questo stile è un aggiustamento del css per il layout base in uso
+/* * Questo stile è un aggiustamento del css per il layout base in uso
 	* @author Blancks
 */
 div#maincontent
@@ -38,7 +38,7 @@ div#maincontent
 	border: 1px white dotted;
 }
 
-/** * Qualsiasi cosa accada, non modificare gli stili già presenti, limitarsi ad aggiungere quelli che servono,
+/* * Qualsiasi cosa accada, non modificare gli stili già presenti, limitarsi ad aggiungere quelli che servono,
 	* in quanto potrebbero compromettere la visualizzazione cross-browser.
 	
 	* @author Blancks
@@ -91,7 +91,7 @@ div.menu{
    border: 1px white dotted;
 }
 
-/** * Stile per il menù a tendina per lo skip rapido delle mappe
+/* * Stile per il menù a tendina per lo skip rapido delle mappe
 	* @author Blancks
 */
 select#gotomap {
@@ -101,7 +101,7 @@ select#gotomap {
     font-size:11px;
 }
 
-/** * Stile per l'evidenziazione delle mappe nel menù a tendina
+/* * Stile per l'evidenziazione delle mappe nel menù a tendina
 	* @author Blancks
 */
 select#gotomap .map{
@@ -109,26 +109,26 @@ select#gotomap .map{
 	font-style:italic;
 }
 
-/****************************************************************************/
+/***************************************************************************/
 
 
-/****************************************************************************/
+/***************************************************************************/
 /* STILE BASE DEGLI ELEMENTI */
 
 /* HELP: Da qui è possibile effettuare modifiche generali che si ripercuotono su
 tutto il sito. */
 
-/******************************/
+/*****************************/
 /*Testo generale del sito*/
 body{
    color: #dadada; /*colore base dei caratteri*/
    font-family: times new roman;
 }
-/******************************/
+/*****************************/
 
-/******************************/
+/*****************************/
 /*Aspetto delle scrollbar*/
-/** * Nota: solo Internet explorer supporta la funzionalità, consiglierei di evitarne l'uso
+/* * Nota: solo Internet explorer supporta la funzionalità, consiglierei di evitarne l'uso
 	* @author Blancks
 */
 body{
@@ -139,16 +139,16 @@ body{
    scrollbar-track-color: #4e4d4d;
    scrollbar-darkshadow-color: #111111;
 }
-/******************************/
+/*****************************/
 
-/******************************/
+/*****************************/
 /*Aspetto generale delle immagini*/
 img{
     border: none;
 }
-/******************************/
+/*****************************/
 
-/******************************/
+/*****************************/
 /*Aspetto dei link*/
 
 a, a:visited{
@@ -165,9 +165,9 @@ a:hover{
 	text-decoration: none;
 }
 
-/******************************/
+/*****************************/
 
-/******************************/
+/*****************************/
 /*Titolo e corpo pagina */
 
 /*Titolo pagina: Appare in alto ad ogni riquadro dell'interfaccia.*/
@@ -189,9 +189,9 @@ div.page_body table{
   width: 80%;
 }
 
-/******************************/
+/*****************************/
 
-/******************************/
+/*****************************/
 /*Aspetto dei menu */
 
 /*Link delle voci di menu. 
@@ -217,17 +217,17 @@ div.link_menu a.sprite:hover {
 /*Immagine "punto voce di elenco" dei menu.*/
 img.link_menu_point{ }
 
-/******************************/
+/*****************************/
 
-/******************************/
+/*****************************/
 /*Link interni alle pagine*/
 
 div.link_back{margin: 5px auto 5px auto; text-align: center; clear: both;}
 div.link_back a{}
 
-/******************************/
+/*****************************/
 
-/******************************/
+/*****************************/
 /*Aspetto dei form*/
 
 
@@ -287,9 +287,9 @@ div.form_submit{
    margin-right: auto;
 }
 
-/*****************************/
+/****************************/
 
-/*****************************/
+/****************************/
 /*Elenchi di record*/
 
 /*Box di un elenco dell'area 
@@ -378,12 +378,12 @@ div.controllo_elenco input{
 dell'elenco*/
 div.pager{ }
 
-/*****************************/
+/****************************/
 
-/****************************************************************************/
+/***************************************************************************/
 
 
-/****************************************************************************/
+/***************************************************************************/
 /* STILE DELLA MAPPA CLICCABILE */
 
 /* HELP: */
@@ -406,7 +406,7 @@ div.mappaclick_more{
 }
 
 
-/** * stile della tooltip di descrizione sulla mappa 
+/* * stile della tooltip di descrizione sulla mappa 
 	* @author Blancks
 */
 div#descriptionLoc{
@@ -448,10 +448,10 @@ div.mappaclick_map a:hover{
 
 
 
-/****************************************************************************/
+/***************************************************************************/
 
 
-/****************************************************************************/
+/***************************************************************************/
 /* STILE DELLA FINESTRA MENU */
 
 /* HELP: Da qui è possibile modificare:
@@ -477,10 +477,10 @@ div.pagina_gestione{ }
 div.pagina_uffici{ }
 div.pagina_controlli_utente{ }
 
-/****************************************************************************/
+/***************************************************************************/
 
 
-/****************************************************************************/
+/***************************************************************************/
 /* STILE DELLA FINESTRA MESSAGGI E BACHECHE */
 
 /* HELP: Da qui è possibile modificare:
@@ -533,10 +533,10 @@ img.colonna_elengo_messaggi_icon{
     height: 25px;
 }
 
-/****************************************************************************/
+/***************************************************************************/
 
 
-/****************************************************************************/
+/***************************************************************************/
 /* STILE DELLA FINESTRA INFORMAZIONI */
 
 /* HELP: Da qui è possibile modificare:
@@ -572,10 +572,10 @@ div.info div.time {
    display: none;
 }
 
-/****************************************************************************/
+/***************************************************************************/
 
 
-/****************************************************************************/
+/***************************************************************************/
 /*STILE DELL'AREA SERVIZI IN GIOCO*/
 
 div.pagina_servizi_lavoro{}
@@ -608,11 +608,11 @@ div.pagina_servizi_gilde div.elenco_esteso img {
    height: 25px;
 }
 
-/****************************************************************************/
+/***************************************************************************/
 
 
 
-/****************************************************************************/
+/***************************************************************************/
 /*STILE DEL MERCATO*/
 
 div.pagina_servizi_mercato { }
@@ -657,11 +657,11 @@ div.pagina_servizi_mercato div.form_submit {
   margin: 4px 0 0 0;
 }
 
-/****************************************************************************/
+/***************************************************************************/
 
 
 
-/****************************************************************************/
+/***************************************************************************/
 /*STILE DELL'AREA GESTIONE*/
 
 div.pagina_gestione{}
@@ -692,10 +692,10 @@ div.pagina_gestione_permessi div.form_submit{
 }
 
 
-/****************************************************************************/
+/***************************************************************************/
 
 
-/****************************************************************************/
+/***************************************************************************/
 /*STILE DEI MESSAGGI DI SISTEMA*/
 
 div.error{
@@ -732,4 +732,4 @@ div.warning{
 
 span.error_details{ }
 
-/****************************************************************************/
+/***************************************************************************/

@@ -123,7 +123,7 @@ $query="SELECT esperienza FROM personaggio WHERE nome = '".gdrcd_filter('in',$_R
 
 
 <?php
-/********* CHIUSURA SCHEDA **********/
+/******** CHIUSURA SCHEDA **********/
 	}//else
 
 }//else

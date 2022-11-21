@@ -17,7 +17,7 @@ else {
 
 
    /* Spostamento di un oggetto dall'inventario nello zaino */
-   if ((gdrcd_filter('get',$_POST['op'])=="in_zaino") && (($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=GAMEMASTER))){
+   if ((gdrcd_filter('get',$_POST['op'])=="in_zaino") && (($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=MASTER))){
       gdrcd_query("UPDATE clgpersonaggiooggetto SET posizione = 1 WHERE id_oggetto = ".gdrcd_filter('num',$_POST['id_oggetto'])." AND nome = '".gdrcd_filter('in',$_REQUEST['pg'])."' LIMIT 1 ");
 
 	  echo '<div class="warning">'.gdrcd_filter('out',$MESSAGE['warning']['done']).'</div>';
@@ -25,7 +25,7 @@ else {
 
 
    /*Indossatura un oggetto*/
-   if ((gdrcd_filter('get',$_POST['op'])=="indossa") && (($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=GAMEMASTER))){
+   if ((gdrcd_filter('get',$_POST['op'])=="indossa") && (($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=MASTER))){
 	   gdrcd_query("UPDATE clgpersonaggiooggetto SET posizione = ".gdrcd_filter('num',$_POST['posizione'])." WHERE id_oggetto = ".$_POST['id_oggetto']." AND nome = '".gdrcd_filter('get',$_REQUEST['pg'])."' LIMIT 1 ");
 
 	   echo '<div class="warning">'.gdrcd_filter('out',$MESSAGE['warning']['done']).'</div>';
@@ -33,7 +33,7 @@ else {
 
 
    /*Rimuovo un oggetto dall'inventario o dallo zaino*/
-   if ((gdrcd_filter('get',$_POST['op'])=="abbandona") && (($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=GAMEMASTER))){ /*Rimuovo un oggetto*/
+   if ((gdrcd_filter('get',$_POST['op'])=="abbandona") && (($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=MASTER))){ /*Rimuovo un oggetto*/
       /*Se ne possiedo più di uno ne rimuovo uno solo*/
 	  if ($_POST['numero']<=1){
 		  $query="DELETE FROM clgpersonaggiooggetto WHERE id_oggetto = ".gdrcd_filter('num',$_POST['id_oggetto'])." AND nome = '".gdrcd_filter('in',$_REQUEST['pg'])."' LIMIT 1 ";
@@ -48,7 +48,7 @@ else {
    }
 
    /*Cessione di un oggetto ad un'altro PG*/
-   if ((gdrcd_filter('get',$_POST['op'])=="cedi") && (($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=GAMEMASTER))){ /*Rimuovo un oggetto*/
+   if ((gdrcd_filter('get',$_POST['op'])=="cedi") && (($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=MASTER))){ /*Rimuovo un oggetto*/
       /*Se ne possiedo più di uno ne rimuovo uno solo*/
 
 	  $result_min=gdrcd_query("SELECT id_oggetto FROM clgpersonaggiooggetto WHERE id_oggetto = ".gdrcd_filter('num',$_POST['id_oggetto'])."", 'result');
@@ -317,7 +317,7 @@ $result=gdrcd_query("SELECT oggetto.id_oggetto, oggetto.nome AS nome_oggetto, og
   </td>
   <!-- Comandi elenco -->
   <td class="casella_controlli">
-  <?php if(($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=GAMEMASTER)){ ?>
+  <?php if(($_SESSION['login']==$_REQUEST['pg'])||($_SESSION['permessi']>=MASTER)){ ?>
    <div class="form_gioco">
      <!-- Abbandona -->
 	 <form action="main.php?page=scheda_equip"
@@ -525,7 +525,7 @@ gdrcd_query($result, 'free');
 
 
 <?php
-/********* CHIUSURA SCHEDA **********/
+/******** CHIUSURA SCHEDA **********/
 	}//else
 	#gdrcd_query($result, 'free');
 }//else

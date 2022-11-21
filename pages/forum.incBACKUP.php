@@ -4,7 +4,7 @@
     <!-- Box principale -->
     <div class="page_body">
 <?php
-    /**
+    /*
      * Funzione segna tutto come letto
      */
     if($_POST['action']=='readall')
@@ -22,7 +22,7 @@
         }
     }
 
-    /**
+    /*
      * Inserimento messaggio o topic
      */
     if($_POST['op']=='insert')
@@ -85,7 +85,7 @@
         }
     } //Fine Insert
 
-    /**
+    /*
      * Modifica messaggio o topic
      */
     if($_POST['op']=='edit')
@@ -94,7 +94,7 @@
 
         if ($row['autore'] == $_SESSION['login'] || ($row['autore'] != $_SESSION['login'] && $_SESSION['permessi'] >= ADMIN))
         {
-		    $time=strftime('%d/%m/%Y %H:%M');
+		    $time=date('%d/%m/%Y %H:%M');
 
 		    gdrcd_query("UPDATE messaggioaraldo SET messaggio = '".gdrcd_filter('in',$_POST['messaggio']).'\n\n\n\nEdit ('.$_SESSION['login'].'): '.$time."', titolo = '".gdrcd_filter('in',$_POST['titolo'])."' WHERE id_messaggio = ".gdrcd_filter('num',$_POST['id_messaggio'])." LIMIT 1");
 ?>
@@ -126,7 +126,7 @@
 	    }
     } //Fine Edit
 
-    /**
+    /*
      * Form modifica
      */
     if($_REQUEST['op']=='modifica')
@@ -242,7 +242,7 @@ if($_REQUEST['op']=='delete')
   	}
 } //Fine delete_conf
 
-/**	* Procedure messaggi importanti e chiusi
+/*	* Procedure messaggi importanti e chiusi
 	* @author Blancks <s.rotondo90@gmail.com>
 */
 
@@ -270,7 +270,7 @@ if ($_SESSION['permessi'] >=ADMIN)
 	}
 }
 
-/**	* Fine Procedura per topic importanti/chiusi
+/*	* Fine Procedura per topic importanti/chiusi
 */
 
  /*Creazione nuovi messaggi e topic*/
@@ -425,7 +425,7 @@ if($_REQUEST['op']=='read')
 		  <div class="forum_post_message">
 <?php
 
-				/** * Se è disponibile il plugin bbd per il trattamento del bbcode usiamo quella
+				/* * Se è disponibile il plugin bbd per il trattamento del bbcode usiamo quella
 					* @author Blancks
 				*/
 			if ($PARAMETERS['settings']['forum_bbcode']['type'] == 'bbd')
@@ -481,7 +481,7 @@ if($_REQUEST['op']=='read')
 		  <div class="forum_post_message">
 			<?php
 
-				/** * Se è disponibile il plugin bbd per il trattamento del bbcode usiamo quella
+				/* * Se è disponibile il plugin bbd per il trattamento del bbcode usiamo quella
 					* @author Blancks
 				*/
 				if ($PARAMETERS['settings']['forum_bbcode']['type'] == 'bbd')
@@ -819,12 +819,12 @@ if(gdrcd_filter('get',$_REQUEST['op'])=='visit')
 	   <div class="forum_column">
 <?php
 
-/**	* Topic importante
+/*	* Topic importante
 	* @author Blancks <s.rotondo90@gmail.com>
 */
 	   			echo ($row['importante'])? $MESSAGE['interface']['administration']['ops']['important'].': ': '';
 
-/**	* Fine
+/*	* Fine
 */
 ?>
 	   <?php echo gdrcd_filter('out',$row['titolo']); ?>
@@ -840,12 +840,12 @@ if(gdrcd_filter('get',$_REQUEST['op'])=='visit')
 	   </div></a>
 <?php
 
-/**	* Topic Chiuso
+/*	* Topic Chiuso
 	* @author Blancks <s.rotondo90@gmail.com>
 */
 	   			echo ($row['chiuso'])? '<div class="forum_column">'.$MESSAGE['interface']['forums']['topic']['title'].' '.$MESSAGE['interface']['administration']['ops']['close'].'</div>': '';
 
-/**	* Fine
+/*	* Fine
 */
 ?>
 	   <div class="forum_date_big"><?php echo gdrcd_format_date($row['data_messaggio']).' '.gdrcd_format_time($row['data_messaggio']); ?></div>
@@ -865,7 +865,7 @@ if(gdrcd_filter('get',$_REQUEST['op'])=='visit')
 <?php
 				if ($_SESSION['permessi']>=ADMIN)
 				{
-					/**	* Topic importanti/chiusi
+					/*	* Topic importanti/chiusi
 						* @author Blancks <s.rotondo90@gmail.com>
 					*/
 					$set_imp = ($row['importante'])? '0' : '1';
@@ -877,14 +877,14 @@ if(gdrcd_filter('get',$_REQUEST['op'])=='visit')
 					$label_imp = ($row['importante'])? 'important' : 'not_important';
 					$label_cls = ($row['chiuso'])? 'close' : 'open';
 					
-					/**	* Fine
+					/*	* Fine
 					*/
 ?>
     <td  class="casella_titolo">
 	<div class="controlli_elenco"><!-- controlli -->
 
 <!--
-/**	* Topic importanti/chiusi
+/*	* Topic importanti/chiusi
 	* @author Blancks <s.rotondo90@gmail.com>
 */
 -->

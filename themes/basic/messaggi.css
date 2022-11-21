@@ -1,4 +1,4 @@
-/****************************************************************************/
+/***************************************************************************/
 /* STILE DEI MESSAGGI PRIVATI */
 
 /* HELP: Da qui è possibile modificare:
@@ -7,7 +7,7 @@
 - Lo sfondo dei messaggi privati */
 
 
-/****************************************************************************/
+/***************************************************************************/
 
 div.pagina_messages_center{}
 
@@ -17,7 +17,7 @@ div.pagina_messages_center div.elementi_elenco{
 }
 
 
-/*************************/
+/************************/
 /*Visualizzazione del messaggio singolo*/
 div.read_message_box{
    width: 80%;

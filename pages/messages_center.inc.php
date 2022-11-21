@@ -58,7 +58,7 @@ include_once('../header.inc.php');
 	 		}
 	 		$query=substr($query,0,-1);
 	 		gdrcd_query($query);
-			/** * Bugfix: commentato la stampa della variabile $query. In caso di messaggio multiplo stampava
+			/* * Bugfix: commentato la stampa della variabile $query. In caso di messaggio multiplo stampava
 		    	* l'ultima query eseguita.
 	 			* @author Rhllor
 	 		*/
@@ -154,7 +154,7 @@ include_once('../header.inc.php');
      </div>
      <div class='form_field'>
  	  	    <textarea type="textbox" name="testo"><?php
- /**	* Fix per evitare le parentesi quadre vuote quando si compone un nuovo messaggio
+ /*	* Fix per evitare le parentesi quadre vuote quando si compone un nuovo messaggio
      * @author Blancks
      */
  	if (isset($_POST['testo']))
@@ -188,7 +188,7 @@ include_once('../header.inc.php');
  <?php /*Visualizzazione completa di un messaggio*/
  if (gdrcd_filter('get',$_REQUEST['op'])=='read'){
 
-	/** * Bugfix: correzione di un bug che permetteva la visualizzazione di messaggi non inviati all'utente
+	/* * Bugfix: correzione di un bug che permetteva la visualizzazione di messaggi non inviati all'utente
  		* semplicemente modificando l'id. Viene quindi aggiunta nella clausola where il controllo sulla proprietà
 		* del messaggio. Nel caso in cui non venga trovato alcun messaggio verrà mostrato un errore.
  		* @author Rhllor
@@ -296,7 +296,7 @@ include_once('../header.inc.php');
 if ($_POST['op']=='erase')
 {
 $id_messaggio=gdrcd_filter('num',$_POST['id_messaggio']);
-/** * Bugfix: correzione di un bug che permetteva la cancellazione di messaggi non inviati all'utente.
+/* * Bugfix: correzione di un bug che permetteva la cancellazione di messaggi non inviati all'utente.
 * Viene quindi aggiunta nella clausola where il controllo sulla proprietà del messaggio.
 * Inoltre viene effettuato un controllo sul numero di righe cancellate. Se non è stato cancellato nulla
 * non verrà mostrato nessun messaggio ma solo il link per tornare alla schermata messaggi.
@@ -314,7 +314,7 @@ if (gdrcd_query("",'affected') > 0) {
 <a href="main.php?page=messages_center&offset=0"><?php echo gdrcd_filter('out',$MESSAGE['interface']['messages']['go_back']); ?></a>
 </div>
 <?php } else {
-/** * Enhancement: in caso di nessuna riga cancellata si controlla l'esistenza del messaggio,
+/* * Enhancement: in caso di nessuna riga cancellata si controlla l'esistenza del messaggio,
 * @author Rhllor
 */
 $result=gdrcd_query("SELECT destinatario FROM messaggi WHERE id = ".gdrcd_filter('num',$_REQUEST['id_messaggio'])." and ( destinatario = '". $_SESSION['login'] ."') LIMIT 1", 'result');

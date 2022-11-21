@@ -1,5 +1,5 @@
 <?php 
-/** * Skin Advanced
+/* * Skin Advanced
 	* Markup e procedure della homepage
 	* @author Blancks
 */
@@ -73,7 +73,7 @@ onMouseOut="this.src='https://virtualredlifegdr.altervista.org/themes/tok1/imgs/
 <div id="footer">
  
    <div>
-    <p><?php echo gdrcd_filter('out',$PARAMETERS['info']['site_name']), ' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['webm']), ': ', gdrcd_filter('out',$PARAMETERS['info']['webmaster_name']), ' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['dbadmin']),': ', gdrcd_filter('out', $PARAMETERS['info']['dbadmin_name']) ,' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['email']), ': <a href="mailto:', gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']), '">', gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']), '</a>.'; ?> <?php echo $CREDITS, ' ', $LICENCE ?></p>
+    <p><?php echo gdrcd_filter('out',$PARAMETERS['info']['site_name']), ' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['webm']), ': ', gdrcd_filter('out',$PARAMETERS['info']['webmaster_name']), ' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['dbadmin']),': ', gdrcd_filter('out', $PARAMETERS['info']['dbadmin_name']) ,' - ', gdrcd_filter('out',$MESSAGE['homepage']['info']['email']), ': <a href="mailto:', gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']), '">', gdrcd_filter('out',$PARAMETERS['info']['webmaster_email']), '</a>.'; ?> <?php echo CREDITS, ' ', LICENCE ?></p>
    </div>
    
   </div>

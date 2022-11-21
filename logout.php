@@ -10,7 +10,7 @@
 	$handleDBConnection = gdrcd_connect();
 
 
-	/** * Aggiorno l'ora di uscita del pg
+	/* * Aggiorno l'ora di uscita del pg
 		* @author Blancks
 	*/
 	gdrcd_query("UPDATE personaggio SET ora_uscita = NOW() WHERE nome='" . gdrcd_filter('in',$_SESSION['login']) . "'");
@@ -44,7 +44,7 @@
 	gdrcd_close_connection($handleDBConnection);
 
 
-	/** * Per ottimizzare le risorse impiegate le liberiamo dopo che non ne abbiamo più bisogno
+	/* * Per ottimizzare le risorse impiegate le liberiamo dopo che non ne abbiamo più bisogno
 		* @author Blancks
 	*/
 	unset($MESSAGE);
