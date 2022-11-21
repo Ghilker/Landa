@@ -41,7 +41,7 @@ if((gdrcd_filter_get($_REQUEST['chat'])=='yes')&&(empty($_SESSION['login'])===FA
 
 				if ($PARAMETERS['mode']['dices']=='ON')
 				{
-					mt_srand((double)microtime()*10000);
+					mt_srand((double)microtime()*1000000);
 					$die = mt_rand(1,(int)$_POST['dice']);
 
 					$chat_dice_msg =  gdrcd_filter('in', $MESSAGE['chat']['commands']['use_skills']['die']).' '.gdrcd_filter('num',$die).',';
@@ -336,9 +336,6 @@ if((gdrcd_filter_get($_REQUEST['chat'])=='yes')&&(empty($_SESSION['login'])===FA
 		{
 			case 'P':
 
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
 
 				/* * Avatar di chat
@@ -367,21 +364,15 @@ if((gdrcd_filter_get($_REQUEST['chat'])=='yes')&&(empty($_SESSION['login'])===FA
 				$add_chat.=': </span> ';
 				$add_chat.= '<span class="chat_msg">'.gdrcd_chatme($_SESSION['login'], gdrcd_chatcolor(gdrcd_filter('out',$row['testo']))).'</span>';
 
-					/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-						* @author eLDiabolo
-					*/
 					if ($PARAMETERS['mode']['chat_avatar']=='ON')
 						$add_chat .= '<br style="clear:both;" />';
 
 					$add_chat.= '</div>';
 
-			break;
+				break;
 
 
 			case 'A':
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
 
 				/* * Avatar di chat
@@ -409,160 +400,78 @@ if((gdrcd_filter_get($_REQUEST['chat'])=='yes')&&(empty($_SESSION['login'])===FA
 				$add_chat.='</span> ';
 				$add_chat.= '<span class="chat_msg">'.gdrcd_chatme($_SESSION['login'], gdrcd_chatcolor(gdrcd_filter('out',$row['testo']))).'</span>';
 
-					/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-						* @author eLDiabolo
-					*/
 					if ($PARAMETERS['mode']['chat_avatar']=='ON')
 						$add_chat .= '<br style="clear:both;" />';
-
 					$add_chat.= '</div>';
 
-			break;
+				break;
 
 
 			case 'S':
 				if ($_SESSION['login']==$row['destinatario'])
 				{
-					/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-						* @author eLDiabolo
-					*/
 					$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 					$add_chat.= '<span class="chat_name">'.$row['mittente'].' '.$MESSAGE['chat']['whisper']['by'].': </span> ';
 					$add_chat.= '<span class="chat_msg">'.gdrcd_filter('out',$row['testo']).'</span>';
-
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 					$add_chat.= '</div>';
 
 				} else if ($_SESSION['login']==$row['mittente'])
 				{
-					/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-						* @author eLDiabolo
-					*/
 					$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 					$add_chat.= '<span class="chat_msg">'.$MESSAGE['chat']['whisper']['to'].' '.gdrcd_filter('out',$row['destinatario']).': </span>';
 					$add_chat.= '<span class="chat_msg">'.gdrcd_filter('out',$row['testo']).'</span>';
-
-					/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-						* @author eLDiabolo
-					*/
 					$add_chat.= '</div>';
 
 				} else if (($_SESSION['permessi']>=ADMIN)&&($PARAMETERS['mode']['spyprivaterooms']=='ON'))
 				{
-					/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-						* @author eLDiabolo
-					*/
 					$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 					$add_chat.= '<span class="chat_msg">'.$row['mittente'].' '.$MESSAGE['chat']['whisper']['from_to'].' '.gdrcd_filter('out',$row['destinatario']).' </span>';
 					$add_chat.= '<span class="chat_msg">'.gdrcd_filter('out',$row['testo']).'</span>';
-
-					/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-						* @author eLDiabolo
-					*/
 					$add_chat.= '</div>';
 
 				}
-			break;
-
+				break;
 
 			case 'N':
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 				$add_chat.= '<span class="chat_time">'.gdrcd_format_time($row['ora']).'</span>';
 				$add_chat.= '<span class="chat_name">'.$row['destinatario'].'</span> ';
 				$add_chat.= '<span class="chat_msg">'.gdrcd_chatcolor(gdrcd_filter('out',$row['testo'])).'</span>';
-
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '</div>';
-			break;
-
+				break;
 
 			case 'M':
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 				$add_chat.= '<span class="chat_master">'.gdrcd_chatme_master($_SESSION['login'], gdrcd_filter('out',$row['testo'])).'</span>';
-
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '</div>';
-			break;
-
+				break;
 
 			case 'I':
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 				$add_chat.= '<img class="chat_img" src="'.gdrcd_filter('fullurl',$row['testo']).'" />';
-
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '</div>';
-			break;
-
+				break;
 
 			case 'C':
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 				$add_chat.= '<span class="chat_time">'.gdrcd_format_time($row['ora']).'</span>';
 				$add_chat.= '<span class="chat_msg">'.gdrcd_filter('out',$row['testo']).'</span>';
-
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '</div>';
-			break;
-
+				break;
 
 			case 'D':
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 				$add_chat.= '<span class="chat_time">'.gdrcd_format_time($row['ora']).'</span>';
 				$add_chat.= '<span class="chat_msg">'.gdrcd_filter('out',$row['testo']).'</span>';
-
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '</div>';
-			break;
-
+				break;
 
 			case 'O':
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '<div class="chat_row_'.$row['tipo'].'">';
-
 				$add_chat.= '<span class="chat_time">'.gdrcd_format_time($row['ora']).'</span>';
 				$add_chat.= '<span class="chat_msg">'.gdrcd_filter('out',$row['testo']).'</span>';
-
-				/*	* Fix problema visualizzazione spazi vuoti con i sussurri
-					* @author eLDiabolo
-				*/
 				$add_chat.= '</div>';
-			break;
+				break;
 		}
 
 		if ($row['id'] > (int)$last_message)
