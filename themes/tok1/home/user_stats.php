@@ -1,6 +1,6 @@
 <?php /*HELP: */ 
 
-/* * Raccolta statistiche sito */
+/** * Raccolta statistiche sito */
 $site_activity 			= gdrcd_query("SELECT MIN(data_iscrizione) AS date_of_activity FROM personaggio");
 $registered_users 		= gdrcd_query("SELECT COUNT(nome) AS num FROM personaggio");
 $banned_users 			= gdrcd_query("SELECT COUNT(nome) AS num FROM personaggio WHERE esilio > NOW()");

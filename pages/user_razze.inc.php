@@ -5,7 +5,7 @@
 </style>
 
 <div class="user_razze">
-<!--<div class="page_title"><h2><?php echo gdrcd_filter('out', $MESSAGE['interface']['user']['races']['page_name'] . ' ' . strtolower($PARAMETERS['names']['race']['plur'])); ?></h2></div>-->
+<!--<div class="page_title"><h2><?php echo gdrcd_filter('out',$MESSAGE['interface']['user']['races']['page_name'].' '.strtolower($PARAMETERS['names']['race']['plur'])); ?></h2></div>-->
 <div style="margin-top: 15px; margin-bottom: 20px"><img src="/imgs/elenco_razze.png"></div>
 
 <div class="page_body" align="center">

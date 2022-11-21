@@ -1,8 +1,8 @@
-/* * Skin advanced
+/** * Skin advanced
 	* @author Blancks
 */
 
-/* * Parametri di default nella pagina
+/** * Parametri di default nella pagina
 */
 body{padding:0; margin:0; color:#222; font-family:Verdana,Sans; font-size:11px; background:url("imgs/bg.gif") top left repeat;}
 
@@ -63,7 +63,7 @@ select.day, select.month, select.year{
 
 
 
-/* * Stile dei messaggi d'avviso dell'engine */
+/** * Stile dei messaggi d'avviso dell'engine */
 
 div.warning_ok{
 	background-color: #a7cf88;
@@ -115,7 +115,7 @@ div.link_back, div.panels_link{
 
 
 
-/* * Logout */
+/** * Logout */
 div.logout_box{
 	/*margin: 200px auto;
     padding-top: 160px;
@@ -163,7 +163,7 @@ span.logout_text_name{
 
 
 
-/* * Titoli delle sezioni
+/** * Titoli delle sezioni
 */
 div.innertube h2, div.output h2, div.page_title h2{
 	font-color: #000000;
@@ -175,7 +175,7 @@ div.innertube h2, div.output h2, div.page_title h2{
 }
 
 
-/* * Stile dei contenitori grigi con i bordini arrotondati
+/** * Stile dei contenitori grigi con i bordini arrotondati
 */
 div.pagina_info_location, div.menu, div.output{
 	margin:5px auto;
@@ -229,7 +229,7 @@ div.output{
 
 
 
-/* * Informazioni con anteprima luogo
+/** * Informazioni con anteprima luogo
 */
 div.info_image{
 	text-align:center;
@@ -250,7 +250,7 @@ div.meteo, div.meteo_date{
 	font-size:12px;
 }
 
-/* * Frame Messaggi 
+/** * Frame Messaggi 
 */
 iframe.iframe_messaggi{
     height: 75px;
@@ -287,7 +287,7 @@ div.msgs {
 }
 
 
-/* * Men� di gioco
+/** * Men� di gioco
 */
 select#gotomap{
 	display: block;
@@ -324,9 +324,9 @@ div.link_menu a:hover{
 
 
 
-/* * Mappa cliccabile */
+/** * Mappa cliccabile */
 
-/* * Posizionamento mappa cliccabile 
+/** * Posizionamento mappa cliccabile 
 */
 div.mappaclick_map{
 	margin:5px auto;
@@ -334,14 +334,14 @@ div.mappaclick_map{
 }
 
 
-/* * Link testuali sulla mappa */
+/** * Link testuali sulla mappa */
 div.mappaclick_map a{
 	font-size:12px;
 	font-weight:bolder;
 
 }
 
-/* * stile della tooltip di descrizione sulla mappa 
+/** * stile della tooltip di descrizione sulla mappa 
 */
 div#descriptionLoc{
 	position:absolute; 
@@ -363,7 +363,7 @@ div#descriptionLoc{
 }
 
 
-/* * Stili relativi all'elenco delle mappe in basso
+/** * Stili relativi all'elenco delle mappe in basso
 */
 div.mappaclick_more{
 	padding-top:25px;
@@ -377,7 +377,7 @@ div.mappaclick_more a{
 }
 
 
-/* * Messages center
+/** * Messages center
 */
 div.elenco_record_gioco{
 	padding:5px;
@@ -435,7 +435,7 @@ div.controllo_elenco input[type='image']{
 }
 
 
-/* * Ambientazione/Regolamento */
+/** * Ambientazione/Regolamento */
 div.user_ambientazione, div.elementi_elenco div.elementi_elenco, td.casella_titolo div.elementi_elenco{
 	text-align:center;
 	padding:5px;
@@ -478,7 +478,7 @@ div.user_regolamento, div.user_documenti, td.casella_titolo div.elementi_elenco 
 
 
 
-/* * Generico per elenchi, bacheche, regolamento, ambientazione etc */
+/** * Generico per elenchi, bacheche, regolamento, ambientazione etc */
 div.capitolo_elenco{
 	padding:5px 5px 5px 20px;
 }
@@ -535,20 +535,20 @@ div.elementi_elenco a:hover{
 
 
 
-/* * Stile tabelle nei moduli di gestione */
+/** * Stile tabelle nei moduli di gestione */
 div.elenco_record_gestione table{
 	width:95%;
 	margin:10px auto;
 }
 
 
-/* * Accorgimenti Layout */
+/** * Accorgimenti Layout */
 
-/* * Allineamento verticale delle colonne 
+/** * Allineamento verticale delle colonne 
 */
 #framecontentLeft, #framecontentRight { display:table; }
 
-/* * margine delle colonne */
+/** * margine delle colonne */
 div.innertube{
 	margin:00px;
 	display:table-cell;
@@ -572,7 +572,7 @@ div.pagina_quest_info{
 }
 
 
-/* * Descrizione Lavori */
+/** * Descrizione Lavori */
 
 div.elementi_elenco_descrizionelavori{
 	padding:27px;
@@ -608,7 +608,7 @@ td.casella_controlli_lavori{
 	
 }
 
-/* * Anagrafe */
+/** * Anagrafe */
 
 div.titoli_elenco-anagrafe{
 	font-size: 13px;
@@ -641,7 +641,7 @@ td.casella_titolo_anagrafe {
 	}
 
 
-/* * Titolo di gestione
+/** * Titolo di gestione
 */
 
 div.page_title_gestione{
@@ -658,7 +658,7 @@ div.page_title_gestione{
 }
 
 
-/* * Titolo di documenti
+/** * Titolo di documenti
 */
 div.page_title_documenti {
 	height: 165px;
@@ -668,7 +668,7 @@ div.page_title_documenti {
 }
 
 
-/* * Titolo di utility
+/** * Titolo di utility
 */
 div.page_title_utility {
 	height: 165px;
@@ -677,7 +677,7 @@ div.page_title_utility {
 	background-position: center;
 }
 
-/* * Titolo del Forum
+/** * Titolo del Forum
 */
 div.page_title_forum_new{
 	/*font-size:46px;
@@ -715,7 +715,7 @@ div.controllo_elenco_nota{
 }
 
 
-/* * Titolo di PRESENTI
+/** * Titolo di PRESENTI
 */
 div.page_title_presenti_B{
 	font-size: 14px;
@@ -731,7 +731,7 @@ div.page_title_presenti_B{
 	margin-bottom: 10px;
 }
 
-/* * Titolo di NOVITA'
+/** * Titolo di NOVITA'
 */
 div.page_title_novita{
 	font-size: 14px;
@@ -748,7 +748,7 @@ div.page_title_novita{
 
 
 
-/* * NUOVO CSM PER ARTICOLI REGOLAMENTO AMBIENTAZIONE
+/** * NUOVO CSM PER ARTICOLI REGOLAMENTO AMBIENTAZIONE
 */
 
 

@@ -1,5 +1,5 @@
 <?php 
-/* * Skin Advanced
+/** * Skin Advanced
 	* Markup e procedure della homepage
 	* @author Blancks
 */
