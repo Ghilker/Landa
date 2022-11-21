@@ -58,7 +58,7 @@
     }
     </script>
     <script type="text/javascript">
-        setTimeout("window.location.reload();", 10);
+        setTimeout("window.location.reload();", 1000);
     </script>
 <!--</body>
 </html>-->
