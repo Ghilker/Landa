@@ -124,7 +124,7 @@ $raw_counter=0;
 </div>
 
 <div class="link_menu">
-<a href="." style="margin-top: 0px; margin-left: 30px; display: inline; float: left;" id="link_menu_refresh" onmouseover="nmenu6_over_button()" onmouseout="nmenu6_up_button()"><img src="themes/tok1/imgs/menu/aggiorna.png" alt="Aggiorna" title="Aggiorna" name="nmenu6_buttonOne"></a>
+<a href="javascript:window.location.href=window.location.href" style="margin-top: 0px; margin-left: 30px; display: inline; float: left;" id="link_menu_refresh" onmouseover="nmenu6_over_button()" onmouseout="nmenu6_up_button()"><img src="themes/tok1/imgs/menu/aggiorna.png" alt="Aggiorna" title="Aggiorna" name="nmenu6_buttonOne"></a>
 <a href="logout.php" style="margin-top: 5px; margin-left: 135px" id="link_menu_quit" onmouseover="nmenu6_over_button()" onmouseout="nmenu6_up_button()"><img src="themes/tok1/imgs/menu/esci.png" alt="Esci" title="Esci" name="nmenu6_buttonOne"></a>
 </div>
 
