@@ -18,9 +18,12 @@ $pass1	= gdrcd_filter('get', $_POST['pass1']);
 switch ($_SERVER['REMOTE_ADDR'])
 {
 	case '::1':
-	case '127.0.0.1':	$host = 'localhost';
+	case '127.0.0.1':	
+		$host = 'localhost';
 		break;
-	default:		$host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+	default:
+		$host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+		$host = (strlen($host) > 20) ? substr($host,0,20) : $host;
 		break;
 }
 /* * Fine Fix
@@ -155,7 +158,7 @@ else
 	if (($login1 != '') && ($pass1 != ''))
 	{
 		/*Registro l'evento (Login errato)*/
-		gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento, descrizione_evento) VALUES ('".gdrcd_filter('in',$_SESSION['login'])."','(strlen(".$host.") > 13) ? substr(".$host.",0,10).'...' : ".$host."', NOW(), ".ERRORELOGIN." ,'".$_SERVER['REMOTE_ADDR']."')");
+		gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento, descrizione_evento) VALUES ('".gdrcd_filter('in',$_SESSION['login'])."','".$host."', NOW(), ".ERRORELOGIN." ,'".$_SERVER['REMOTE_ADDR']."')");
 
 
 		$record = gdrcd_query("SELECT count(*) FROM log WHERE descrizione_evento = '".$_SERVER['REMOTE_ADDR']."' AND codice_evento = ".ERRORELOGIN." AND DATE_ADD(data_evento, INTERVAL 60 MINUTE) > NOW()");
