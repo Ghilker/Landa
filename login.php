@@ -23,12 +23,12 @@ switch ($_SERVER['REMOTE_ADDR'])
 		break;
 	default:
 		$host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-		$host = (strlen($host) > 20) ? substr($host,0,20) : $host;
-		echo $host;
 		break;
 }
 /* * Fine Fix
 */
+
+$host = (strlen($host) > 20) ? substr($host,0,20) : $host;
 
 /*Controllo se la postazione non sia stata esclusa dal sito*/
 $result = gdrcd_query("SELECT * FROM blacklist WHERE ip = '".$_SERVER['REMOTE_ADDR']."' AND granted = 0", 'result');
