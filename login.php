@@ -28,8 +28,6 @@ switch ($_SERVER['REMOTE_ADDR'])
 /* * Fine Fix
 */
 
-$host = (strlen($host) > 20) ? substr($host,0,20) : $host;
-
 /*Controllo se la postazione non sia stata esclusa dal sito*/
 $result = gdrcd_query("SELECT * FROM blacklist WHERE ip = '".$_SERVER['REMOTE_ADDR']."' AND granted = 0", 'result');
 
@@ -158,6 +156,7 @@ else
 
 	if (($login1 != '') && ($pass1 != ''))
 	{
+		$host = (strlen($host) > 20) ? substr($host,0,20) : $host;
 		/*Registro l'evento (Login errato)*/
 		gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento, descrizione_evento) VALUES ('".gdrcd_filter('in',$_SESSION['login'])."','".$host."', NOW(), ".ERRORELOGIN." ,'".$_SERVER['REMOTE_ADDR']."')");
 
