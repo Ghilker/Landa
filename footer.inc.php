@@ -57,9 +57,9 @@
         $('#dialog-'+name).dialog({width: width, height: height});
     }
     </script>
-    <script type="text/javascript">
-        setTimeout("self.location.reload();", 10000);
-    </script>
+    <!-- <script type="text/javascript">
+        setTimeout("document.location.reload();", 10000);
+    </script> -->
 <!--</body>
 </html>-->
 <?php
