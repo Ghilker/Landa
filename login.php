@@ -24,6 +24,7 @@ switch ($_SERVER['REMOTE_ADDR'])
 	default:
 		$host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 		$host = (strlen($host) > 20) ? substr($host,0,20) : $host;
+		echo $host;
 		break;
 }
 /* * Fine Fix
