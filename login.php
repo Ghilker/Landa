@@ -140,9 +140,8 @@ if (!empty($record) and gdrcd_password_check($pass1,$record['pass']) && ($record
 	/*Registro l'evento (Avvenuto login)*/
 	gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento, descrizione_evento) VALUES ('".gdrcd_filter('in',$_SESSION['login'])."','".$_SERVER['REMOTE_ADDR']."', NOW(), ".LOGGEDIN." ,'".$_SERVER['REMOTE_ADDR']."')");
 } 
-elseif (strtotime($record['ora_entrata']) > strtotime($record['ora_uscita'])||(strtotime($record['ultimo_refresh'])+300) > time())
+elseif ((strtotime($record['ultimo_refresh'])+300) > time())
 {
-
 	/*Se la postazione è stata esclusa*/
     echo '<div class="error_box"><h2 class="error_major">'.$MESSAGE['warning']['double_connection'].'</h2></div>';
 	/*Registro l'evento (Tentativo di connessione da postazione esclusa)*/
