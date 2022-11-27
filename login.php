@@ -140,34 +140,31 @@ if (!empty($record) and gdrcd_password_check($pass1,$record['pass']) && ($record
 	/*Registro l'evento (Avvenuto login)*/
 	gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento, descrizione_evento) VALUES ('".gdrcd_filter('in',$_SESSION['login'])."','".$_SERVER['REMOTE_ADDR']."', NOW(), ".LOGGEDIN." ,'".$_SERVER['REMOTE_ADDR']."')");
 } 
+/*Sono stati inseriti username e password errati*/
+elseif (($login1 != '') && ($pass1 != ''))
+{
+	$_SESSION['login'] = '';
+
+	/*Registro l'evento (Login errato)*/
+	gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento, descrizione_evento) VALUES ('".gdrcd_filter('in',$_SESSION['login'])."','Wrong_usr_pass', NOW(), ".ERRORELOGIN." ,'".$_SERVER['REMOTE_ADDR']."')");
+
+
+	$record = gdrcd_query("SELECT count(*) FROM log WHERE descrizione_evento = '".$_SERVER['REMOTE_ADDR']."' AND codice_evento = ".ERRORELOGIN." AND DATE_ADD(data_evento, INTERVAL 60 MINUTE) > NOW()");
+	/*Se ho tentato 10 login fallendo nel giro di un ora*/
+	$iErrorsNumber = $record['count(*)'];
+
+	if ($iErrorsNumber>=10)
+	{
+		gdrcd_query("INSERT INTO blacklist (ip, nota, ora, host) VALUES ('".$_SERVER['REMOTE_ADDR']."', '".$login1." (tenta password)', NOW(), '".$Host."')");
+	}
+}
 elseif ((strtotime($record['ultimo_refresh'])+300) > time())
 {
 	/*Se la postazione è stata esclusa*/
-    echo '<div class="error_box"><h2 class="error_major">'.$MESSAGE['warning']['double_connection'].'</h2></div>';
+	echo '<div class="error_box"><h2 class="error_major">'.$MESSAGE['warning']['double_connection'].'</h2></div>';
 	/*Registro l'evento (Tentativo di connessione da postazione esclusa)*/
-    gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento ,descrizione_evento) VALUES ('".$login1."', 'Login_procedure', NOW(), ".BLOCKED.", '".$_SERVER['REMOTE_ADDR']."')");
-    exit();
-}
-else 
-{
-	/*Sono stati inseriti username e password errati*/
-	$_SESSION['login'] = '';
-
-	if (($login1 != '') && ($pass1 != ''))
-	{
-		/*Registro l'evento (Login errato)*/
-		gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento, descrizione_evento) VALUES ('".gdrcd_filter('in',$_SESSION['login'])."','Wrong_usr_pass', NOW(), ".ERRORELOGIN." ,'".$_SERVER['REMOTE_ADDR']."')");
-
-
-		$record = gdrcd_query("SELECT count(*) FROM log WHERE descrizione_evento = '".$_SERVER['REMOTE_ADDR']."' AND codice_evento = ".ERRORELOGIN." AND DATE_ADD(data_evento, INTERVAL 60 MINUTE) > NOW()");
-        /*Se ho tentato 10 login fallendo nel giro di un ora*/
-		$iErrorsNumber = $record['count(*)'];
-
-		if ($iErrorsNumber>=10)
-		{
-			gdrcd_query("INSERT INTO blacklist (ip, nota, ora, host) VALUES ('".$_SERVER['REMOTE_ADDR']."', '".$login1." (tenta password)', NOW(), '".$Host."')");
-		}
-	}
+	gdrcd_query("INSERT INTO log (nome_interessato, autore, data_evento, codice_evento ,descrizione_evento) VALUES ('".$login1."', 'Login_procedure', NOW(), ".BLOCKED.", '".$_SERVER['REMOTE_ADDR']."')");
+	exit();
 }
 
 /*Eseguo l'accesso*/
