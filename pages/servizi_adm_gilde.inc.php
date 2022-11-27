@@ -185,7 +185,7 @@ if(isset($_POST['op'])===FALSE){ ?>
 		} else {
           /*Opero l'affiliazione*/
      	  $subject = explode('-',gdrcd_filter('in',$_POST['ruolo']));
-		  gdrcd_query("INSERT INTO clgpersonaggioruolo  (personaggio, id_ruolo, scadenza) VALUES ('".gdrcd_filter('in',$_POST['nome'])."', ".$subject[0].", NOW())");
+		  gdrcd_query("INSERT INTO clgpersonaggioruolo  (personaggio, id_ruolo, scadenza, descrizione) VALUES ('".gdrcd_filter('in',$_POST['nome'])."', ".$subject[0].", NOW(), 'Entra in gilda')");
 
           /*Confermo l'operazione*/
 		  echo '<div class="warning">'.gdrcd_filter('out',$MESSAGE['interface']['adm_guilds']['ok_hire']).'</div>';   
