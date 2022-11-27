@@ -297,36 +297,36 @@ function gdrcd_filter($what, $str)
 	{
 		case 'in':
 		case 'get':
-				$str = addslashes(str_replace('\\','',$str));
-		break;
+			$str = addslashes(str_replace('\\','',$str));
+			break;
 
 		case 'num':
-				$str = (int)$str;
-		break;
+			$str = (int)$str;
+			break;
 
 		case 'out':
-				$str = htmlentities($str, ENT_QUOTES, 'utf-8');
-		break;
+			$str = htmlentities($str, ENT_QUOTES, 'utf-8');
+			break;
 
 		case 'addslashes':
-				$str = addslashes($str);
-		break;
+			$str = addslashes($str);
+			break;
 
 		case 'email':
-				$str = (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$#is", $str))? $str : false;
-		break;
+			$str = (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$#is", $str))? $str : false;
+			break;
 
 		case 'includes':
-				$str = (preg_match("#[^:]#is", $str))? htmlentities($str, ENT_QUOTES) : false;
-		break;
+			$str = (preg_match("#[^:]#is", $str))? htmlentities($str, ENT_QUOTES) : false;
+			break;
 
-    case 'url':
-        $str = urlencode($str);
-    break;
+		case 'url':
+			$str = urlencode($str);
+			break;
 
-    case 'fullurl':
-        $str = filter_var(str_replace(' ', '%20', $str),FILTER_VALIDATE_URL,FILTER_FLAG_PATH_REQUIRED);
-    break;
+		case 'fullurl':
+			$str = filter_var(str_replace(' ', '%20', $str),FILTER_VALIDATE_URL,FILTER_FLAG_PATH_REQUIRED);
+			break;
 	}
 
 	return $str;
