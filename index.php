@@ -67,7 +67,7 @@ else
 	}
 	/* * Fine Recupero Password */
 
-
+//TEST ME
 
 include 'themes/'. $PARAMETERS['themes']['current_theme'] .'/home/' . $page . '.php';
 
