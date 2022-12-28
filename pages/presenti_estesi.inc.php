@@ -75,7 +75,7 @@ $mappa_corrente='';
 echo '<table style="text-align: center; vertical-align: middle; margin-left: auto; margin-right: auto;"><tbody>';
 while ($record = gdrcd_query($result, 'fetch'))
 {
-	
+	echo $record;
 	echo '<tr><th colspan="8" style="min-width: 597px; margin-left:auto; margin-right:auto;">';
 	//Stampo il nome del luogo	
 	if($record['is_invisible']==1)
