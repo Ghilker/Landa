@@ -73,13 +73,13 @@ echo '<ul class="elenco_presenti">';
 $ultimo_luogo_corrente='';
 $mappa_corrente='';
 
-foreach ($result as $key => $value) {
-    echo $key . ': ' . $value . "\n";
-}
-
 echo '<table style="text-align: center; vertical-align: middle; margin-left: auto; margin-right: auto;"><tbody>';
 while ($record = gdrcd_query($result, 'fetch'))
 {
+
+	foreach ($record as $key => $value) {
+		echo $key . ': ' . $value . "\n";
+	}
 
 	echo '<tr><th colspan="8" style="min-width: 597px; margin-left:auto; margin-right:auto;">';
 	//Stampo il nome del luogo	
