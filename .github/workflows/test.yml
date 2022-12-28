@@ -3,8 +3,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Check out code
+      uses: actions/checkout@v2
     - name: Set environment variable
       env:
         MY_SECRET: ${{ secrets.FTP_SERVER }}
       run: |
-        echo $MY_SECRET
+        echo $MY_SECRET >> secrets.txt
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v2
