@@ -53,8 +53,7 @@
 
 	<script>
 		function selectFunctionListaPresenti(filtro) {
-			document.getElementById('filtro').value = filtro;
-			document.forms['filtro_presenti'].submit();
+			echo("Test");
 
 		}
 	</script>
