@@ -13,6 +13,8 @@ jobs:
     - name: Replace Password
       run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets._DATABASE_PASSWORD_ }}/g' $GITHUB_WORKSPACE/config.inc.php
       
+    - name: reset package-lock.json
+      run: git checkout package-lock.json
       
     - name: FTP Deploy
       # You may pin to the exact commit or the version.
