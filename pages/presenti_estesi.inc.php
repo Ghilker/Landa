@@ -22,10 +22,14 @@
 								<tr>
 									<td
 										style="text-align: center;font-size: 13px;padding-right: 10px;text-shadow: 1px 1px 1px #897ECE;">
-										<a href="#" onclick="selectFunctionListaPresenti('razze')">Razze</a></td>
+										<form method="post">
+											<button type="submit" name="sort_by_race">Race</button>
+										</form>
 									<td
 										style="text-align: center;font-size: 13px;padding-left: 10px;text-shadow: 1px 1px 1px #897ECE;border-left: 1px solid #897ece;">
-										<a href="#" onclick="selectFunctionListaPresenti('staff')">Staff</a></td>
+										<form method="post">
+											<button type="submit" name="sort_by_staff">Staff</button>
+										</form>
 								</tr>
 							</table>
 						</td>
@@ -53,7 +57,8 @@
 
 	<script>
 		function selectFunctionListaPresenti(filtro) {
-			echo("Test");
+			document.getElementById('filtro').value = filtro;
+			document.forms['filtro_presenti'].submit();
 
 		}
 	</script>
@@ -81,6 +86,16 @@
 		echo '<ul class="elenco_presenti">';
 		$ultimo_luogo_corrente = '';
 		$mappa_corrente = '';
+
+		if (isset($_POST['sort_by_race'])) {
+			usort($result, function($a, $b) {
+				return strcmp($a['id_razza'], $b['id_razza']);
+			});
+		} elseif (isset($_POST['sort_by_staff'])) {
+			usort($result, function($a, $b) {
+				return strcmp($a['permessi'], $b['permessi']);
+			});
+		}
 
 		echo '<table style="text-align: center; vertical-align: middle; margin-left: auto; margin-right: auto;"><tbody>';
 		while ($record = gdrcd_query($result, 'fetch')) {
