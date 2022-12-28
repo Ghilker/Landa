@@ -22,10 +22,10 @@
 								<tr>
 									<td
 										style="text-align: center;font-size: 13px;padding-right: 10px;text-shadow: 1px 1px 1px #897ECE;">
-										<a href="javascript:selectFunctionListaPresenti('razze')">Razze</a></td>
+										<a href="#" onclick="selectFunctionListaPresenti('razze')">Razze</a></td>
 									<td
 										style="text-align: center;font-size: 13px;padding-left: 10px;text-shadow: 1px 1px 1px #897ECE;border-left: 1px solid #897ece;">
-										<a href="javascript:selectFunctionListaPresenti('staff')">Staff</a></td>
+										<a href="#" onclick="selectFunctionListaPresenti('staff')">Staff</a></td>
 								</tr>
 							</table>
 						</td>
@@ -51,9 +51,8 @@
 
 	</div>
 
-
-	<script language="javascript">
-		var selectFunctionListaPresenti = function (filtro) {
+	<script>
+		function selectFunctionListaPresenti(filtro) {
 			document.getElementById('filtro').value = filtro;
 			document.forms['filtro_presenti'].submit();
 
@@ -61,8 +60,6 @@
 	</script>
 	<!-- Chiudura finestra del gioco --> <!--</div>
 </div>-->
-
-
 
 	<!--CODICE ORIGINALE-->
 	<div class="presenti_estesi">
@@ -76,9 +73,9 @@
 
 
 		//Carico la lista presenti.
-/* * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando il pg non è più connesso
-	* @author Blancks
-*/
+		/* * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando il pg non è più connesso
+			* @author Blancks
+		*/
 		$query = "SELECT personaggio.nome, personaggio.cognome, personaggio.permessi, personaggio.sesso, personaggio.id_razza, razza.sing_m, razza.sing_f, razza.icon, personaggio.disponibile, personaggio.online_status, personaggio.is_invisible, personaggio.ultima_mappa, personaggio.ultimo_luogo, personaggio.posizione, personaggio.ora_entrata, personaggio.ora_uscita, personaggio.ultimo_refresh, mappa.stanza_apparente, mappa.nome as luogo, mappa_click.nome as mappa FROM personaggio LEFT JOIN mappa ON personaggio.ultimo_luogo = mappa.id LEFT JOIN mappa_click ON personaggio.ultima_mappa = mappa_click.id_click LEFT JOIN razza ON personaggio.id_razza = razza.id_razza WHERE personaggio.ora_entrata > personaggio.ora_uscita AND DATE_ADD(personaggio.ultimo_refresh, INTERVAL 4 MINUTE) > NOW() ORDER BY personaggio.is_invisible, personaggio.ultima_mappa, personaggio.ultimo_luogo, personaggio.nome";
 		$result = gdrcd_query($query, 'result');
 
@@ -88,10 +85,6 @@
 
 		echo '<table style="text-align: center; vertical-align: middle; margin-left: auto; margin-right: auto;"><tbody>';
 		while ($record = gdrcd_query($result, 'fetch')) {
-
-			if($record['id_razza'] == 1008){
-				continue;
-			}
 
 			echo '<tr><th colspan="8" style="min-width: 597px; margin-left:auto; margin-right:auto;">';
 			//Stampo il nome del luogo	
