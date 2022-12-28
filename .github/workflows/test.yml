@@ -1,0 +1,9 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set environment variable
+      env:
+        MY_SECRET: ${{ secrets.MY_SECRET }}
+      run: |
+        echo $MY_SECRET
