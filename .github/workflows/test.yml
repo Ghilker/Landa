@@ -1,9 +1,10 @@
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Set environment variable
       env:
-        MY_SECRET: ${{ secrets.MY_SECRET }}
+        MY_SECRET: ${{ secrets.FTP_SERVER }}
       run: |
         echo $MY_SECRET
