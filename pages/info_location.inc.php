@@ -17,7 +17,7 @@
     } else {
         $nome_luogo = $record['nome'];
     }
-    $_SESSION['descrizione_luogo'] = $record['descrizione'];
+    $_SESSION['descrizione_luogo'] = $record;
 
     ?>
     <div class="page_title_info">
