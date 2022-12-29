@@ -44,11 +44,6 @@
 	  
 	  <?php $_SESSION['staff'] = $staff; ?>
 	  
-	  <?php if ($staff) { ?>
-						document.body.innerHTML = '<p>The staff variable is true</p>';
-		  <?php } else { ?>
-						document.body.innerHTML = '<p>The staff variable is false</p>';
-		  <?php } ?>
 	});
 		</script>
 	</body>
