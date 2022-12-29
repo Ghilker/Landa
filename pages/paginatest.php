@@ -2,7 +2,8 @@
 // Get the array from the query parameter
 session_start();
 
-echo $_SESSION['descrizione_luogo']
-
+    foreach ($_SESSION['descrizione_luogo'] as $key => $value) {
+        echo "$key: $value\n";
+    }
 
 ?>
