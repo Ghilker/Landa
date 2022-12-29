@@ -88,7 +88,7 @@
 		while ($record = gdrcd_query($result, 'fetch')) {
 
 
-			if ($staff and $record['permessi'] < 4) {
+			if ($staff && $record['permessi'] < 4) {
 				continue;
 			}
 
