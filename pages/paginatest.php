@@ -1,7 +1,8 @@
 <?php
 // Get the array from the query parameter
-$myArray = $_GET['myArray'];
+session_start();
 
-// Print the array to the page
-print_r($myArray);
+echo $_SESSION['descrizione_luogo']
+
+
 ?>
