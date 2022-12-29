@@ -21,14 +21,6 @@
 							<table>
 								<tr>
 									<td
-										style="text-align: center;font-size: 13px;padding-right: 10px;text-shadow: 1px 1px 1px #897ECE;">
-										<form method="post" id="sort_by_race_form">
-											<a href="#"
-												onclick="document.getElementById('sort_by_race_form').submit();">Race</a>
-										</form>
-									</td>
-
-									<td
 										style="text-align: center;font-size: 13px;padding-left: 10px;text-shadow: 1px 1px 1px #897ECE;border-left: 1px solid #897ece;">
 										<form method="post" id="sort_by_staff_form">
 											<a href="#"
@@ -92,20 +84,20 @@
 		$ultimo_luogo_corrente = '';
 		$mappa_corrente = '';
 
-		if (isset($_POST['sort_by_race_form'])) {
-			echo ("Razza");
-			usort($result, function ($a, $b) {
-				return strcmp($a['id_razza'], $b['id_razza']);
-			});
-		} elseif (isset($_POST['sort_by_staff_form'])) {
+
+		$mostra_solo_staff = false;
+		if (isset($_POST['sort_by_staff_form'])) {
 			echo ("Staff");
-			usort($result, function ($a, $b) {
-				return strcmp($a['permessi'], $b['permessi']);
-			});
+			$mostra_solo_staff = !$mostra_solo_staff;
 		}
 
 		echo '<table style="text-align: center; vertical-align: middle; margin-left: auto; margin-right: auto;"><tbody>';
 		while ($record = gdrcd_query($result, 'fetch')) {
+
+
+			if ($mostra_solo_staff and $record['permessi'] < 4) {
+				continue;
+			}
 
 			echo '<tr><th colspan="8" style="min-width: 597px; margin-left:auto; margin-right:auto;">';
 			//Stampo il nome del luogo	
