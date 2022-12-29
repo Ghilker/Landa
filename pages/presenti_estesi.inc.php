@@ -22,14 +22,19 @@
 								<tr>
 									<td
 										style="text-align: center;font-size: 13px;padding-right: 10px;text-shadow: 1px 1px 1px #897ECE;">
-										<form method="post">
-											<button type="submit" name="sort_by_race">Race</button>
+										<form method="post" id="sort_by_race_form">
+											<a href="#"
+												onclick="document.getElementById('sort_by_race_form').submit();">Race</a>
 										</form>
+									</td>
+
 									<td
 										style="text-align: center;font-size: 13px;padding-left: 10px;text-shadow: 1px 1px 1px #897ECE;border-left: 1px solid #897ece;">
-										<form method="post">
-											<button type="submit" name="sort_by_staff">Staff</button>
+										<form method="post" id="sort_by_staff_form">
+											<a href="#"
+												onclick="document.getElementById('sort_by_staff_form').submit();">Staff</a>
 										</form>
+									</td>
 								</tr>
 							</table>
 						</td>
@@ -78,27 +83,30 @@
 
 		//Carico la lista presenti.
 		/* * Fix della query per includere l'uso dell'orario di uscita per capire istantaneamente quando il pg non è più connesso
-			* @author Blancks
-		*/
+		 * @author Blancks
+		 */
 		$query = "SELECT personaggio.nome, personaggio.cognome, personaggio.permessi, personaggio.sesso, personaggio.id_razza, razza.sing_m, razza.sing_f, razza.icon, personaggio.disponibile, personaggio.online_status, personaggio.is_invisible, personaggio.ultima_mappa, personaggio.ultimo_luogo, personaggio.posizione, personaggio.ora_entrata, personaggio.ora_uscita, personaggio.ultimo_refresh, mappa.stanza_apparente, mappa.nome as luogo, mappa_click.nome as mappa FROM personaggio LEFT JOIN mappa ON personaggio.ultimo_luogo = mappa.id LEFT JOIN mappa_click ON personaggio.ultima_mappa = mappa_click.id_click LEFT JOIN razza ON personaggio.id_razza = razza.id_razza WHERE personaggio.ora_entrata > personaggio.ora_uscita AND DATE_ADD(personaggio.ultimo_refresh, INTERVAL 4 MINUTE) > NOW() ORDER BY personaggio.is_invisible, personaggio.ultima_mappa, personaggio.ultimo_luogo, personaggio.nome";
 		$result = gdrcd_query($query, 'result');
+		$record = gdrcd_query($result, 'fetch');
 
 		echo '<ul class="elenco_presenti">';
 		$ultimo_luogo_corrente = '';
 		$mappa_corrente = '';
 
 		if (isset($_POST['sort_by_race'])) {
-			usort($result, function($a, $b) {
+			echo ("Razza");
+			usort($record, function ($a, $b) {
 				return strcmp($a['id_razza'], $b['id_razza']);
 			});
 		} elseif (isset($_POST['sort_by_staff'])) {
-			usort($result, function($a, $b) {
+			echo ("Staff");
+			usort($record, function ($a, $b) {
 				return strcmp($a['permessi'], $b['permessi']);
 			});
 		}
 
 		echo '<table style="text-align: center; vertical-align: middle; margin-left: auto; margin-right: auto;"><tbody>';
-		while ($record = gdrcd_query($result, 'fetch')) {
+		while ($record) {
 
 			echo '<tr><th colspan="8" style="min-width: 597px; margin-left:auto; margin-right:auto;">';
 			//Stampo il nome del luogo	
