@@ -17,16 +17,15 @@
     } else {
         $nome_luogo = $record['nome'];
     }
-
+    $query = http_build_query(array('info_luogo' => $record));
     ?>
     <div class="page_title_info">
         <div class="page_title_info_testo">
             <h2>
-                <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3"
+            <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3"
                     class="stato_luogo">&nbsp;
-                    <a href="#" onclick="window.open('paginatest.php', 'New Window', 'height=500,width=500');">
-                        <?php echo gdrcd_filter('out', $nome_luogo); ?>
-                    </a>
+                    <?php echo '<a href="#" onclick="window.open(\'newpage.php?' . $query . '\', \'New Window\', \'height=500,width=500\');">gdrcd_filter(\'out\', $nome_luogo);</a>';
+                    ?>
                 </marquee>
             </h2>
         </div>
