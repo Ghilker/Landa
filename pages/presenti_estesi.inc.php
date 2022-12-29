@@ -6,40 +6,42 @@
 		<div style="margin-top: 15px; margin-bottom: 20px"><img src="/imgs/connessi.png"></div>
 	</div>
 
+	<?php
+
+	$staff = false;
+
+	if (isset($_GET['staff'])) {
+		$staff = !$staff;
+	}
+
+	// Save the toggle variable to a session variable so it can be accessed later
+	$_SESSION['staff'] = $staff;
+
+	// Output the HTML
+	?>
+	<!DOCTYPE html>
+	<html>
+
+	<body>
+		<!-- Create a form that submits when the button is clicked -->
+		<form method="get">
+			<input type="hidden" name="staff" value="true">
+			<button type="submit">Staff</button>
+		</form>
+
+		<!-- Use the toggle variable in a PHP function -->
+		<?php if ($staff) { ?>
+			<p>The staff variable is true</p>
+			<?php } else { ?>
+			<p>The staff variable is false</p>
+			<?php } ?>
+	</body>
+
+	</html>
+
+
 	<!--CODICE ORIGINALE-->
 	<div class="presenti_estesi">
-
-		<?php
-
-		$staff = false;
-
-		if (isset($_GET['staff'])) {
-			$staff = !$staff;
-		}
-
-		// Save the toggle variable to a session variable so it can be accessed later
-		$_SESSION['staff'] = $staff;
-
-		// Output the HTML
-		?>
-		<!DOCTYPE html>
-		<html>
-		<body>
-			<!-- Create a form that submits when the button is clicked -->
-			<form method="get">
-				<input type="hidden" name="staff" value="true">
-				<button type="submit">Staff</button>
-			</form>
-
-			<!-- Use the toggle variable in a PHP function -->
-			<?php if ($staff) { ?>
-				<p>The staff variable is true</p>
-				<?php } else { ?>
-				<p>The staff variable is false</p>
-				<?php } ?>
-		</body>
-
-		</html>
 		<?php
 
 
