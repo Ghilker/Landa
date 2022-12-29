@@ -6,58 +6,6 @@
 		<div style="margin-top: 15px; margin-bottom: 20px"><img src="/imgs/connessi.png"></div>
 	</div>
 
-	<!--CODICE HDY-->
-	<div class="container">
-		<div class="presenti_estesi">
-			<div id="descriptionLoc"></div>
-			<form action="" method="get" name="filtro_presenti">
-				<input type="hidden" name="filtro" id="filtro" />
-				<input type="hidden" name="page" value="presenti_estesi" />
-
-				<table class="elenco_presenti"
-					style="border-top: 1px dashed #B6C7D5; padding-top: 10px; text-align: center; margin-right:auto; margin-left:auto;">
-					<tr>
-						<td style="text-align:left;">
-							<table>
-								<tr>
-									<form method="post">
-										<button type="submit" name="sort_by_staff">Staff</button>
-									</form>
-								</tr>
-							</table>
-						</td>
-						<td style="text-align:right;">
-							<div
-								style="font-size: 13px;padding-left: 260px; margin-top: 5px;float: left;text-shadow: 1px 1px 1px #897ECE;">
-								Gilde:</div>
-							<select name="gilda" style="width: 35%; border-radius: 10px;"
-								onchange="selectFunctionListaPresenti('gilda')">
-								<option></option>
-								<option value="1">Custodi del Crocevia</option>
-								<option value="2">Circolo degli Eruditi</option>
-								<option value="3">Legione di Ferro</option>
-								<option value="4">Loggia delle Sette Chiavi</option>
-							</select>
-						</td>
-					</tr>
-				</table>
-			</form>
-
-			<!--<table class="elenco_presenti"><tr><td class="mappa" colspan="8">Fuori Citt&agrave;</td></tr><tr class="stile_tabella" ><td class="icone_colonne"><img class="presenti_ico_2" src="imgs/icons/blank.png" alt="" title="" /></td><td class="icone_colonne"><img class="presenti_ico_2" src="themes/advanced/imgs/races/standard_razza_kemo.png" alt="Kemonomimi" title="Kemonomimi" /></td><td class="presente"onmouseover="show_desc(event, 'Let\'s Play ♡ | I\'m back.');" onmouseout="hide_desc();""><img class="presenti_ico_3" src="imgs/icons/permessi3.gif" alt="Master" title="Master" /><a href="main.php?page=scheda&pg=Ren" class="link_sheet">Ren Shirokami</a></td><td><img class="presenti_ico" src="imgs/icons/testaminim.png" alt="Maschio" title="Maschio" /></td><td><a href="main.php?page=messages_center&newmessage=yes&reply_dest=Ren"><img class="presenti_ico" src="imgs/icons/mail_new.png" alt="" title="Invia un messaggio" /></a></td><td class="icone_colonne_lavori"><img class="presenti_ico_4" src="../themes/advanced/imgs/guilds/standard_gilda_universitario.png" alt="Studente Universitario" title="Studente Universitario" /></td><td class="icone_colonne_lavori"><img class="presenti_ico" src="../themes/advanced/imgs/guilds/capoprogetto.png" alt="Capo Progetto" title="Capo Progetto" /></td><td><img class="presenti_ico_dispon" src="imgs/icons/disponibile0.png" alt="Non disponibile" title="Non disponibile" /></td></tr></table>-->
-		</div>
-
-	</div>
-
-	<script>
-		function selectFunctionListaPresenti(filtro) {
-			document.getElementById('filtro').value = filtro;
-			document.forms['filtro_presenti'].submit();
-
-		}
-	</script>
-	<!-- Chiudura finestra del gioco --> <!--</div>
-</div>-->
-
 	<!--CODICE ORIGINALE-->
 	<div class="presenti_estesi">
 		<?php
@@ -82,7 +30,7 @@
 
 
 		$mostra_solo_staff = false;
-		if (isset($_POST['sort_by_staff'])) {
+		if (isset($_POST['sort_by_staff_form'])) {
 			echo ("Staff");
 			$mostra_solo_staff = !$mostra_solo_staff;
 		}
