@@ -44,6 +44,9 @@
 	  
 	  <?php $_SESSION['staff'] = $staff; ?>
 	  
+	  <?php if ($staff) {
+	  echo ("Test");
+	  } ?>
 	});
 		</script>
 	</body>
