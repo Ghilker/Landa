@@ -24,7 +24,7 @@
             <h2>
                 <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3"
                     class="stato_luogo">&nbsp;
-                    <a href="paginatest.php" target="_blank">
+                    <a href="#" onclick="window.open('paginatest.php', 'New Window', 'height=500,width=500');">
                         <?php echo gdrcd_filter('out', $nome_luogo); ?>
                     </a>
                 </marquee>
