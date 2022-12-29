@@ -45,7 +45,7 @@
 	  <?php $_SESSION['staff'] = $staff; ?>
 	  
 	  <?php if ($staff) {
-	  echo ("Test");
+	  echo "ok";
 	  } ?>
 	});
 		</script>
@@ -76,13 +76,6 @@
 		echo '<ul class="elenco_presenti">';
 		$ultimo_luogo_corrente = '';
 		$mappa_corrente = '';
-
-
-		$mostra_solo_staff = false;
-		if (isset($_POST['sort_by_staff_form'])) {
-			echo ("Staff");
-			$mostra_solo_staff = !$mostra_solo_staff;
-		}
 
 		echo '<table style="text-align: center; vertical-align: middle; margin-left: auto; margin-right: auto;"><tbody>';
 		while ($record = gdrcd_query($result, 'fetch')) {
