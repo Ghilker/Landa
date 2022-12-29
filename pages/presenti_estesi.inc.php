@@ -92,12 +92,12 @@
 		$ultimo_luogo_corrente = '';
 		$mappa_corrente = '';
 
-		if (isset($_POST['sort_by_race'])) {
+		if (isset($_POST['sort_by_race_form'])) {
 			echo ("Razza");
 			usort($result, function ($a, $b) {
 				return strcmp($a['id_razza'], $b['id_razza']);
 			});
-		} elseif (isset($_POST['sort_by_staff'])) {
+		} elseif (isset($_POST['sort_by_staff_form'])) {
 			echo ("Staff");
 			usort($result, function ($a, $b) {
 				return strcmp($a['permessi'], $b['permessi']);
