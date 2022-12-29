@@ -9,38 +9,33 @@
 	<!--CODICE ORIGINALE-->
 	<div class="presenti_estesi">
 
+		<?php
+
+		$staff = false;
+
+		if (isset($_GET['staff'])) {
+			$staff = !$staff;
+		}
+
+		// Save the toggle variable to a session variable so it can be accessed later
+		$_SESSION['staff'] = $staff;
+
+		// Output the HTML
+		?>
 		<!DOCTYPE html>
 		<html>
-
-		<head>
-			<title>Toggle Example</title>
-		</head>
-
 		<body>
 			<!-- Create a form that submits when the button is clicked -->
 			<form method="get">
-				<input type="hidden" name="toggle" value="true">
-				<button type="submit">Toggle</button>
+				<input type="hidden" name="staff" value="true">
+				<button type="submit">Staff</button>
 			</form>
 
-			<?php
-			// Initialize the toggle variable to false
-			$toggle = false;
-
-			// Check if the toggle variable is set
-			if (isset($_GET['toggle'])) {
-				// If it is, switch the value of the toggle variable
-				$toggle = !$toggle;
-			}
-
-			// Save the toggle variable to a session variable so it can be accessed later
-			$_SESSION['toggle'] = $toggle;
-
-			// Use the toggle variable in a PHP function
-			if ($toggle) { ?>
-				<p>The toggle variable is true</p>
+			<!-- Use the toggle variable in a PHP function -->
+			<?php if ($staff) { ?>
+				<p>The staff variable is true</p>
 				<?php } else { ?>
-				<p>The toggle variable is false</p>
+				<p>The staff variable is false</p>
 				<?php } ?>
 		</body>
 
@@ -77,7 +72,7 @@
 		while ($record = gdrcd_query($result, 'fetch')) {
 
 
-			if ($mostra_solo_staff and $record['permessi'] < 4) {
+			if ($staff and $record['permessi'] < 4) {
 				continue;
 			}
 
