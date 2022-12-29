@@ -7,9 +7,9 @@
     $record = gdrcd_query($result, 'fetch');
 
     /* * Fix: quando non si � in una mappa visualizza il nome della chat
-    * Quando si � in una mappa si visualizza il nome della mappa
-    * @author Blancks
-    */
+     * Quando si � in una mappa si visualizza il nome della mappa
+     * @author Blancks
+     */
     if (empty($record['nome'])) {
         $nome_mappa = gdrcd_query("SELECT nome FROM mappa_click WHERE id_click = " . (int) $_SESSION['mappa']);
         $nome_luogo = $nome_mappa['nome'];
@@ -24,7 +24,10 @@
             <h2>
                 <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3"
                     class="stato_luogo">&nbsp;
-                    <?php echo gdrcd_filter('out', $nome_luogo); ?></marquee>
+                    <a href="paginatest.php" target="_blank">
+                        <?php echo gdrcd_filter('out', $nome_luogo); ?>
+                    </a>
+                </marquee>
             </h2>
         </div>
     </div>
