@@ -17,6 +17,7 @@
     } else {
         $nome_luogo = $record['nome'];
     }
+    $_SESSION['descrizione_luogo'] = null;
     $_SESSION['descrizione_luogo'] = $record;
 
     ?>
