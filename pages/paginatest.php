@@ -4,4 +4,5 @@ session_start();
 
 echo $_SESSION['descrizione_luogo']['descrizione'];
 
+
 ?>
