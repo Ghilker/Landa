@@ -9,6 +9,7 @@
 	<!--CODICE ORIGINALE-->
 	<div class="presenti_estesi">
 
+		<!DOCTYPE html>
 		<html>
 
 		<head>
@@ -16,11 +17,27 @@
 		</head>
 
 		<body>
-			<!-- Create a link that runs the PHP script when clicked -->
-			<a href="?toggle=true">Toggle</a>
+			<!-- Create a form that submits when the button is clicked -->
+			<form method="get">
+				<input type="hidden" name="toggle" value="true">
+				<button type="submit">Toggle</button>
+			</form>
 
-			<!-- Use the toggle variable in a PHP function -->
-			<?php if ($toggle) { ?>
+			<?php
+			// Initialize the toggle variable to false
+			$toggle = false;
+
+			// Check if the toggle variable is set
+			if (isset($_GET['toggle'])) {
+				// If it is, switch the value of the toggle variable
+				$toggle = !$toggle;
+			}
+
+			// Save the toggle variable to a session variable so it can be accessed later
+			$_SESSION['toggle'] = $toggle;
+
+			// Use the toggle variable in a PHP function
+			if ($toggle) { ?>
 				<p>The toggle variable is true</p>
 				<?php } else { ?>
 				<p>The toggle variable is false</p>
@@ -28,20 +45,7 @@
 		</body>
 
 		</html>
-
 		<?php
-
-		// Initialize the toggle variable to false
-		$toggle = false;
-
-		// Check if the toggle variable is set
-		if (isset($_GET['toggle'])) {
-			// If it is, switch the value of the toggle variable
-			$toggle = !$toggle;
-		}
-
-		// Save the toggle variable to a session variable so it can be accessed later
-		$_SESSION['toggle'] = $toggle;
 
 
 		/* * Abilitazione tooltip
