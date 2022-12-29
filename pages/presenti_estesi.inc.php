@@ -20,13 +20,9 @@
 						<td style="text-align:left;">
 							<table>
 								<tr>
-									<td
-										style="text-align: center;font-size: 13px;padding-left: 10px;text-shadow: 1px 1px 1px #897ECE;border-left: 1px solid #897ece;">
-										<form method="post" id="sort_by_staff_form">
-											<a href="#"
-												onclick="document.getElementById('sort_by_staff_form').submit();">Staff</a>
-										</form>
-									</td>
+									<form method="post">
+										<button type="submit" name="sort_by_staff">Staff</button>
+									</form>
 								</tr>
 							</table>
 						</td>
@@ -86,7 +82,7 @@
 
 
 		$mostra_solo_staff = false;
-		if (isset($_POST['sort_by_staff_form'])) {
+		if (isset($_POST['sort_by_staff'])) {
 			echo ("Staff");
 			$mostra_solo_staff = !$mostra_solo_staff;
 		}
