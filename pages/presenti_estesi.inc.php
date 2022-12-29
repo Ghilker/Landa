@@ -8,7 +8,41 @@
 
 	<!--CODICE ORIGINALE-->
 	<div class="presenti_estesi">
+
+		<html>
+
+		<head>
+			<title>Toggle Example</title>
+		</head>
+
+		<body>
+			<!-- Create a link that runs the PHP script when clicked -->
+			<a href="?toggle=true">Toggle</a>
+
+			<!-- Use the toggle variable in a PHP function -->
+			<?php if ($toggle) { ?>
+				<p>The toggle variable is true</p>
+				<?php } else { ?>
+				<p>The toggle variable is false</p>
+				<?php } ?>
+		</body>
+
+		</html>
+
 		<?php
+
+		// Initialize the toggle variable to false
+		$toggle = false;
+
+		// Check if the toggle variable is set
+		if (isset($_GET['toggle'])) {
+			// If it is, switch the value of the toggle variable
+			$toggle = !$toggle;
+		}
+
+		// Save the toggle variable to a session variable so it can be accessed later
+		$_SESSION['toggle'] = $toggle;
+
 
 		/* * Abilitazione tooltip
 		 * @author Blancks
