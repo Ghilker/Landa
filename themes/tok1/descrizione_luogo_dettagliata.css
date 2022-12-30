@@ -3,3 +3,9 @@ body {
     background-repeat: repeat;
     background-position: left top;
   }
+
+  #container {
+    background-image: url('/imgs/sfondopg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
