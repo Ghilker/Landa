@@ -1,5 +1,5 @@
 .bg-image {
-    background-image: url('imgs/pattern.png');
+    background-image: url("imgs/pattern.png");
     background-size: cover;
     background-position: center;
   }
