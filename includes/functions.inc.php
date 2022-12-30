@@ -208,6 +208,7 @@ function gdrcd_mysql_error($details = false)
 
 
 
+
 /*
  * Funzionalità di escape
  * Set di funzioni escape per filtrare i possibili contenuti introdotti da un utente ;-)
