@@ -236,6 +236,7 @@
                         style="text-align:center; width: 90px; margin:-22px 0px 0px 50px; position: absolute; padding:0px; color: #0A1228; font-style: italic; font-size: 10px; font-weight: bold;">
                         <!--CODICE VENTO-->
 
+                        
                         <?php
                         // Mantiene il valore di 'oldH' anche dopo il refresh
                         session_set_cookie_params(array(3600, "/"));
