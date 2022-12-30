@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="../themes/<?php echo $PARAMETERS['themes']['current_theme']; ?>/descrizione_luogo_dettagliata.css">
+  <link rel="stylesheet" type="text/css" href="../themes/tok1/descrizione_luogo_dettagliata.css">
 </head>
 <?php
 session_start();
