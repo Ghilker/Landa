@@ -1,10 +1,7 @@
 
-<html>
-<head>
-	<meta http-equiv="Content-Type" content='text/html; charset=utf-8'>
-	<link rel="stylesheet" href="themes/<?php echo $PARAMETERS['themes']['current_theme']; ?>/descrizione_luogo_dettagliata.css" TYPE='text/css'>
-</head>
-</html>
+<div class="bg-image">
+  <!-- content here -->
+</div>
 
 <?php
 require '../ref_header.inc.php';
