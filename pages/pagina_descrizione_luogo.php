@@ -10,7 +10,7 @@
             background-image: url('/imgs/sfondopg.png');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: contain;
+            background-size: cover;
         }
     </style>
 </head>
