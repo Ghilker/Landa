@@ -26,7 +26,7 @@
                 <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3"
                     class="stato_luogo">&nbsp;
                     <?php
-                    echo '<a href="#" onclick="window.open(\'../pages/pagina_descrizione_luogo.php\', \'Descrizione Luogo\', \'height=500,width=500\');">' . gdrcd_filter('out', $nome_luogo) . '</a>';
+                    echo '<a href="#" onclick="window.open(\'../main.php?page=forum\', \'Descrizione Luogo\', \'height=500,width=500\');">' . gdrcd_filter('out', $nome_luogo) . '</a>';
                     ?>
                 </marquee>
             </h2>
