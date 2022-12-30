@@ -28,6 +28,7 @@ $PARAMETERS['database']['database_name'] = '_DATABASE_NAME_'; //nome del databas
 $PARAMETERS['database']['url'] = 'localhost'; //indirizzo ip del database
 
 
+
 /* HELP: Sostituire le diciture inserite tra le virgolette con i parametri di connessione al Database del proprio dominio. Essi sono forniti al momento della registrazione. Se non si e' in possesso di tali parametri consultare le FAQ della homepage dell'host che fornisce il dominio. Se non le si trovano li contattare lo staff dell'host. */
 
 
