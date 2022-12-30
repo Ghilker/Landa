@@ -1,0 +1,22 @@
+name: Deploy via ftp
+on: push
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install sed
+      run: sudo apt-get update && sudo apt-get install -y sed
+    - name: Replace Username
+      run: sed -i 's/_DATABASE_USERNAME_/${{ secrets._DATABASE_USERNAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
+    - name: Replace Password
+      run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets._DATABASE_PASSWORD_ }}/g' $GITHUB_WORKSPACE/config.inc.php
+    - name: Replace Database Name
+      run: sed -i 's/_DATABASE_NAME_/${{ secrets._DATABASE_NAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
