@@ -238,7 +238,7 @@
 
                         <?php
                         // Mantiene il valore di 'oldH' anche dopo il refresh
-                        session_set_cookie_params(array(3600, "/"));
+                        session_set_cookie_params(3600, "/");
                         session_start();
                         // ora di riferimento
                         $_SESSION['oldH'] = 0;
