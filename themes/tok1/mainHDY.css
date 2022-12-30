@@ -67,7 +67,7 @@ select.day, select.month, select.year{
 
 div.warning_ok{
 	background-color: #a7cf88;
-    font-size: 12px; !important
+    font-size: 12px;
     text-align: center;
     margin: 15px;
     font-weight: bolder;
@@ -79,7 +79,7 @@ div.warning_ok{
  
 div.warning, div.error{
 	background-color:#cf8888;
-	font-size:12px; !important
+	font-size:12px;
 	text-align:center;
 	margin:15px;
 	font-weight:bolder;
@@ -90,7 +90,7 @@ div.warning, div.error{
 
 div.warning_banca{
 background-color: #bdb4c9;
-    font-size: 12px; !important
+    font-size: 12px;
     width: 650px;
     text-align: center;
     margin: auto;
