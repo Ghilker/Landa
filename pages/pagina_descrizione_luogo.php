@@ -1,6 +1,5 @@
 <?php
-require '../ref_header.inc.php';
-require '../footer.inc.php';
+
 // Get the array from the query parameter
 session_start();
 
