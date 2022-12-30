@@ -3,7 +3,7 @@
 </head>
 <body>
     <div id = "container">
-        Descrizione dettagliata luogo
+        <p>Descrizione dettagliata luogo</p>
     </div>
 </body>
 <?php
