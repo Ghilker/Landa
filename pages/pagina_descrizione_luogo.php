@@ -6,7 +6,7 @@
             background-position: left top;
         }
 
-        .container {
+        #container {
             background-image: url('/imgs/sfondopg.png');
             background-repeat: no-repeat;
             background-position: center;
