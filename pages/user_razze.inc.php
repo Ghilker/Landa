@@ -7,11 +7,22 @@
 
 
 		$query = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
-		$result = gdrcd_query($query, 'result'); ?>
+		$result = gdrcd_query($query, 'result');
+
+		$race_amount = count(gdrcd_query($result, 'fetch'));
+		for ($i = 1; $i <= $race_amount; $i++) {
+			echo "<button id='button-$i'>Scroll to Section $i</button>";
+		}
+		
+		
+		?>
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
 				<table>
-					<?php while ($row = gdrcd_query($result, 'fetch')) { ?>
+					<?php
+					$id = 0;
+					while ($row = gdrcd_query($result, 'fetch')) { ?>
+						<div id="section-"$id></div>
 						<tr>
 							<td colspan="2" class="casella_titolo">
 								<div class="elementi_elenco">
@@ -46,7 +57,10 @@
 
 							</td>
 						</tr>
-						<?php } //while 
+					<?php
+
+					$id += 1;
+					} //while 
 						
 						gdrcd_query($result, 'free');
 						?>
