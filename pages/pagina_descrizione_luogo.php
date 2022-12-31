@@ -15,15 +15,14 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            position: relative;
         }
 
         #output {
             position: absolute;
-            top: 20px;
-            bottom: 0;
-            right: 0px;
-            left: 0px;
+            top: 25px;
+            bottom: 10px;
+            right: 10px;
+            left: 10px;
             width: auto;
             overflow: auto;
             text-align: center;
