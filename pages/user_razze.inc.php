@@ -20,11 +20,12 @@
 
 
 		<script>
-			const elementId = row['nome_razza'];
-			$results.foreach(function($result2)
-				document.getElementById(elementId).addEventListener('click', function() {
-					document.getElementById(elementId).scrollIntoView({behavior: 'smooth'});
-				}));
+  			const element = document.getElementById(row['nome_razza']);
+  				$results.forEach(function($result2) {
+    				document.getElementById(row['nome_razza']).addEventListener('click', function() {
+     				 document.getElementById(row['nome_razza']).scrollIntoView({behavior: 'smooth'});
+    				});
+ 				 });
 		</script>
 		
 		<div class="panels_box">
