@@ -26,4 +26,4 @@
 </body>
 <?php
 session_start();
-echo gdrcd_filter('out', $_SESSION['descrizione_luogo']['descrizione_dettagliata']); ?>
+echo htmlentities($_SESSION['descrizione_luogo']['descrizione_dettagliata'], ENT_QUOTES, 'utf-8'); ?>
