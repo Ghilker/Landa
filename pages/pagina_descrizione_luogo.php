@@ -13,7 +13,7 @@
         }
 
         #desc_container {
-            width: 100%;
+            max-width: 100%;
             background-image: url('/imgs/sfondopg.png');
             background-repeat: no-repeat;
             background-position: center;
