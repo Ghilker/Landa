@@ -22,6 +22,8 @@
             position: relative;
             width: auto;
             overflow: auto;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             background: url("") no-repeat center #0a1228;
             color: #7b859f;
