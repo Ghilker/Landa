@@ -24,7 +24,7 @@
             font-size: 35px;
             font-family: Arial, sans-serif;
             color: #031127;
-            height: 100%;
+            width: 100%;
         }
 
         #desc_output {
