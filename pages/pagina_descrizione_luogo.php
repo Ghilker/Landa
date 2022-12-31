@@ -15,10 +15,11 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            position: absolute;
         }
 
         #output {
-            position: absolute;
+            position: relative;
             top: 25px;
             bottom: 10px;
             right: 10px;
@@ -44,5 +45,4 @@
         echo $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
         ?><p>
     </div>
-
 </body>
