@@ -24,7 +24,6 @@
         }
 
         #desc_output {
-            width: auto;
             overflow: auto;
             text-align: center;
             background: url("") no-repeat center #0a1228;
