@@ -11,7 +11,7 @@
 		
 		foreach($result1 as $row){
 			$value = $row['nome_razza'];
-			echo "<button id = button + $value> $value </button>";
+			echo "<button id = 'button' + '$value'> $value </button>";
 		}
 		
 		$query2 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
@@ -23,8 +23,8 @@
 <script>
   <?php
   foreach($result2 as $result2) {
-    echo "document.getElementById('button" . $result2['nome_razza'] . "').addEventListener('click', function() {";
-    echo "  document.getElementById('id" . $result2['nome_razza'] . "').scrollIntoView({behavior: 'smooth'});";
+    echo "document.getElementById('button " . $result2['nome_razza'] . "').addEventListener('click', function() {";
+    echo "  document.getElementById('id " . $result2['nome_razza'] . "').scrollIntoView({behavior: 'smooth'});";
     echo "});";
   };
   ?>
@@ -51,7 +51,7 @@
 									<img class="razza_icon"
 										src="themes/<?php echo $PARAMETERS['themes']['current_theme'] ?>/imgs/races/<?php echo $row['immagine']; ?>" />
 								</div>
-								<?php echo "<div id = id + $race_name></div>" ?>
+								<?php echo "<div id = 'id' + '$race_name'></div>" ?>
 							</td>
 						</tr>
 						<tr>
