@@ -11,16 +11,32 @@
 		
 		foreach($result1 as $row){
 			$value = $row['nome_razza'];
-			echo "<button> $value </button>";
+			echo "<button id = $value> $value </button>";
 		}
 		
+		$query2 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
+		$result2 = gdrcd_query($query2, 'result');
 		?>
+
+		<script>
+			// Use a for loop to add a click event listener to each button that will scroll the view to the corresponding div when the button is clicked
+			foreach($result2 as $row){
+				document.getElementById('button' + $row['nome_razza']).addEventListener('click', function() {
+					document.getElementById('div' + $row['nome_razza']).scrollIntoView({behavior: 'smooth'});
+				});
+			}
+		</script>
+		
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
 				<?php $query = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
 				$result = gdrcd_query($query, 'result');?>
 				<table>
-					<?php while ($row = gdrcd_query($result, 'fetch')) { ?>
+					<?php
+					while ($row = gdrcd_query($result, 'fetch')) {
+						$race_name = $row['nome_razza'];
+						echo "<div id = $race_name></div>"
+						?>
 						<tr>
 							<td colspan="2" class="casella_titolo">
 								<div class="elementi_elenco">
@@ -55,7 +71,8 @@
 
 							</td>
 						</tr>
-						<?php } //while 
+						<?php
+					} //while 
 						
 						gdrcd_query($result, 'free');
 						?>
