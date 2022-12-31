@@ -15,11 +15,12 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            position: relative;
         }
 
         #output {
             position: absolute;
-            top: 20px;
+            top: 100px;
             bottom: 0;
             right: 0px;
             left: 0px;
@@ -34,13 +35,12 @@
 <body>
     <div id="container">
         <p>Descrizione dettagliata luogo</p>
-        <div id="output">
+    </div>
+    <div id="output">
         <?php
         session_start();
         echo $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
         ?>
     </div>
-    </div>
-    
 
 </body>
