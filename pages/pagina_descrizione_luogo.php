@@ -24,7 +24,7 @@
         <p>Descrizione dettagliata luogo</p>
     </div>
     <?php
-    require '/includes/functions.inc.php';
+    require '../includes/functions.inc.php';
     session_start();
     echo '<div class="box_stato_luogo"><div class="box_stato_luogo_marquee"><marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3" class="stato_luogo">&nbsp;' . $MESSAGE['interface']['maps']['Status'] . ':  -  ' . gdrcd_filter('out', $_SESSION['descrizione_luogo']['descrizione_dettagliata']) . '</marquee></div></div>';
     ?>
