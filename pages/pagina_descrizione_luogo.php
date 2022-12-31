@@ -21,7 +21,7 @@
             background-size: 100%;
             text-align: center;
             font-size: larger;
-            font-size: 40px;
+            font-size: 35px;
             font-family: Arial, sans-serif;
             color: #031127;
         }
