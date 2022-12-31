@@ -70,7 +70,7 @@
 								<div class="elementi_elenco">
 									<?php echo gdrcd_bbcoder(gdrcd_filter('out', $row['descrizione'])); ?>
 								</div>
-
+								<button onclick="location.reload()">Refresh</button>
 							</td>
 						</tr>
 						<?php
