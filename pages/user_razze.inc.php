@@ -19,6 +19,7 @@
 		?>
 
 
+
 <script>
   <?php
   foreach($result2 as $result2) {
