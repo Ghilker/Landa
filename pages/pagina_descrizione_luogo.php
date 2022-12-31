@@ -16,11 +16,9 @@
             background-image: url('/imgs/sfondopg.png');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: cover;
+            background-size: 100%;
             text-align: center;
             font-size: larger;
-            max-width: 100%;
-            max-height: 100%;
         }
 
         #desc_output {
