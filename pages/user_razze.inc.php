@@ -19,8 +19,7 @@
 		?>
 
 		<script>
-			// Use a for loop to add a click event listener to each button that will scroll the view to the corresponding div when the button is clicked
-			foreach($result2 as $row){
+			for(const $row of $result2){
 				document.getElementById("button" + $row['nome_razza']).addEventListener('click', function() {
 					document.getElementById("div" + $row['nome_razza']).scrollIntoView({behavior: 'smooth'});
 				});
