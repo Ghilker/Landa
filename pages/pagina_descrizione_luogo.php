@@ -13,6 +13,7 @@
         }
 
         #desc_container {
+            width: 100%;
             background-image: url('/imgs/sfondopg.png');
             background-repeat: no-repeat;
             background-position: center;
@@ -26,7 +27,7 @@
             text-align: center;
             background: url("") no-repeat center #0a1228;
             color: #7b859f;
-            font-size: 18px;
+            font-size: 10px;
             font-family: Arial, sans-serif;
         }
     </style>
