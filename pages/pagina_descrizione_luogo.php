@@ -26,4 +26,4 @@
 </body>
 <?php
 session_start();
-echo $_SESSION['descrizione_luogo']['descrizione']; ?>
+echo $_SESSION['descrizione_luogo']; ?>
