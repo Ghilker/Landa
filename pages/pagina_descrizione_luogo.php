@@ -18,6 +18,7 @@
             background-position: center;
             background-size: cover;
             text-align: center;
+            font-size: medium;
         }
 
         #desc_output {
