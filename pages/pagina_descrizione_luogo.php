@@ -19,6 +19,8 @@
             background-size: cover;
             text-align: center;
             font-size: larger;
+            max-width: 100%;
+            max-height: 100%;
         }
 
         #desc_output {
