@@ -35,9 +35,9 @@
 					<?php
 					while ($row = gdrcd_query($result, 'fetch')) {
 						$race_name = $row['nome_razza'];
-						echo "<div id = $race_name></div>"
 						?>
 						<tr>
+							<?php echo "<div id = $race_name></div>" ?>
 							<td colspan="2" class="casella_titolo">
 								<div class="elementi_elenco">
 									<img class="razza_icon"
