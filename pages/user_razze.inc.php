@@ -11,7 +11,7 @@
 		
 		foreach($result1 as $row){
 			$value = $row['nome_razza'];
-			echo "<button id = button + $value> $value </button>";
+			echo "<button id = $value> $value </button>";
 		}
 		
 		$query2 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
@@ -37,7 +37,7 @@
 						?>
 						<tr>
 							<td colspan="2" class="casella_titolo">
-								<?php echo "<div id = div + $race_name></div>" ?>
+								<?php echo "<div id = $race_name></div>" ?>
 								<div class="elementi_elenco">
 									<img class="razza_icon"
 										src="themes/<?php echo $PARAMETERS['themes']['current_theme'] ?>/imgs/races/<?php echo $row['immagine']; ?>" />
