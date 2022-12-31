@@ -20,7 +20,7 @@
 
 
 		<script>
-			for(const $row of $result2){
+			for(const $row of $result2) {
 				document.getElementById("button" + $row['nome_razza']).addEventListener('click', function() {
 					document.getElementById("div" + $row['nome_razza']).scrollIntoView({behavior: 'smooth'});
 				});
