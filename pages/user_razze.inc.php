@@ -10,8 +10,11 @@
 		$result = gdrcd_query($query, 'result');
 
 		foreach($result as $key => $value){
-			echo "<button> $key </button>";
-			echo "<button> $value </button>";
+			
+			foreach($value as $key1 => $value1){
+				echo "<button> $key1 </button>";
+				echo "<button> $value1 </button>";
+			}
 		}
 
 		/* for ($i = 1; $i <= $race_amount; $i++) {
