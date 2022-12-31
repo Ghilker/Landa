@@ -21,7 +21,7 @@
 
 
 		<script>
-		 	for(const $row of $_SESSION["Button_race"]) {
+		 	for(const $row of $result2["nome_razza"]) {
 				document.getElementById("button" + $row['nome_razza']).addEventListener('click', function() {
 					document.getElementById("div" + $row['nome_razza']).scrollIntoView({behavior: 'smooth'});
 				});
