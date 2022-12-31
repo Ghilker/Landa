@@ -2,7 +2,7 @@
     <?php /* HELP: Il box delle informazioni carica l'immagine del luogo corrente, lo stato e la descrizione. Genera, inoltre, il meteo */
 
 
-    $result = gdrcd_query("SELECT mappa.nome, mappa.descrizione, mappa.stato, mappa.immagine, mappa.stanza_apparente, mappa.scadenza, mappa_click.meteo FROM  mappa_click LEFT JOIN mappa ON mappa_click.id_click = mappa.id_mappa WHERE id = " . $_SESSION['luogo'] . "", 'result');
+    $result = gdrcd_query("SELECT mappa.nome, mappa.descrizione, mappa.descrizione_dettagliata, mappa.stato, mappa.immagine, mappa.stanza_apparente, mappa.scadenza, mappa_click.meteo FROM  mappa_click LEFT JOIN mappa ON mappa_click.id_click = mappa.id_mappa WHERE id = " . $_SESSION['luogo'] . "", 'result');
     $record_exists = gdrcd_query($result, 'num_rows');
     $record = gdrcd_query($result, 'fetch');
 
