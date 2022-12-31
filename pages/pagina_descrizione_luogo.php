@@ -15,11 +15,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            position: absolute;
         }
 
         #desc_output {
-            position: relative;
             width: auto;
             overflow: auto;
             align-items: center;
