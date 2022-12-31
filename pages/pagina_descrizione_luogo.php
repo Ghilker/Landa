@@ -23,11 +23,11 @@
     <div id="container">
         <p>Descrizione dettagliata luogo</p>
     </div>
-    <div id = "container">
-    <?php
-    session_start();
-    echo $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
-    ?>
+    <div id = "output">
+        <?php
+        session_start();
+        echo $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
+        ?>
     </div>
 
 </body>
