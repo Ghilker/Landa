@@ -27,6 +27,7 @@
             color: #7b859f;
             font-size: 18px;
             font-family: Arial, sans-serif;
+            display: flex;
         }
     </style>
 </head>
