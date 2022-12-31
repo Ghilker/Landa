@@ -7,15 +7,17 @@
 
 
 		$query1 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
-		$result1 = gdrcd_query($query1, 'result');?>
+		$result1 = gdrcd_query($query1, 'result');
+		
+		foreach($result1 as $row){
+			$value = $row['nome_razza'];
+			echo "<button> $value </button>";
+		}
+		
+		?>
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
-				<?php 
-				foreach($result1 as $row){
-					$value = $row['nome_razza'];
-					echo "<button> $value </button>";
-				}
-				$query = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
+				<?php $query = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
 				$result = gdrcd_query($query, 'result');?>
 				?>
 				<table>
