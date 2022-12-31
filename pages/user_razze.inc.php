@@ -19,9 +19,9 @@
 		?>
 
 		<script>
-			for($result2 as $row){
-				document.getElementById($row['nome_razza']).addEventListener('click', function() {
-					document.getElementById($row['nome_razza']).scrollIntoView({behavior: 'smooth'});
+			foreach($result2 as $row){
+				document.getElementById("button" + $row['nome_razza']).addEventListener('click', function() {
+					document.getElementById("div" + $row['nome_razza']).scrollIntoView({behavior: 'smooth'});
 				});
 			}
 		</script>
