@@ -21,8 +21,8 @@
 
 		<script>
 			$results.foreach(function($result2)
-				document.getElementById("button" + $row['nome_razza']).addEventListener('click', function() {
-					document.getElementById("div" + $row['nome_razza']).scrollIntoView({behavior: 'smooth'});
+				document.getElementById($row['nome_razza']).addEventListener('click', function() {
+					document.getElementById($row['nome_razza']).scrollIntoView({behavior: 'smooth'});
 				}));
 		</script>
 		
