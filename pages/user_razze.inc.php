@@ -18,6 +18,7 @@
 		$result2 = gdrcd_query($query2, 'result');
 		?>
 
+
 		<script>
 			for(const $row of $result2){
 				document.getElementById("button" + $row['nome_razza']).addEventListener('click', function() {
