@@ -25,6 +25,6 @@
     </div>
 </body>
 <?php
-include('../includes/functions.inc.php');
 session_start();
-echo gdrcd_filter('out', $_SESSION['descrizione_luogo']['descrizione_dettagliata']); ?>
+echo test;
+echo $_SESSION['descrizione_luogo']['descrizione_dettagliata']; ?>
