@@ -9,12 +9,9 @@
 		$query = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
 		$result = gdrcd_query($query, 'result');
 
-		$race_array = gdrcd_query($result, 'fetch');
-		$race_amount = count($race_array);
-		foreach($race_array as $row){
-			foreach ($row as $element) {
-				echo "<button>$element</button>";
-			}
+		while($race_array = gdrcd_query($result, 'fetch')){
+			$name = $race_array['nome_razza'];
+			echo "<button> $name </button>";
 		}
 		/* for ($i = 1; $i <= $race_amount; $i++) {
 			echo "<button id='button-$i'>  </button>";
