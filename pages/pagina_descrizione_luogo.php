@@ -20,8 +20,7 @@
             background-position: center;
             background-size: 100%;
             text-align: center;
-            font-size: larger;
-            font-size: 35px;
+            font-size: 30px;
             font-family: Arial, sans-serif;
             color: #031127;
             width: 100%;
