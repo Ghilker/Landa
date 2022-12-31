@@ -26,7 +26,8 @@
     <h1>
         <?php
         session_start();
-        echo $_SESSION['descrizione_luogo']['descrizione_dettagliata']; ?>
+        $variable = $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
+        echo $variable; ?>
     </h1>
 
 </body>
