@@ -20,7 +20,7 @@
 
         #output {
             position: absolute;
-            top: 100px;
+            top: 20px;
             bottom: 0;
             right: 0px;
             left: 0px;
