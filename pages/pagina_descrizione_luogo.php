@@ -6,7 +6,7 @@
             background-position: left top;
         }
 
-        #container {
+        #desc_container {
             background-image: url('/imgs/sfondopg.png');
             background-repeat: no-repeat;
             background-position: center;
@@ -18,7 +18,7 @@
             position: absolute;
         }
 
-        #output {
+        #desc_output {
             position: relative;
             top: 25px;
             bottom: 10px;
@@ -36,10 +36,10 @@
 </head>
 
 <body>
-    <div id="container">
+    <div id="desc_container">
         <p>Descrizione dettagliata luogo</p>
     </div>
-    <div id="output">
+    <div id="desc_output">
         <p><?php
         session_start();
         echo $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
