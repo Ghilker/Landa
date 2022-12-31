@@ -19,14 +19,15 @@
 		?>
 
 
-		<script>
-  			const element = document.getElementById($result2['nome_razza']);
-  				$results.forEach(function($result2) {
-    				document.getElementById($result2['nome_razza']).addEventListener('click', function() {
-     				 document.getElementById($result2['nome_razza']).scrollIntoView({behavior: 'smooth'});
-    				});
- 				 });
-		</script>
+<script>
+  <?php
+  foreach($result2 as $result2) {
+    echo "document.getElementById('" . $result2['nome_razza'] . "').addEventListener('click', function() {";
+    echo "  document.getElementById('" . $result2['nome_razza'] . "').scrollIntoView({behavior: 'smooth'});";
+    echo "});";
+  };
+  ?>
+</script>
 		
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
