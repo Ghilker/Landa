@@ -11,7 +11,7 @@
 		
 		foreach($result1 as $row){
 			$value = $row['nome_razza'];
-			echo "<button id = $value> $value </button>";
+			echo "<button id = button + $value> $value </button>";
 		}
 		
 		$query2 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
@@ -21,8 +21,8 @@
 		<script>
 			// Use a for loop to add a click event listener to each button that will scroll the view to the corresponding div when the button is clicked
 			foreach($result2 as $row){
-				document.getElementById($row['nome_razza']).addEventListener('click', function() {
-					document.getElementById($row['nome_razza']).scrollIntoView({behavior: 'smooth'});
+				document.getElementById("button" + $row['nome_razza']).addEventListener('click', function() {
+					document.getElementById("div" + $row['nome_razza']).scrollIntoView({behavior: 'smooth'});
 				});
 			}
 		</script>
@@ -38,7 +38,7 @@
 						?>
 						<tr>
 							<td colspan="2" class="casella_titolo">
-								<?php echo "<div id = $race_name></div>" ?>
+								<?php echo "<div id = div + $race_name></div>" ?>
 								<div class="elementi_elenco">
 									<img class="razza_icon"
 										src="themes/<?php echo $PARAMETERS['themes']['current_theme'] ?>/imgs/races/<?php echo $row['immagine']; ?>" />
