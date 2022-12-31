@@ -9,10 +9,14 @@
 		$query = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
 		$result = gdrcd_query($query, 'result');
 
-		$race_amount = count(gdrcd_query($result, 'fetch'));
-		for ($i = 1; $i <= $race_amount; $i++) {
-			echo "<button id='button-$i'>Scroll to Section $i</button>";
+		$race_array = gdrcd_query($result, 'fetch');
+		$race_amount = count($race_array);
+		foreach($race_array as $element){
+			echo "<button>$element</button>";
 		}
+		/* for ($i = 1; $i <= $race_amount; $i++) {
+			echo "<button id='button-$i'>  </button>";
+		} */
 		
 		
 		?>
