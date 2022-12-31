@@ -71,6 +71,7 @@
 									<?php echo gdrcd_bbcoder(gdrcd_filter('out', $row['descrizione'])); ?>
 								</div>
 								<button onclick="location.reload()">Torna Su</button>
+								
 							</td>
 						</tr>
 						<?php
