@@ -25,6 +25,7 @@
     </div>
     <?php
     require '../includes/functions.inc.php';
+    session_start();
     echo '<div class="box_stato_luogo"><div class="box_stato_luogo_marquee"><marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3" class="stato_luogo">&nbsp;' . $MESSAGE['interface']['maps']['Status'] . ':  -  ' . $_SESSION['descrizione_luogo']['descrizione'] . '</marquee></div></div>';
     ?>
 
