@@ -11,8 +11,10 @@
 
 		$race_array = gdrcd_query($result, 'fetch');
 		$race_amount = count($race_array);
-		foreach($race_array as $element){
-			echo "<button>$element</button>";
+		foreach($race_array as $row){
+			foreach ($row as $element) {
+				echo "<button>$element</button>";
+			}
 		}
 		/* for ($i = 1; $i <= $race_amount; $i++) {
 			echo "<button id='button-$i'>  </button>";
