@@ -20,10 +20,6 @@
 
         #desc_output {
             position: relative;
-            top: 25px;
-            bottom: 10px;
-            right: 10px;
-            left: 10px;
             width: auto;
             overflow: auto;
             text-align: center;
