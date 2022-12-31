@@ -21,7 +21,7 @@
             background-size: 100%;
             text-align: center;
             font-size: larger;
-            font-size: 30px;
+            font-size: 40px;
             font-family: Arial, sans-serif;
             color: #031127;
         }
@@ -31,7 +31,7 @@
             text-align: center;
             background: url("") no-repeat center #0a1228;
             color: #7b859f;
-            font-size: 10px;
+            font-size: 15px;
             font-family: Arial, sans-serif;
         }
     </style>
