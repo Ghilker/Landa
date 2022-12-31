@@ -22,8 +22,8 @@
 		<script>
 			const element = document.getElementById(`${row['nome_razza']}`);
 			$results.foreach(function($result2)
-				document.getElementById($row['nome_razza']).addEventListener('click', function() {
-					document.getElementById($row['nome_razza']).scrollIntoView({behavior: 'smooth'});
+				document.getElementById(`${row['nome_razza']}`).addEventListener('click', function() {
+					document.getElementById(`${row['nome_razza']}`).scrollIntoView({behavior: 'smooth'});
 				}));
 		</script>
 		
