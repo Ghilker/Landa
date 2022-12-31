@@ -16,11 +16,12 @@
 		
 		$query2 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
 		$result2 = gdrcd_query($query2, 'result');
+		$_SESSION["Button_race"] = $result2;
 		?>
 
 
 		<script>
-		 	for(const $row of <?php $result2 ?>) {
+		 	for(const $row of <?php $_SESSION["Button_race"] ?>) {
 				document.getElementById("button" + $row['nome_razza']).addEventListener('click', function() {
 					document.getElementById("div" + $row['nome_razza']).scrollIntoView({behavior: 'smooth'});
 				});
