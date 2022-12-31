@@ -41,7 +41,6 @@
 						?>
 						<tr>
 							<td colspan="2" class="casella_titolo">
-								<?php echo "<div id = $race_name></div>" ?>
 								<div class="elementi_elenco">
 									<img class="razza_icon"
 										src="themes/<?php echo $PARAMETERS['themes']['current_theme'] ?>/imgs/races/<?php echo $row['immagine']; ?>" />
@@ -53,6 +52,7 @@
 									<img class="razza_icon"
 										src="themes/<?php echo $PARAMETERS['themes']['current_theme'] ?>/imgs/races/<?php echo $row['immagine']; ?>" />
 								</div>
+								<?php echo "<div id = $race_name></div>" ?>
 							</td>
 						</tr>
 						<tr>
