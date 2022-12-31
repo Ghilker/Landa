@@ -23,11 +23,11 @@
     <div id="container">
         <p>Descrizione dettagliata luogo</p>
     </div>
-    <h1>
-        <?php
+    <?php
         session_start();
-        $variable = $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
-        echo $variable; ?>
+        $variable = $_SESSION['descrizione_luogo']['descrizione_dettagliata']; ?>
+    <h1>
+        <?php echo $variable; ?>
     </h1>
 
 </body>
