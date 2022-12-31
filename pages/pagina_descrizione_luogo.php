@@ -27,11 +27,15 @@
         }
 
         #desc_output {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
             overflow: auto;
             text-align: center;
             background: url("") no-repeat center #0a1228;
             color: #7b859f;
-            font-size: 15px;
+            font-size: 12px;
             font-family: Arial, sans-serif;
             height: 100%;
         }
