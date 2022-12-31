@@ -26,7 +26,7 @@
             width: auto;
             overflow: auto;
             text-align: center;
-            background: url("") no-repeat top center #0a1228;
+            background: url("") no-repeat center #0a1228;
         }
     </style>
 </head>
