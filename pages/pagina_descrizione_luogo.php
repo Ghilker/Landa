@@ -21,6 +21,8 @@
             background-size: 100%;
             text-align: center;
             font-size: larger;
+            height: 100%; 
+            width: 100%;  
         }
 
         #desc_output {
