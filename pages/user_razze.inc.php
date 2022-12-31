@@ -9,8 +9,8 @@
 		$query1 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
 		$result1 = gdrcd_query($query1, 'result');
 		
-		foreach($result1 as $row){
-			$value = $row['nome_razza'];
+		foreach($result1 as $result1){
+			$value = $result1['nome_razza'];
 			echo "<button id = button$value> $value </button>";
 		}
 		
@@ -22,9 +22,9 @@
 
 <script>
   <?php
-  foreach($result2 as $result2) {
-    echo "document.getElementById('button" . $result2['nome_razza'] . "').addEventListener('click', function() {";
-    echo "  document.getElementById('id" . $result2['nome_razza'] . "').scrollIntoView({behavior: 'smooth'});";
+  foreach($result1 as $result1) {
+    echo "document.getElementById('button" . $result1['nome_razza'] . "').addEventListener('click', function() {";
+    echo "  document.getElementById('id" . $result1['nome_razza'] . "').scrollIntoView({behavior: 'smooth'});";
     echo "});";
   };
   ?>
