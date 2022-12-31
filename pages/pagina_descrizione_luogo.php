@@ -1,11 +1,6 @@
 <head>
     <style>
-        html,
         body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
             background-image: url('/themes/tok1/imgs/pattern.png');
             background-repeat: repeat;
             background-position: left top;
@@ -26,6 +21,9 @@
             background-size: 100%;
             text-align: center;
             font-size: larger;
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            color: #031127;
         }
 
         #desc_output {
@@ -45,11 +43,10 @@
             <p>Descrizione dettagliata luogo</p>
         </div>
         <div id="desc_output">
-            <p>
-                <?php
-                session_start();
-                echo $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
-                ?>
+            <p><?php
+            session_start();
+            echo $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
+            ?>
             <p>
         </div>
     </div>
