@@ -29,7 +29,6 @@
   };
   ?>
 </script>
-		
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
 				<?php $query = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
