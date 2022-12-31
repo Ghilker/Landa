@@ -6,7 +6,7 @@
 		<?php /*HELP: */
 
 
-		$query1 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
+		$query1 = "SELECT nome_razza FROM razza WHERE visibile = 1 ORDER BY nome_razza";
 		$result1 = gdrcd_query($query1, 'result');
 		
 		foreach($result1 as $result1){
@@ -14,7 +14,7 @@
 			echo "<button id = button$value> $value </button>";
 		}
 		
-		$query2 = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
+		$query2 = "SELECT nome_razza FROM razza WHERE visibile = 1 ORDER BY nome_razza";
 		$result2 = gdrcd_query($query2, 'result');
 		?>
 
