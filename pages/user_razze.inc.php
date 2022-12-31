@@ -22,9 +22,9 @@
 
 <script>
   <?php
-  foreach($result1 as $result1) {
-    echo "document.getElementById('button" . $result1['nome_razza'] . "').addEventListener('click', function() {";
-    echo "  document.getElementById('id" . $result1['nome_razza'] . "').scrollIntoView({behavior: 'smooth'});";
+  foreach($result2 as $result2) {
+    echo "document.getElementById('button" . $result2['nome_razza'] . "').addEventListener('click', function() {";
+    echo "  document.getElementById('id" . $result2['nome_razza'] . "').scrollIntoView({behavior: 'smooth'});";
     echo "});";
   };
   ?>
