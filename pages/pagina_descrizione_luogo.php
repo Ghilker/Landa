@@ -27,6 +27,9 @@
             overflow: auto;
             text-align: center;
             background: url("") no-repeat center #0a1228;
+            color: #7b859f;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
@@ -36,10 +39,10 @@
         <p>Descrizione dettagliata luogo</p>
     </div>
     <div id="output">
-        <?php
+        <p><?php
         session_start();
         echo $_SESSION['descrizione_luogo']['descrizione_dettagliata'];
-        ?>
+        ?><p>
     </div>
 
 </body>
