@@ -7,7 +7,14 @@
 
 
 		$query = "SELECT nome_razza, sing_m, sing_f, descrizione, url_site, immagine, icon  FROM razza WHERE visibile = 1 ORDER BY nome_razza";
-		$result = gdrcd_query($query, 'result'); ?>
+		$result = gdrcd_query($query, 'result'); 
+		
+		foreach($result as $row){
+			$value = $row['nome_razza'];
+			echo "<button> $value </button>";
+		}
+		
+		?>
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
 				<table>
