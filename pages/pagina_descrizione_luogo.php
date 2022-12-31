@@ -23,8 +23,10 @@
     <div id="container">
         <p>Descrizione dettagliata luogo</p>
     </div>
+    <h1>
+        <?php
+        session_start();
+        echo $_SESSION['descrizione_luogo']['descrizione_dettagliata']; ?>
+    </h1>
+
 </body>
-<?php
-session_start();
-echo test;
-echo $_SESSION['descrizione_luogo']['descrizione_dettagliata']; ?>
