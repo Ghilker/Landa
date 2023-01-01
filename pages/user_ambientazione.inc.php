@@ -63,6 +63,7 @@
 						</tr>
 						<?php } //while 
 				
+				
 				gdrcd_query($result, 'free');
 				?>
 				</table>
