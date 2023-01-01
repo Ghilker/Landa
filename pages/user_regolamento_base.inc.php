@@ -33,7 +33,6 @@
 		$result = gdrcd_query($query, 'result');
 		?>
 
-
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
 				<table>
