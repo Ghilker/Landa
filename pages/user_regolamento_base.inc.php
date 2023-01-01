@@ -14,7 +14,7 @@
 			echo "<button id = button$value> $name </button>";
 		}
 
-		$query2 = "SELECT nome_razza FROM razza WHERE visibile = 1 ORDER BY nome_razza";
+		$query2 = "SELECT articolo, titolo FROM regolamento_base ORDER BY articolo";
 		$result2 = gdrcd_query($query2, 'result');
 
 
