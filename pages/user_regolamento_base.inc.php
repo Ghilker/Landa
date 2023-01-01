@@ -8,22 +8,22 @@
 			<p style="font-size:14px;">Indice</p>
 			<br>
 			1. <a
-				href="https://provalice.altervista.org/main.php?page=user_regolamento#:~:text=1)-,Istruzioni%20per%20l%27uso,-INDICE%3A%0A%0A1">
+				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=1)-,Istruzioni%20per%20l%27uso,-INDICE%3A%0A%0A1">
 				Istruzioni per l'uso </a><br>
 			2. <a
-				href="https://provalice.altervista.org/main.php?page=user_regolamento#:~:text=2)-,Regolamento,-INDICE%3A%0A%0A1">
+				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=2)-,Regolamento,-INDICE%3A%0A%0A1">
 				Regolamento </a><br>
 			3. <a
-				href="https://provalice.altervista.org/main.php?page=user_regolamento#:~:text=3)-,Skills%20speciali,-SKILLS%20SPECIALI%0A%0ALe">
+				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=3)-,Skills%20speciali,-SKILLS%20SPECIALI%0A%0ALe">
 				Skills speciali </a><br>
 			4. <a
-				href="https://provalice.altervista.org/main.php?page=user_regolamento#:~:text=4)-,Lavori%20e%20Mestieri,-LAVORI%20E%20MESTIERI">
+				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=4)-,Lavori%20e%20Mestieri,-LAVORI%20E%20MESTIERI">
 				Lavori e Mestieri </a><br>
 			5. <a
-				href="https://provalice.altervista.org/main.php?page=user_regolamento#:~:text=5)-,Gli%20Allineamenti,-GLI%20ALLINEAMENTI%0AL%E2%80%99allineamento">
+				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=5)-,Gli%20Allineamenti,-GLI%20ALLINEAMENTI%0AL%E2%80%99allineamento">
 				Gli Allineamenti </a><br>
 			6. <a
-				href="https://provalice.altervista.org/main.php?page=user_regolamento#:~:text=6)-,Informazioni%20utili,-PARAMETRI%20VARI%20E">
+				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=6)-,Informazioni%20utili,-PARAMETRI%20VARI%20E">
 				Informazioni utili </a><br>
 		</div>
 		<?php /*HELP: */
@@ -61,7 +61,7 @@
 						<!-- TORNA ALL'INDICE-->
 						<tr>
 							<td colspan="2" class="torna_all_indice">
-								<?php echo '<a href="https://provalice.altervista.org/main.php?page=user_regolamento#:~:text=1)-,Istruzioni%20per%20l%27uso,-INDICE%3A%0A%0A1">' . " Torna all'inizio </a><br>" ?>
+								<?php echo '<a href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=1)-,Istruzioni%20per%20l%27uso,-INDICE%3A%0A%0A1">' . " Torna all'inizio </a><br>" ?>
 							</td>
 						</tr>
 						<!--FINE-->

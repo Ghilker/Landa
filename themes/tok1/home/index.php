@@ -64,7 +64,7 @@ onMouseOut="this.src='https://talesofkangei.altervista.org/themes/tok1/imgs/soci
     <ul>
      <li><a href="index.php?page=index&content=iscrizione" style="padding-top: 4px"><img src="https://talesofkangei.altervista.org/themes/tok1/imgs/iscrizione.png" height="30" onMouseOver="this.src='https://talesofkangei.altervista.org/themes/tok1/imgs/iscrizione2.png'"
 onMouseOut="this.src='https://talesofkangei.altervista.org/themes/tok1/imgs/iscrizione.png'"></a></li>
-     <li><a href="index.php?page=index&content=user_regolamento"><img src="https://talesofkangei.altervista.org/themes/tok1/imgs/regolamento.png" height="27" onMouseOver="this.src='https://talesofkangei.altervista.org/themes/tok1/imgs/regolamento2.png'"
+     <li><a href="index.php?page=index&content=user_regolamento_base"><img src="https://talesofkangei.altervista.org/themes/tok1/imgs/regolamento.png" height="27" onMouseOver="this.src='https://talesofkangei.altervista.org/themes/tok1/imgs/regolamento2.png'"
 onMouseOut="this.src='https://talesofkangei.altervista.org/themes/tok1/imgs/regolamento.png'"></a></li>
      <li><a href="index.php?page=index&content=user_ambientazione"><img src="https://talesofkangei.altervista.org/themes/tok1/imgs/ambientazione.png" height="27" onMouseOver="this.src='https://talesofkangei.altervista.org/themes/tok1/imgs/ambientazione2.png'"
 onMouseOut="this.src='https://talesofkangei.altervista.org/themes/tok1/imgs/ambientazione.png'"></a></li>

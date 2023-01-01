@@ -6,7 +6,7 @@
 	   } else if($_REQUEST['page']=='user_razze') {
 	      include('pages/user_razze.inc.php'); 
 	   } else {
-		  include('pages/user_regolamento.inc.php'); 
+		  include('pages/user_regolamento_base.inc.php'); 
 	   }?>
 	   <!-- Link di ritorno alla homepage -->
 	   <div class="link_back">
