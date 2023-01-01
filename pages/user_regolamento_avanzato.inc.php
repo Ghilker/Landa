@@ -38,6 +38,7 @@
 					$value = $row['articolo'] ?>
 						<tr>
 							<td class="casella_titolo">
+								<?php echo "<div id = id$value></div>" ?>
 								<div class="elementi_elenco">
 									<?php echo gdrcd_filter('out', $row['articolo']); ?>)
 								</div>
