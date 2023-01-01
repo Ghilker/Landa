@@ -1,11 +1,11 @@
 <div class="servizi_abilita">
-<div class="page_title"><h2><?php echo gdrcd_filter('out',$MESSAGE['interface']['rules']['page_name']); ?></h2></div>
+<div class="page_title"><h2><?php echo gdrcd_filter('out',$MESSAGE['interface']['adv_rules']['page_name']); ?></h2></div>
 
 <div class="page_body">
 <?php /*HELP: */ 
   
   
-  	    $query="SELECT articolo, titolo, testo FROM regolamento_base ORDER BY articolo";
+  	    $query="SELECT articolo, titolo, testo FROM regolamento_avanzato ORDER BY articolo";
 	    $result=gdrcd_query($query, 'result');?>
 		<div class="panels_box">
 		<div class="elenco_record_gioco">

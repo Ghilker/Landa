@@ -21,7 +21,8 @@ $MESSAGE['homepage']['forms']['online_now']='Utenti connessi';
 $MESSAGE['homepage']['forms']['open_in_popup']='Apri in popup?';
 $MESSAGE['homepage']['registration']='Iscrizione';
 $MESSAGE['homepage']['storyline']='Ambientazione';
-$MESSAGE['homepage']['rules']='Regolamento Base';
+$MESSAGE['homepage']['basic_rules']='Regolamento Base';
+$MESSAGE['homepage']['adv_rules']='Regolamento Avanzato';
 $MESSAGE['homepage']['races']='Razze Di Gioco';
 $MESSAGE['homepage']['info']['webm']='Responsabile legale';
 $MESSAGE['homepage']['info']['dbadmin']='Amministratore del Database';
@@ -366,7 +367,8 @@ $MESSAGE['interface']['skills']['desc']='Descrizione';
 $MESSAGE['interface']['skills']['sys']='A ciascuna abilità è associata una delle sei caratteristiche dei personaggi ed un grado di competenza specifico per il personaggio. Per far uso di un\'abilità occorre eseguire un tiro di dado (1d'.$PARAMETERS['settings']['skills_die'] .') e sommare grado + caratteristica + bonus raziale + eventuale bonus di oggetti indossati. Se il punteggio ottenuto eguaglia o supera quello stabilito dal master come difficoltà della prova, l\'abilità è stata usata con successo. Nel caso di prove contrapposte, come il combattimento, ha la meglio chi, tra i contendenti, ottiene il punteggio più alto. In combattimento chi ottiene il punteggio più alto può ferire l\'altro, applicando il danno previsto dall\'arma o per il combattimento a mani nude, e sottraendo la protezione eventualmente prevista dagli oggetti dell\'avversario.';
 $MESSAGE['interface']['skills']['sys_tit']='Uso delle abilità';
 /*Regolamento e ambientazione*/
-$MESSAGE['interface']['rules']['page_name']="Regolamento Base";
+$MESSAGE['interface']['basic_rules']['page_name']="Regolamento Base";
+$MESSAGE['interface']['adv_rules']['page_name']="Regolamento Avanzato";
 $MESSAGE['interface']['plot']['page_name']="Ambientazione";
 
 
@@ -577,12 +579,18 @@ $MESSAGE['interface']['administration']['skills']['link']['back']='Torna all\'el
 $MESSAGE['interface']['administration']['skills']['link']['new']='Nuova abilità';
 $MESSAGE['interface']['administration']['skills']['costo_px']='Costo';
 /*Regolamento e ambientazione*/
-$MESSAGE['interface']['administration']['rules']['page_name']='Gestione regolamento base';
-$MESSAGE['interface']['administration']['rules']['art']='Articolo';
-$MESSAGE['interface']['administration']['rules']['title']='titolo';
-$MESSAGE['interface']['administration']['rules']['infos']='Testo';
-$MESSAGE['interface']['administration']['rules']['link']['back']='Torna all\'elenco';
-$MESSAGE['interface']['administration']['rules']['link']['new']='Nuovo articolo';
+$MESSAGE['interface']['administration']['basic_rules']['page_name']='Gestione regolamento base';
+$MESSAGE['interface']['administration']['basic_rules']['art']='Articolo';
+$MESSAGE['interface']['administration']['basic_rules']['title']='titolo';
+$MESSAGE['interface']['administration']['basic_rules']['infos']='Testo';
+$MESSAGE['interface']['administration']['basic_rules']['link']['back']='Torna all\'elenco';
+$MESSAGE['interface']['administration']['basic_rules']['link']['new']='Nuovo articolo';
+$MESSAGE['interface']['administration']['adv_rules']['page_name']='Gestione regolamento avanzato';
+$MESSAGE['interface']['administration']['adv_rules']['art']='Articolo';
+$MESSAGE['interface']['administration']['adv_rules']['title']='titolo';
+$MESSAGE['interface']['administration']['adv_rules']['infos']='Testo';
+$MESSAGE['interface']['administration']['adv_rules']['link']['back']='Torna all\'elenco';
+$MESSAGE['interface']['administration']['adv_rules']['link']['new']='Nuovo articolo';
 $MESSAGE['interface']['administration']['plot']['page_name']='Gestione ambientazione';
 $MESSAGE['interface']['administration']['plot']['art']='Capitolo';
 $MESSAGE['interface']['administration']['plot']['title']='titolo';
