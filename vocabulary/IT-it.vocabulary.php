@@ -577,7 +577,7 @@ $MESSAGE['interface']['administration']['skills']['link']['back']='Torna all\'el
 $MESSAGE['interface']['administration']['skills']['link']['new']='Nuova abilità';
 $MESSAGE['interface']['administration']['skills']['costo_px']='Costo';
 /*Regolamento e ambientazione*/
-$MESSAGE['interface']['administration']['rules']['page_name']='Gestione regolamento';
+$MESSAGE['interface']['administration']['rules']['page_name']='Gestione regolamento base';
 $MESSAGE['interface']['administration']['rules']['art']='Articolo';
 $MESSAGE['interface']['administration']['rules']['title']='titolo';
 $MESSAGE['interface']['administration']['rules']['infos']='Testo';

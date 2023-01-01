@@ -32,7 +32,7 @@
 					<?php } ?>
 				<!-- Link di ritorno alla visualizzazione di base -->
 				<div class="link_back">
-					<a href="main.php?page=gestione_regolamento">
+					<a href="main.php?page=gestione_regolamento_base">
 						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['back']); ?>
 					</a>
 				</div>
@@ -48,7 +48,7 @@
 				</div>
 				<!-- Link di ritorno alla visualizzazione di base -->
 				<div class="link_back">
-					<a href="main.php?page=gestione_regolamento">
+					<a href="main.php?page=gestione_regolamento_base">
 						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['back']); ?>
 					</a>
 				</div>
@@ -73,7 +73,7 @@
 					<?php } ?>
 				<!-- Link di ritorno alla visualizzazione di base -->
 				<div class="link_back">
-					<a href="main.php?page=gestione_regolamento">
+					<a href="main.php?page=gestione_regolamento_base">
 						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['back']); ?>
 					</a>
 				</div>
@@ -81,10 +81,17 @@
 
 			<?php /*Form di inserimento/modifica*/
 			if (
-				(gdrcd_filter('get',
-					$_POST['op'] == 'edit')) ||
-				(gdrcd_filter('get',
-					$_REQUEST['op']) == 'new')
+				(
+					gdrcd_filter(
+						'get',
+						$_POST['op'] == 'edit'
+					)
+				) ||
+				(
+					gdrcd_filter(
+						'get',
+						$_REQUEST['op']
+					) == 'new')
 			) {
 				/*Preseleziono l'operazione di inserimento*/
 				$operation = 'insert';
@@ -99,7 +106,7 @@
 
 				<!-- Form di inserimento/modifica -->
 				<div class="panels_box">
-					<form action="main.php?page=gestione_regolamento" method="post" class="form_gestione">
+					<form action="main.php?page=gestione_regolamento_base" method="post" class="form_gestione">
 
 						<div class='form_label'>
 							<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['art']); ?>
@@ -148,7 +155,7 @@
 				</div>
 				<!-- Link di ritorno alla visualizzazione di base -->
 				<div class="link_back">
-					<a href="main.php?page=gestione_regolamento">
+					<a href="main.php?page=gestione_regolamento_base">
 						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['back']); ?>
 					</a>
 				</div>
@@ -204,7 +211,7 @@
 										<!-- Modifica -->
 										<div class="controlli_elenco">
 											<div class="controllo_elenco">
-												<form class="opzioni_elenco_record_gestione" action="main.php?page=gestione_regolamento"
+												<form class="opzioni_elenco_record_gestione" action="main.php?page=gestione_regolamento_base"
 													method="post">
 													<input type="hidden" name="id_record" value="<?php echo $row['articolo'] ?>" />
 													<input type="hidden" name="op" value="edit" />
@@ -215,7 +222,7 @@
 											</div>
 											<!-- Elimina -->
 											<div class="controllo_elenco">
-												<form class="opzioni_elenco_record_gestione" action="main.php?page=gestione_regolamento"
+												<form class="opzioni_elenco_record_gestione" action="main.php?page=gestione_regolamento_base"
 													method="post">
 													<input type="hidden" name="id_record" value="<?php echo $row['articolo'] ?>" />
 													<input type="hidden" name="op" value="erase" />
@@ -241,7 +248,7 @@
 					echo gdrcd_filter('out', $MESSAGE['interface']['pager']['pages_name']);
 					for ($i = 0; $i <= floor($totaleresults / $PARAMETERS['settings']['records_per_page']); $i++) {
 						if ($i != gdrcd_filter('num', $_REQUEST['offset'])) { ?>
-								<a href="main.php?page=gestione_regolamento&offset=<?php echo $i; ?>">
+								<a href="main.php?page=gestione_regolamento_base&offset=<?php echo $i; ?>">
 									<?php echo $i + 1; ?>
 								</a>
 								<?php } else {
@@ -253,7 +260,7 @@
 
 				<!-- link crea nuovo -->
 				<div class="link_back">
-					<a href="main.php?page=gestione_regolamento&op=new">
+					<a href="main.php?page=gestione_regolamento_base&op=new">
 						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['new']); ?>
 					</a>
 				</div>
