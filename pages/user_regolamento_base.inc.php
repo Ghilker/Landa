@@ -28,15 +28,16 @@
 				echo "document.getElementById('button" . $result2['articolo'] . "').addEventListener('click', function() {";
 				echo "  document.getElementById('id" . $result2['articolo'] . "').scrollIntoView({behavior: 'smooth'});";
 				echo "});";
-			};
+			}
+			;
 			?>
 		</script>
 
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
 				<table>
-					<?php while ($row = gdrcd_query($result, 'fetch')) { 
-						$value = $row['articolo']?>
+					<?php while ($row = gdrcd_query($result, 'fetch')) {
+					$value = $row['articolo'] ?>
 						<tr>
 							<td class="casella_titolo">
 								<?php echo "<div id = id$value></div>" ?>
@@ -61,15 +62,15 @@
 						<!-- TORNA ALL'INDICE-->
 						<tr>
 							<td colspan="2" class="torna_all_indice">
-								<?php echo '<a href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=1)-,Istruzioni%20per%20l%27uso,-INDICE%3A%0A%0A1">' . " Torna all'inizio </a><br>" ?>
+								<button onclick="location.reload()">Torna Su</button>
 							</td>
 						</tr>
 						<!--FINE-->
 
 						<?php } //while 
-						
-						gdrcd_query($result, 'free');
-						?>
+				
+				gdrcd_query($result, 'free');
+				?>
 				</table>
 
 			</div><!--elenco_record_gioco-->
