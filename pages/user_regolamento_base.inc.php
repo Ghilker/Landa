@@ -8,23 +8,38 @@
 		$query1 = "SELECT articolo, titolo FROM regolamento_base ORDER BY articolo";
 		$result1 = gdrcd_query($query1, 'result');
 
-		foreach($result1 as $result1){
+		foreach ($result1 as $result1) {
 			$value = $result1['articolo'];
 			$name = $result1['titolo'];
 			echo "<button id = button$value> $name </button>";
 		}
+
+		$query2 = "SELECT nome_razza FROM razza WHERE visibile = 1 ORDER BY nome_razza";
+		$result2 = gdrcd_query($query2, 'result');
 
 
 		$query = "SELECT articolo, titolo, testo FROM regolamento_base ORDER BY articolo";
 		$result = gdrcd_query($query, 'result');
 		?>
 
+		<script>
+			<?php
+			foreach ($result2 as $result2) {
+				echo "document.getElementById('button" . $result2['articolo'] . "').addEventListener('click', function() {";
+				echo "  document.getElementById('id" . $result2['articolo'] . "').scrollIntoView({behavior: 'smooth'});";
+				echo "});";
+			};
+			?>
+		</script>
+
 		<div class="panels_box">
 			<div class="elenco_record_gioco">
 				<table>
-					<?php while ($row = gdrcd_query($result, 'fetch')) { ?>
+					<?php while ($row = gdrcd_query($result, 'fetch')) { 
+						$value = $row['articolo']?>
 						<tr>
 							<td class="casella_titolo">
+								<?php echo "<div id = id$value></div>" ?>
 								<div class="elementi_elenco">
 									<?php echo gdrcd_filter('out', $row['articolo']); ?>)
 								</div>
@@ -61,4 +76,5 @@
 		</div><!--panels_box-->
 
 	</div>
-</div><!-- Box principale -->
+</div>
+< !--Box principale-->
