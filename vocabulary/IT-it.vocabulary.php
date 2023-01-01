@@ -370,6 +370,7 @@ $MESSAGE['interface']['skills']['sys_tit']='Uso delle abilità';
 $MESSAGE['interface']['basic_rules']['page_name']="Regolamento Base";
 $MESSAGE['interface']['adv_rules']['page_name']="Regolamento Avanzato";
 $MESSAGE['interface']['plot']['page_name']="Ambientazione";
+$MESSAGE['interface']['desc_luoghi']['page_name']="Luoghi Continente";
 
 
 
@@ -597,6 +598,12 @@ $MESSAGE['interface']['administration']['plot']['title']='titolo';
 $MESSAGE['interface']['administration']['plot']['infos']='Testo';
 $MESSAGE['interface']['administration']['plot']['link']['back']='Torna all\'elenco';
 $MESSAGE['interface']['administration']['plot']['link']['new']='Nuovo capitolo';
+$MESSAGE['interface']['administration']['desc_luoghi']['page_name']='Gestione luoghi continente';
+$MESSAGE['interface']['administration']['desc_luoghi']['art']='Capitolo';
+$MESSAGE['interface']['administration']['desc_luoghi']['title']='titolo';
+$MESSAGE['interface']['administration']['desc_luoghi']['infos']='Testo';
+$MESSAGE['interface']['administration']['desc_luoghi']['link']['back']='Torna all\'elenco';
+$MESSAGE['interface']['administration']['desc_luoghi']['link']['new']='Nuovo capitolo';
 /*Manutensione*/
 $MESSAGE['interface']['administration']['maintenance']['page_name']='Manutenzione';
 $MESSAGE['interface']['administration']['maintenance']['link']['back']='Indietro...';
