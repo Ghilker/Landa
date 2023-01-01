@@ -5,7 +5,7 @@
 <?php /*HELP: */ 
   
   
-  	    $query="SELECT articolo, titolo, testo FROM regolamento ORDER BY articolo";
+  	    $query="SELECT articolo, titolo, testo FROM regolamento_base ORDER BY articolo";
 	    $result=gdrcd_query($query, 'result');?>
 		<div class="panels_box">
 		<div class="elenco_record_gioco">

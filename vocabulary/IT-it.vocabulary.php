@@ -21,7 +21,7 @@ $MESSAGE['homepage']['forms']['online_now']='Utenti connessi';
 $MESSAGE['homepage']['forms']['open_in_popup']='Apri in popup?';
 $MESSAGE['homepage']['registration']='Iscrizione';
 $MESSAGE['homepage']['storyline']='Ambientazione';
-$MESSAGE['homepage']['rules']='Regolamento';
+$MESSAGE['homepage']['rules']='Regolamento Base';
 $MESSAGE['homepage']['races']='Razze Di Gioco';
 $MESSAGE['homepage']['info']['webm']='Responsabile legale';
 $MESSAGE['homepage']['info']['dbadmin']='Amministratore del Database';
@@ -366,7 +366,7 @@ $MESSAGE['interface']['skills']['desc']='Descrizione';
 $MESSAGE['interface']['skills']['sys']='A ciascuna abilità è associata una delle sei caratteristiche dei personaggi ed un grado di competenza specifico per il personaggio. Per far uso di un\'abilità occorre eseguire un tiro di dado (1d'.$PARAMETERS['settings']['skills_die'] .') e sommare grado + caratteristica + bonus raziale + eventuale bonus di oggetti indossati. Se il punteggio ottenuto eguaglia o supera quello stabilito dal master come difficoltà della prova, l\'abilità è stata usata con successo. Nel caso di prove contrapposte, come il combattimento, ha la meglio chi, tra i contendenti, ottiene il punteggio più alto. In combattimento chi ottiene il punteggio più alto può ferire l\'altro, applicando il danno previsto dall\'arma o per il combattimento a mani nude, e sottraendo la protezione eventualmente prevista dagli oggetti dell\'avversario.';
 $MESSAGE['interface']['skills']['sys_tit']='Uso delle abilità';
 /*Regolamento e ambientazione*/
-$MESSAGE['interface']['rules']['page_name']="Regolamento";
+$MESSAGE['interface']['rules']['page_name']="Regolamento Base";
 $MESSAGE['interface']['plot']['page_name']="Ambientazione";
 
 

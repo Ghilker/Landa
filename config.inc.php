@@ -642,7 +642,7 @@ if ($PARAMETERS['mode']['skillsystem'] == 'ON') {
     $PARAMETERS['user']['skill_list']['url'] = 'main.php?page=user_abilita';
     $PARAMETERS['user']['skill_list']['access_level'] = GESTORE;
 }
-$PARAMETERS['user']['rules']['text'] = 'Regolamento';
+$PARAMETERS['user']['rules']['text'] = 'Regolamento Base';
 $PARAMETERS['user']['rules']['url'] = 'main.php?page=user_regolamento_base';
 $PARAMETERS['user']['rules']['access_level'] = USER;
 $PARAMETERS['user']['plot']['text'] = 'Ambientazione';

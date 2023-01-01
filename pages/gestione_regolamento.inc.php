@@ -19,7 +19,7 @@
 			if ($_POST['op'] == 'insert') {
 				/*Eseguo l'inserimento*/
 				if (is_numeric($_POST['articolo']) == TRUE) {
-					gdrcd_query("INSERT INTO regolamento (articolo, titolo, testo) VALUES (" . gdrcd_filter('num', $_POST['articolo']) . ", '" . gdrcd_filter('in', $_POST['titolo']) . "', '" . gdrcd_filter('in', $_POST['testo']) . "')");
+					gdrcd_query("INSERT INTO regolamento_base (articolo, titolo, testo) VALUES (" . gdrcd_filter('num', $_POST['articolo']) . ", '" . gdrcd_filter('in', $_POST['titolo']) . "', '" . gdrcd_filter('in', $_POST['testo']) . "')");
 
 					?>
 					<div class="warning">
@@ -41,7 +41,7 @@
 			<?php /* Cancellatura in un record */
 			if ($_POST['op'] == 'erase') {
 				/*Eseguo la cancellatura*/
-				gdrcd_query("DELETE FROM regolamento WHERE articolo=" . gdrcd_filter('num', $_POST['id_record']) . " LIMIT 1");
+				gdrcd_query("DELETE FROM regolamento_base WHERE articolo=" . gdrcd_filter('num', $_POST['id_record']) . " LIMIT 1");
 				?>
 				<div class="warning">
 					<?php echo gdrcd_filter('out', $MESSAGE['warning']['deleted']); ?>
@@ -60,7 +60,7 @@
 				if ((is_numeric($_POST['art']) == TRUE) && (is_numeric($_POST['articolo']) == TRUE)) {
 
 					/*Eseguo l'aggiornamento*/
-					gdrcd_query("UPDATE regolamento SET titolo ='" . gdrcd_filter('in', $_POST['titolo']) . "', testo ='" . gdrcd_filter('in', $_POST['testo']) . "', articolo = " . gdrcd_filter('num', $_POST['articolo']) . " WHERE articolo = " . gdrcd_filter('num', $_POST['art']) . " LIMIT 1");
+					gdrcd_query("UPDATE regolamento_base SET titolo ='" . gdrcd_filter('in', $_POST['titolo']) . "', testo ='" . gdrcd_filter('in', $_POST['testo']) . "', articolo = " . gdrcd_filter('num', $_POST['articolo']) . " WHERE articolo = " . gdrcd_filter('num', $_POST['art']) . " LIMIT 1");
 
 					?>
 					<div class="warning">
@@ -91,7 +91,7 @@
 				/*Se è stata richiesta una modifica*/
 				if ($_POST['op'] == 'edit') {
 					/*Carico il record da modificare*/
-					$loaded_record = gdrcd_query("SELECT * FROM regolamento WHERE articolo=" . gdrcd_filter('num', $_POST['id_record']) . " LIMIT 1 ");
+					$loaded_record = gdrcd_query("SELECT * FROM regolamento_base WHERE articolo=" . gdrcd_filter('num', $_POST['id_record']) . " LIMIT 1 ");
 					/*Cambio l'operazione in modifica*/
 					$operation = 'edit';
 
@@ -160,10 +160,10 @@
 			$pagebegin = (int) $_REQUEST['offset'] * $PARAMETERS['settings']['records_per_page'];
 			$pageend = $PARAMETERS['settings']['records_per_page'];
 			//Conteggio record totali
-			$record_globale = gdrcd_query("SELECT COUNT(*) FROM regolamento");
+			$record_globale = gdrcd_query("SELECT COUNT(*) FROM regolamento_base");
 			$totaleresults = $record_globale['COUNT(*)'];
 			//Lettura record
-			$result = gdrcd_query("SELECT articolo, titolo, testo FROM regolamento ORDER BY articolo LIMIT " . $pagebegin . ", " . $pageend . "", 'result');
+			$result = gdrcd_query("SELECT articolo, titolo, testo FROM regolamento_base ORDER BY articolo LIMIT " . $pagebegin . ", " . $pageend . "", 'result');
 			$numresults = gdrcd_query($result, 'num_rows');
 
 			/* Se esistono record */

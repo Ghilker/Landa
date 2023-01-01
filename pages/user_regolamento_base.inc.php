@@ -11,8 +11,8 @@
 				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=1)-,Istruzioni%20per%20l%27uso,-INDICE%3A%0A%0A1">
 				Istruzioni per l'uso </a><br>
 			2. <a
-				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=2)-,Regolamento,-INDICE%3A%0A%0A1">
-				Regolamento </a><br>
+				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=2)-,Regolamento Base,-INDICE%3A%0A%0A1">
+				Regolamento Base </a><br>
 			3. <a
 				href="https://provalice.altervista.org/main.php?page=user_regolamento_base#:~:text=3)-,Skills%20speciali,-SKILLS%20SPECIALI%0A%0ALe">
 				Skills speciali </a><br>
@@ -29,7 +29,7 @@
 		<?php /*HELP: */
 
 
-		$query = "SELECT articolo, titolo, testo FROM regolamento ORDER BY articolo";
+		$query = "SELECT articolo, titolo, testo FROM regolamento_base ORDER BY articolo";
 		$result = gdrcd_query($query, 'result');
 		?>
 
