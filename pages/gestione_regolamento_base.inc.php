@@ -8,7 +8,7 @@
 
 		<!-- Titolo della pagina -->
 		<div class="page_title">
-			<!--<h2><?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['page_name']); ?></h2>-->
+			<!--<h2><?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['page_name']); ?></h2>-->
 			<div style="margin-top: 15px; margin-bottom: 20px"><img src="/imgs/gest_regolamento.png"></div>
 		</div>
 
@@ -33,7 +33,7 @@
 				<!-- Link di ritorno alla visualizzazione di base -->
 				<div class="link_back">
 					<a href="main.php?page=gestione_regolamento_base">
-						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['back']); ?>
+						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['link']['back']); ?>
 					</a>
 				</div>
 				<?php } ?>
@@ -49,7 +49,7 @@
 				<!-- Link di ritorno alla visualizzazione di base -->
 				<div class="link_back">
 					<a href="main.php?page=gestione_regolamento_base">
-						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['back']); ?>
+						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['link']['back']); ?>
 					</a>
 				</div>
 				<?php } ?>
@@ -74,7 +74,7 @@
 				<!-- Link di ritorno alla visualizzazione di base -->
 				<div class="link_back">
 					<a href="main.php?page=gestione_regolamento_base">
-						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['back']); ?>
+						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['link']['back']); ?>
 					</a>
 				</div>
 				<?php } ?>
@@ -109,7 +109,7 @@
 					<form action="main.php?page=gestione_regolamento_base" method="post" class="form_gestione">
 
 						<div class='form_label'>
-							<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['art']); ?>
+							<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['art']); ?>
 						</div>
 						<div class='form_field'>
 							<input name="articolo" value="<?php echo 0 + $loaded_record['articolo']; ?>" />
@@ -117,14 +117,14 @@
 						</div>
 
 						<div class='form_label'>
-							<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['title']); ?>
+							<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['title']); ?>
 						</div>
 						<div class='form_field'>
 							<input name="titolo" value="<?php echo $loaded_record['titolo']; ?>" />
 						</div>
 
 						<div class='form_label'>
-							<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['infos']); ?>
+							<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['infos']); ?>
 						</div>
 						<div class='form_field'>
 							<textarea name="testo"><?php echo $loaded_record['testo']; ?></textarea>
@@ -156,7 +156,7 @@
 				<!-- Link di ritorno alla visualizzazione di base -->
 				<div class="link_back">
 					<a href="main.php?page=gestione_regolamento_base">
-						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['back']); ?>
+						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['link']['back']); ?>
 					</a>
 				</div>
 				<?php } //if ?>
@@ -182,11 +182,11 @@
 							<tr>
 								<td class="casella_titolo">
 									<div class="titoli_elenco">
-										<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['art']); ?>
+										<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['art']); ?>
 									</div>
 								</td>
 								<td class="casella_titolo">
-									<div class="titoli_elenco"><?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['titolo']); ?></div>
+									<div class="titoli_elenco"><?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['titolo']); ?></div>
 								</td>
 								<td class="casella_titolo">
 									<div class="titoli_elenco">
@@ -261,7 +261,7 @@
 				<!-- link crea nuovo -->
 				<div class="link_back">
 					<a href="main.php?page=gestione_regolamento_base&op=new">
-						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['rules']['link']['new']); ?>
+						<?php echo gdrcd_filter('out', $MESSAGE['interface']['administration']['basic_rules']['link']['new']); ?>
 					</a>
 				</div>
 
