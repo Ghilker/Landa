@@ -21,6 +21,7 @@
 		$result = gdrcd_query($query, 'result');
 		?>
 
+
 		<script>
 			<?php
 			foreach ($result2 as $result2) {
