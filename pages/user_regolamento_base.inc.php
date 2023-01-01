@@ -28,8 +28,7 @@
 				echo "document.getElementById('button" . $result2['articolo'] . "').addEventListener('click', function() {";
 				echo "  document.getElementById('id" . $result2['articolo'] . "').scrollIntoView({behavior: 'smooth'});";
 				echo "});";
-			}
-			;
+			};
 			?>
 		</script>
 
