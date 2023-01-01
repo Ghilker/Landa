@@ -21,15 +21,13 @@
 		$result = gdrcd_query($query, 'result');
 		?>
 
-
 		<script>
 			<?php
 			foreach ($result2 as $result2) {
 				echo "document.getElementById('button" . $result2['articolo'] . "').addEventListener('click', function() {";
 				echo "  document.getElementById('id" . $result2['articolo'] . "').scrollIntoView({behavior: 'smooth'});";
 				echo "});";
-			}
-			;
+			};
 			?>
 		</script>
 
