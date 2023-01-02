@@ -115,6 +115,13 @@ if ($_SESSION['permessi']<ADMIN){
 		  <div class='form_field'>  
 		    <textarea name="stato"><?php echo gdrcd_filter('out',$loaded_location['stato']); ?></textarea>
           </div>
+
+		  <div class='form_label'>
+             <?php echo gdrcd_filter('out',$MESSAGE['interface']['administration']['locations']['extended_description']); ?>
+          </div>
+		  <div class='form_field'>  
+		    <textarea name="descrizione dettagliata"><?php echo gdrcd_filter('out',$loaded_location['descrizione_dettagliata']); ?></textarea>
+          </div>
 			  
 		  <div class='form_label'>
              <?php echo gdrcd_filter('out',$MESSAGE['interface']['administration']['locations']['is_chat']); ?>

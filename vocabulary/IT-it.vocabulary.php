@@ -429,6 +429,7 @@ $MESSAGE['interface']['administration']['locations']['description']='Descrizione
 $MESSAGE['interface']['administration']['locations']['description_default']='Nessuna descrizione';
 $MESSAGE['interface']['administration']['locations']['status']='Stato';
 $MESSAGE['interface']['administration']['locations']['status_default']='Nella norma';
+$MESSAGE['interface']['administration']['locations']['extended_description'] = 'Descrizione estesa';
 $MESSAGE['interface']['administration']['locations']['page']='Pagina associata';
 $MESSAGE['interface']['administration']['locations']['is_chat']='Chat';
 $MESSAGE['interface']['administration']['locations']['is_chat_info']='Spuntare se la stanza è adibita a chat, altrimenti specificare nel campo "pagina" il file da caricare nel riquadro principale';
