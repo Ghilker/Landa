@@ -216,22 +216,23 @@
 
 			// 5 TODO 
 			$lavoro = "L";
+			$gilda;
 			$guilds=gdrcd_query("SELECT ruolo.nome_ruolo, ruolo.gilda, ruolo.immagine, gilda.visibile, gilda.nome AS nome_gilda FROM clgpersonaggioruolo LEFT JOIN ruolo ON ruolo.id_ruolo = clgpersonaggioruolo.id_ruolo LEFT JOIN gilda ON ruolo.gilda = gilda.id_gilda WHERE clgpersonaggioruolo.personaggio = '".gdrcd_filter('in',$record['nome'])."'", 'result');
 			if (gdrcd_query($guilds, 'num_rows')==0){
-				echo gdrcd_filter('out',$MESSAGE['interface']['sheet']['profile']['uneployed']);
+				$gilda = gdrcd_filter('out',$MESSAGE['interface']['sheet']['profile']['uneployed']);
 			}else{
 				while ($row_guilds = gdrcd_query($guilds, 'fetch')){
 					if($row_guilds['gilda']==-1){
-						echo '<img class="profilo_img_gilda"  src="themes/'.$PARAMETERS['themes']['current_theme'].'/imgs/guilds/'.gdrcd_filter('out',$row_guilds['immagine']).'" alt="'.gdrcd_filter('out',$row_guilds['nome_ruolo']).'" title="'.gdrcd_filter('out',$row_guilds['nome_ruolo']).'" />';
+						$gilda = '<img class="profilo_img_gilda"  src="themes/'.$PARAMETERS['themes']['current_theme'].'/imgs/guilds/'.gdrcd_filter('out',$row_guilds['immagine']).'" alt="'.gdrcd_filter('out',$row_guilds['nome_ruolo']).'" title="'.gdrcd_filter('out',$row_guilds['nome_ruolo']).'" />';
 					} else {
 						if(($row_quilds['visibile']==1)||($_SESSION['permessi']>=USER)){
-							echo '<a href="main.php?page=servizi_gilde&id_gilda='.$row_guilds['gilda'].'"><img class="profilo_img_gilda"  src="themes/'.$PARAMETERS['themes']['current_theme'].'/imgs/guilds/'.gdrcd_filter('out',$row_guilds['immagine']).'" alt="'.gdrcd_filter('out',$row_guilds['nome_ruolo'].' - '.$row_guilds['nome_gilda']).'" title="'.gdrcd_filter('out',$row_guilds['nome_ruolo'].' - '.$row_guilds['nome_gilda']).'" /></a>';
+							$gilda = '<a href="main.php?page=servizi_gilde&id_gilda='.$row_guilds['gilda'].'"><img class="profilo_img_gilda"  src="themes/'.$PARAMETERS['themes']['current_theme'].'/imgs/guilds/'.gdrcd_filter('out',$row_guilds['immagine']).'" alt="'.gdrcd_filter('out',$row_guilds['nome_ruolo'].' - '.$row_guilds['nome_gilda']).'" title="'.gdrcd_filter('out',$row_guilds['nome_ruolo'].' - '.$row_guilds['nome_gilda']).'" /></a>';
 						}
 					}//else
 				}//while
 				gdrcd_query($guilds, 'free');
 			}
-			echo '<td style="padding-left:15px; padding-right:15px; background-color: rgba(99, 109, 135, 0.15);">' . $lavoro . '</td>'; /* Placeholder per icona del Lavoro */
+			echo '<td style="padding-left:15px; padding-right:15px; background-color: rgba(99, 109, 135, 0.15);">' . $gilda . '</td>'; /* Placeholder per icona del Lavoro */
 
 			// 7 Missiva
 			//Iconcina del messaggio cliccabile
