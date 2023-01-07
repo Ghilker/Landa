@@ -233,7 +233,7 @@
 				gdrcd_query($guilds, 'free');
 			}
 			echo '<td style="padding-left:15px; padding-right:15px; background-color: rgba(99, 109, 135, 0.15);">' . $gilda . '</td>'; /* Placeholder per icona del Lavoro */
-
+			
 			// 7 Missiva
 			//Iconcina del messaggio cliccabile
 			?>
