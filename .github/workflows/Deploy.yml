@@ -10,10 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Update Git
+      run: sudo apt-get update && sudo apt-get install git
     - name: Checkout code
       uses: actions/checkout@v2
-
+    - name: Install git-ftp
+      run: sudo apt-get install git-ftp
     - name: Deploy to FTP
       run: |
-        git ftp catchup -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
-        git ftp push -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+        git ftp push -vv --auto-init --insecure --changed-only --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+        git ftp catchup --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
