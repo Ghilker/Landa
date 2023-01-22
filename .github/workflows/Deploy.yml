@@ -17,7 +17,7 @@ jobs:
     - name: Fetch and merge remote changes
       run: git pull origin master --force
     - name: Upload ftp
-      run: echo "new content" >> index.txt && git commit index.txt -m "Add new content" && git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
+      run: git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
