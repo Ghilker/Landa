@@ -17,14 +17,13 @@ jobs:
     - name: Fetch and merge remote changes
       run: git pull origin master --force
     - name: Upload ftp
-      run: git ftp catchup --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
+      run: git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
-        
     - name: Upload ftp
-      run: git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
+      run: git ftp catchup --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
