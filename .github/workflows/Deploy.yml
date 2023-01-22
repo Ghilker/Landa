@@ -12,8 +12,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
+    - name: FTP Catchup
+      run: git ftp catchup -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
     - name: Deploy to FTP
-      run: |
-        git ftp catchup -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
-        git ftp push --commit master -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+      run: git ftp push --commit master -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
