@@ -13,7 +13,7 @@ $result = gdrcd_query($query, 'result'); ?>
 
 	<!-- Titolo della pagina -->
 	<div class="page_title">
-		<!--<h2><?php echo gdrcd_filter('out', $MESSAGE['interface']['pg_list']['page_name']); ?></h2>-->
+		<?php echo gdrcd_filter('out', $MESSAGE['interface']['pg_list']['page_name']); ?>
 		<div style="margin-top: 15px; margin-bottom: 20px"><img src="/imgs/anagrafe.png"></div>
 	</div>
 
