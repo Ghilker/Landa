@@ -10,14 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Update Git
-      run: sudo apt-get update && sudo apt-get install git
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Install git-ftp
-      run: sudo apt-get install git-ftp
-    - name: Dry Run
-      run: git ftp push --dry-run --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
     - name: Deploy to FTP
       run: git ftp push -b master --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
 
