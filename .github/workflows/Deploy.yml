@@ -13,4 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Deploy to FTP
-      run: git ftp push -vv --auto-init --insecure --changed-only --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+      run: |
+        git add .
+        git commit -am 'build'
+        git ftp push -vv --auto-init --insecure --changed-only --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+        git reset --hard
+        git checkout HEAD~1
+        git ftp catchup --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
