@@ -1,23 +1,19 @@
-name: Deploy via ftp
-on: push
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   deploy:
-    name: Deploy
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Replace Username
-      run: sed -i 's/_DATABASE_USERNAME_/${{ secrets._DATABASE_USERNAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: Replace Password
-      run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets._DATABASE_PASSWORD_ }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: Replace Database Name
-      run: sed -i 's/_DATABASE_NAME_/${{ secrets._DATABASE_NAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@3.1.2
-      with:
-        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        # FTP account username
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        # FTP account password
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to FTP
+      run: |
+        git ftp init --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+        git ftp push
