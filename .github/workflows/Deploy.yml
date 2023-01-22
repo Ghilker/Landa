@@ -14,4 +14,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Deploy to FTP
-      run: git ftp init -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+      run: git ftp push -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
