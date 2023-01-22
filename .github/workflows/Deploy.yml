@@ -8,12 +8,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install git-ftp
       run: sudo apt-get update && sudo apt-get install -y git-ftp
-    - name: Configure git-ftp
-      run: git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
-      env:
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        FTP_SERVER: ${{ secrets.FTP_SERVER }}
     - name: Replace Username
       run: sed -i 's/_DATABASE_USERNAME_/${{ secrets._DATABASE_USERNAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
     - name: Replace Password
@@ -21,6 +15,10 @@ jobs:
     - name: Replace Database Name
       run: sed -i 's/_DATABASE_NAME_/${{ secrets._DATABASE_NAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
     - name: Fetch and merge remote changes
-      run: git pull origin master --force
+      run: git pull origin main --force
     - name: Upload ftp
-      run: git ftp push --force
+      run: git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER --force
+      env:
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
