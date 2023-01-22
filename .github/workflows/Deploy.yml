@@ -13,5 +13,5 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Deploy to FTP
-      run: git ftp push -c -b master --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+      run: git ftp push --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
 
