@@ -18,5 +18,6 @@ jobs:
       run: sudo apt-get install git-ftp
     - name: Deploy to FTP
       run: |
+        git checkout master
         git ftp push -vv --auto-init --insecure --changed-only --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
         git ftp catchup --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
