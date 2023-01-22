@@ -13,5 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Deploy to FTP
-      run: git ftp push --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+      run: |
+        git config user.name land
+        git config user.email minefap44@gmail.com
+        git add .
+        git push
+        git ftp push --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
 
