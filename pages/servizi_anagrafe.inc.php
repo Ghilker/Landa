@@ -14,7 +14,9 @@ $result = gdrcd_query($query, 'result'); ?>
 	<!-- Titolo della pagina -->
 	<div class="page_title">
 		<?php echo gdrcd_filter('out', $MESSAGE['interface']['pg_list']['page_name']); ?>
-		saofiasoifhaosifhaosfi
+
+		
+		
 		<div style="margin-top: 15px; margin-bottom: 20px"><img src="/imgs/anagrafe.png"></div>
 	</div>
 
