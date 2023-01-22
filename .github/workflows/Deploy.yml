@@ -15,4 +15,4 @@ jobs:
     - name: FTP Catchup
       run: git ftp catchup -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
     - name: Deploy to FTP
-      run: git ftp push --commit master -vv --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+      run: git ftp push -vv --auto-init --insecure --changed-only --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
