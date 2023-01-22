@@ -14,10 +14,8 @@ jobs:
       run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets._DATABASE_PASSWORD_ }}/g' $GITHUB_WORKSPACE/config.inc.php
     - name: Replace Database Name
       run: sed -i 's/_DATABASE_NAME_/${{ secrets._DATABASE_NAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: Fetch and merge remote changes
-      run: git pull origin master --force
     - name: Upload ftp
-      run: git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
+      run: git ftp push -vv --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
