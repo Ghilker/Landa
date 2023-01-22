@@ -17,7 +17,6 @@ $result = gdrcd_query($query, 'result'); ?>
 
 		
 
-		
 		<div style="margin-top: 15px; margin-bottom: 20px"><img src="/imgs/anagrafe.png"></div>
 	</div>
 
