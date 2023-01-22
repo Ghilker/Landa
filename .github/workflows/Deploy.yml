@@ -6,25 +6,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install git-ftp
-      run: sudo apt-get update && sudo apt-get install -y git-ftp
-    - name: Synchronize remote repository
-      run: git ftp catchup
-      env:
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        FTP_SERVER: ${{ secrets.FTP_SERVER }}
-    - name: Initialize git-ftp
-      run: git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
     - name: Replace Username
       run: sed -i 's/_DATABASE_USERNAME_/${{ secrets._DATABASE_USERNAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
     - name: Replace Password
       run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets._DATABASE_PASSWORD_ }}/g' $GITHUB_WORKSPACE/config.inc.php
     - name: Replace Database Name
       run: sed -i 's/_DATABASE_NAME_/${{ secrets._DATABASE_NAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: Fetch and merge remote changes
-      run: git pull origin master --force
-    - name: Upload ftp
-      run: git ftp push
-    - name: Synchronize remote repository
-      run: git ftp catchup
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@3.1.2
+      with:
+        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+        ftp-server: ${{ secrets.FTP_SERVER }}
+        # FTP account username
+        ftp-username: ${{ secrets.FTP_USERNAME }}
+        # FTP account password
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
