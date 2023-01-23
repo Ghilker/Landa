@@ -12,9 +12,14 @@ jobs:
       run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets._DATABASE_PASSWORD_ }}/g' $GITHUB_WORKSPACE/config.inc.php
     - name: Replace Database Name
       run: sed -i 's/_DATABASE_NAME_/${{ secrets._DATABASE_NAME_ }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: Upload ftp
-      run: git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
-      env:
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+    - name: FTP Deploy
+      # You may pin to the exact commit or the version.
+      # uses: SamKirkland/FTP-Deploy-Action@6647c2f8ad10f869fded8e5a6253c9da11d7fb47
+      uses: SamKirkland/FTP-Deploy-Action@3.1.2
+      with:
+        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+        ftp-server: ${{ secrets.FTP_SERVER }}
+        # FTP account username
+        ftp-username: ${{ secrets.FTP_USERNAME }}
+        # FTP account password
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
