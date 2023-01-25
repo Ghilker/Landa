@@ -135,6 +135,8 @@ gdrcd_query($result, 'free');
 			if ($disoccupato == -1) {
 				gdrcd_query("UPDATE clgpersonaggioruolo SET id_ruolo = " . gdrcd_filter('num', $_POST['id_record']) . ", scadenza = DATE_ADD(NOW(), INTERVAL " . gdrcd_filter('num', $PARAMETERS['settings']['minimum_employment']) . " DAY) WHERE personaggio='" . $_SESSION['login'] . "' AND id_ruolo = " . gdrcd_filter('num', $lavoro) . " LIMIT 1");
 
+
+				
 			} else {
 				gdrcd_query("INSERT INTO clgpersonaggioruolo (id_ruolo,  personaggio, scadenza) VALUES (" . gdrcd_filter('num', $_POST['id_record']) . ", '" . $_SESSION['login'] . "', DATE_ADD(NOW(), INTERVAL " . gdrcd_filter('num', $PARAMETERS['settings']['minimum_employment']) . " DAY))");
 

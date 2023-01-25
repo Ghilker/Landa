@@ -2,6 +2,8 @@
 
 
 
+
+
 ## VERSIONE STABILE
 
 Le corrente versione e' stabile, ma ancora soggetta ed ampliamenti,

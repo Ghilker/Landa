@@ -11,8 +11,6 @@ header('Content-Type:text/html; charset=UTF-8');
 */
 if (!empty($_SESSION['login'])) {
 
-	
-	
 	/* * Aggiornamento della posizione nella mappa del pg
 	 * @author Blancks
 	 */
