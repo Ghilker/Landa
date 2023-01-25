@@ -17,11 +17,17 @@ jobs:
       run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets.DATABASE_PASSWORD }}/g' $GITHUB_WORKSPACE/config.inc.php
     - name: Replace Database Name
       run: sed -i 's/_DATABASE_NAME_/${{ secrets.DATABASE_NAME }}/g' $GITHUB_WORKSPACE/config.inc.php
+    - name: Commit Changes
+      run: |
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add .
+        git commit -m "Update config.inc.php with secrets"
+    - name: Push to Development Branch
+      run: git push origin deployment
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.2
       with:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-    - name: Delete Deployment Branch
-      run: git branch -D deployment
