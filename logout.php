@@ -3,6 +3,7 @@
 
 //Includio i parametri, la configurazione, la lingua e le funzioni
 require 'config.inc.php';
+require('db_parameters.inc.php');
 require 'includes/functions.inc.php';
 require 'vocabulary/' . $PARAMETERS['languages']['set'] . '.vocabulary.php';
 
