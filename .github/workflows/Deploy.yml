@@ -9,22 +9,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Create Deployment Branch
-      run: git checkout -b deployment
-    - name: Replace Username
-      run: sed -i 's/_DATABASE_USERNAME_/${{ secrets.DATABASE_USERNAME }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: Replace Password
-      run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets.DATABASE_PASSWORD }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: Replace Database Name
-      run: sed -i 's/_DATABASE_NAME_/${{ secrets.DATABASE_NAME }}/g' $GITHUB_WORKSPACE/config.inc.php
-    - name: Commit Changes
-      run: |
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "GitHub Actions"
-        git add .
-        git commit -m "Update config.inc.php with secrets"
-    - name: Push to Development Branch
-      run: git push origin deployment
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.2
       with:
