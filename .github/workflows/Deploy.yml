@@ -9,9 +9,5 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v1
-    - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@3.1.2
-      with:
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+    - name: Deploy to FTP
+      run: git ftp init --user ${{ secrets.FTP_USERNAME }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
