@@ -257,7 +257,6 @@ while ($row = gdrcd_query($query, 'fetch')) {
 			$add_chat .= '<span class="chat_time">' . gdrcd_format_time($row['ora']) . '</span>';
 			$add_chat .= '<span class="chat_name">' . $row['destinatario'] . '</span> ';
 			$add_chat .= '<span class="chat_msg">' . gdrcd_chatcolor(gdrcd_filter('out', $row['testo'])) . '</span>';
-			$add_chat .= '<br style="clear:both;" />';
 			$add_chat .= '</div>';
 			break;
 
@@ -265,7 +264,7 @@ while ($row = gdrcd_query($query, 'fetch')) {
 		case 'M':
 			$add_chat .= '<div class="chat_row_' . $row['tipo'] . '">';
 
-			$add_chat .= '<span class="chat_master">' . gdrcd_filter('out', $row['testo']) . '</span>';
+			$add_chat .= '<span class="chat_master">' . gdrcd_chatcolor(gdrcd_filter('out', $row['testo'])) . '</span>';
 
 			$add_chat .= '</div>';
 			break;

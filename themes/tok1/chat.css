@@ -80,6 +80,18 @@ div.chat_row_M{
    font-weight:bold;
 }
 
+div.chat_row_M span.color2{ 
+   margin-top: 3px;
+   border-width: 1px;
+   border-color: #b6c7d5;
+   border-style: solid;
+   background-color: #7b859f;
+   text-align: center;
+   color: #0f202e;
+   font-size: 13px;
+   font-weight:bold;
+}
+
 div.chat_row_N{margin-top: 3px; color: #B6C7D5;}
 
 div.chat_row_N	span.color2{margin-top: 3px; color:#B6C7D5; font-weight:bolder; font-style: italic;}   
