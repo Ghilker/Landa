@@ -60,7 +60,7 @@ img.chat_avatar{
 
 /* Tipi messaggio: (A azione, P parlato, N PNG, M Master, I Immagine, S sussurro, D dado, C skill check, O uso oggetto) */
 
-div.chat_row_A{margin-top: 3px; color: #B6C7D5;}
+div.chat_row_A{margin-top: 3px; color: #26ff00;}
 
 div.chat_row_A	span.color2{margin-top: 3px; color:#B6C7D5; font-weight:bolder;}   
 
