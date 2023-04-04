@@ -72,78 +72,77 @@ img.chat_avatar{
 
 /* Tipi messaggio: (A azione, P parlato, N PNG, M Master, I Immagine, S sussurro, D dado, C skill check, O uso oggetto) */
 
-div.chat_row_A{margin-top: 3px;}
+div.chat_row_A{margin-top: 3px; color: #B6C7D5;}
 
-div.chat_row_A	span.color2{margin-top: 3px; color:#000; font-weight:bolder;}   
+div.chat_row_A	span.color2{margin-top: 3px; color:#B6C7D5; font-weight:bolder;}   
 
-div.chat_row_P{margin-top: 3px;}
+div.chat_row_P{margin-top: 3px; color: #B6C7D5;}
 
-div.chat_row_P	span.color2{margin-top: 3px; color:#000; font-weight:bolder;}
+div.chat_row_P	span.color2{margin-top: 3px; color:#B6C7D5; font-weight:bolder;}
 
 div.chat_row_M{ 
-	margin-top: 3px;
-	border: 2px solid #B8A7CC;
-	text-align: center;
-	background-color: rgba(184, 167, 204, 0.26);
-	padding: 3px;
-	color:#334477;
+   margin-top: 3px;
+   border-width: 1px;
+   border-color: #b6c7d5;
+   border-style: solid;
+   background-color: #7b859f;
+   text-align: center;
+   color: #0a1228;
+   font-size: 13px;
+   font-weight:bold;
 }
 
-div.chat_row_N{margin-top: 3px; border-width: 1px;
-   border-color: #663300;
-   border-style: dotted;
-   color: #996622;
-   font-size:12px;
-   -moz-border-radius:5px;		/* Bordi arrotondati */
-	-webkit-border-radius:5px;
-	-khtml-border-radius: 5px;
-	border-radius:5px;}
+div.chat_row_N{margin-top: 3px; color: #B6C7D5;}
 
-div.chat_row_N	span.color2{color:#000; 
-font-weight:bolder;
- }
+div.chat_row_N	span.color2{margin-top: 3px; color:#B6C7D5; font-weight:bolder;}   
 
 div.chat_row_I{
 	margin-top: 3px;
    text-align: center;
 }
 
-div.chat_row_S{
-	margin-top: 3px;
-	background-color: #F6F3F8;
-	font-style: italic;
-	border: 1px dotted;
-	padding: 3px;
-
+div.chat_row_S{margin-top: 3px;
+   border-width: 2px;
+   border-color: #7b859f;
+   border-style: dotted;
+   background-color: #273956;
+   color: #b6c7d5;
+   font-style:italic;
 }
 
 div.chat_row_D{
-margin-top: 3px;
- border-width: 2px;
-   border-color: #338855;
+   margin-top: 3px;
+   border-width: 2px;
+   border-color: #7b859f;
    border-style: solid;
-   color: #3344BB;
-}
-
-div.chat_row_C{}
-
-div.chat_row_O{
-margin-top: 3px;
- border-width: 2px;
-   border-color: blue;
-   border-style: solid;
-      color: #3344BB;
-
+   background-color: #273956;
+   color: #b6c7d5;
 }
 
 div.chat_row_C{
-margin-top: 3px;
-
- border-width: 2px;
-   border-color: #334477;
+   margin-top: 3px;
+   border-width: 2px;
+   border-color: #7b859f;
    border-style: solid;
-      color: #3344BB;
+   background-color: #273956;
+   color: #b6c7d5;
+}
 
+div.chat_row_O{
+   margin-top: 3px;
+   border-width: 2px;
+   border-color: #7b859f;
+   border-style: solid;
+   background-color: #273956;
+   color: #b6c7d5;
+}
+
+div.chat_row_C{
+   margin-top: 3px;
+   border-width: 2px;
+   border-color: #7b859f;
+   border-style: solid;
+   color: #b6c7d5;
 }
 
 span.chat_time{
