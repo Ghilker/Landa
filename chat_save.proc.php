@@ -257,7 +257,7 @@ while ($row = gdrcd_query($query, 'fetch')) {
 			$add_chat .= '<span class="chat_time">' . gdrcd_format_time($row['ora']) . '</span>';
 			$add_chat .= '<span class="chat_name">' . $row['destinatario'] . '</span> ';
 			$add_chat .= '<span class="chat_msg">' . gdrcd_chatcolor(gdrcd_filter('out', $row['testo'])) . '</span>';
-
+			$add_chat .= '<br style="clear:both;" />';
 			$add_chat .= '</div>';
 			break;
 
