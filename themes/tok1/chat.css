@@ -81,10 +81,9 @@ margin-top: 3px;
    font-weight:bold;
 }
 
-div.chat_row_N{border: 1px solid #7b859f; margin-top: 3px; padding: 3px; /*width: 98.5%**/}
+div.chat_row_N{margin-top: 3px; color: #B6C7D5;}
 
-div.chat_row_N	
-   span.color2{color:#000; font-weight:bolder;}
+div.chat_row_N	span.color2{margin-top: 3px; color:#B6C7D5; font-weight:bolder;}   
 
 div.chat_row_I{
 	margin-top: 3px;
