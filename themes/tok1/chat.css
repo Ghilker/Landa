@@ -170,7 +170,10 @@ span.chat_msg{
 	font-size:12px;
 }
 
-span.chat_master{ }
+span.chat_master{
+	color:#0d1c29;
+	font-size:12px;
+}
 
 
 
