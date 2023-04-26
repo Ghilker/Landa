@@ -26,7 +26,7 @@ $info = gdrcd_query("SELECT nome, stanza_apparente, invitati, privata, proprieta
 					(strpos($_SESSION['gilda'], $info['proprietario']) != FALSE) ||
 					(strpos($info['invitati'], gdrcd_capital_letter($_SESSION['login'])) != FALSE) ||
 					(($PARAMETERS['mode']['spyprivaterooms'] == 'ON') && ($_SESSION['permessi'] > ADMIN))
-				) && ($info['scadenza'] > date('Y-m-d H:M:S'))
+				) && ($info['scadenza'] > date('%Y-%m-%d %H:%M:%S'))
 			) {
 				$allowance = TRUE;
 			}
