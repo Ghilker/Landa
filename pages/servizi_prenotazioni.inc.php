@@ -36,6 +36,10 @@
 							<select name="id">
 								<?php
 								while ($row = gdrcd_query($result, 'fetch')) { ?>
+									<?php
+									$test1 = $row['scadenza'];
+									$test2 = date('%Y-%m-%d %H:%M:%S');
+									echo "<script>console.log('$test1 $test2' );</script>"; ?>
 									<?php if ($row['scadenza'] > date('%Y-%m-%d %H:%M:%S')) { ?>
 										<option value="" disabled>
 											<?php echo gdrcd_filter('out', $row['luogo'] . ', ' . $row['nome']) . ' (' . $row['proprietario'] . ', ' . gdrcd_format_time($row['scadenza']) . ') '; ?>
