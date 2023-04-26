@@ -20,9 +20,6 @@ $info = gdrcd_query("SELECT nome, stanza_apparente, invitati, privata, proprieta
 		<?php
 		//e' una stanza privata?
 		if ($info['privata'] == 1) {
-			$allowance = FALSE;
-			$test1 = $row['scadenza'];
-			$test2 = date('Y-m-d H:i:s');
 			if (
 				(($info['proprietario'] == gdrcd_capital_letter($_SESSION['login'])) ||
 					(strpos($_SESSION['gilda'], $info['proprietario']) != FALSE) ||
