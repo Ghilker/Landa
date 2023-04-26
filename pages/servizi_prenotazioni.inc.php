@@ -36,18 +36,18 @@
 							<select name="id">
 								<?php
 								while ($row = gdrcd_query($result, 'fetch')) { ?>
-									<?php if ($row['scadenza'] > date('d/m/Y H:M')) { ?>
+									<?php if ($row['scadenza'] > date('Y-m-d H:M:S')) { ?>
 										<option value="" disabled>
 											<?php echo gdrcd_filter('out', $row['luogo'] . ', ' . $row['nome']) . ' (' . $row['proprietario'] . ', ' . gdrcd_format_time($row['scadenza']) . ') '; ?>
 										</option>
 
-										<?php } else { ?>
+									<?php } else { ?>
 										<option value="<?php echo $row['id'] . '-' . $row['costo']; ?>">
 											<?php echo gdrcd_filter('out', $row['luogo'] . ', ' . $row['nome']) . ' (' . $row['costo'] . ' ' . strtolower($PARAMETERS['names']['currency']['plur']) . ' ' . $MESSAGE['interface']['hotel']['per_hour'] . ') '; ?>
 
 										</option>
-										<?php } ?>
-									<?php } //while 
+									<?php } ?>
+								<?php } //while 
 						
 								gdrcd_query($result, 'free');
 								?>
@@ -58,7 +58,7 @@
 									<option value="<?php echo $i; ?>">
 										<?php echo $i . ' ' . gdrcd_filter('out', $MESSAGE['interface']['hotel']['hours']); ?>
 									</option>
-									<?php } //while ?>
+								<?php } //while ?>
 							</select>
 						</div>
 						<div class="form_submit">
@@ -67,9 +67,9 @@
 								value="<?php echo gdrcd_filter('out', $MESSAGE['interface']['forms']['submit']); ?>" />
 						</div>
 					</form>
-					<?php } //else ?>
+				<?php } //else ?>
 			</div>
-			<?php } //if ?>
+		<?php } //if ?>
 
 		<?php /*Prenota*/
 		if (gdrcd_filter('get', $_POST['op']) == 'book') {
@@ -110,7 +110,7 @@
 				</a>
 			</div>
 
-			<?php } ?>
+		<?php } ?>
 
 
 	</div>
