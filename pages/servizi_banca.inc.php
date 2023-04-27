@@ -41,9 +41,11 @@ gdrcd_query($result, 'free');
 			} ?>
 
 			<div class="link_back">
-				<a href="main.php?page=servizi_banca"><?php echo gdrcd_filter('out', $MESSAGE['interface']['bank']['back']); ?></a>
+				<a href="main.php?page=servizi_banca">
+					<?php echo gdrcd_filter('out', $MESSAGE['interface']['bank']['back']); ?>
+				</a>
 			</div>
-			<?php } ?>
+		<?php } ?>
 
 		<?php /*Deposito*/
 		if ((isset($_POST['op']) === TRUE) && (gdrcd_filter('get', $_POST['op']) == 'deposita')) {
@@ -63,7 +65,7 @@ gdrcd_query($result, 'free');
 					<?php echo gdrcd_filter('out', $MESSAGE['interface']['bank']['back']); ?>
 				</a>
 			</div>
-			<?php } ?>
+		<?php } ?>
 
 		<?php /*Bonifico*/
 		if ((isset($_POST['op']) === TRUE) && ($_POST['op'] == 'bonifico')) {
@@ -93,7 +95,7 @@ gdrcd_query($result, 'free');
 					<?php echo gdrcd_filter('out', $MESSAGE['interface']['bank']['back']); ?>
 				</a>
 			</div>
-			<?php } ?>
+		<?php } ?>
 
 		<?php /*Stipendio*/
 		/*	* Correzione dell'exploit che rendeva possibile accreditarsi un numero illimitato di soldi in banca
@@ -101,7 +103,7 @@ gdrcd_query($result, 'free');
 		 * Un grazie a Dyrr per la segnalazione.
 		 * @author Blancks
 		 */
-		if ((isset($_POST['op']) === TRUE) && ($_POST['op'] == 'incassa') && ($ultimo != date("d/m/Y H:M"))) {
+		if ((isset($_POST['op']) === TRUE) && ($_POST['op'] == 'incassa') && ($ultimo != date("Y-m-d"))) {
 			echo '<div class="warning">' . gdrcd_filter('out', $MESSAGE['interface']['bank']['done']) . '</div>';
 			gdrcd_query("UPDATE personaggio SET banca = banca + " . $stipendio . ", ultimo_stipendio = NOW() WHERE nome = '" . $_SESSION['login'] . "' AND ultimo_stipendio < NOW() LIMIT 1");
 
@@ -113,7 +115,7 @@ gdrcd_query($result, 'free');
 				</a>
 			</div>
 
-			<?php } ?>
+		<?php } ?>
 
 
 		<?php /*Visualizzazione di base*/
@@ -187,9 +189,9 @@ gdrcd_query($result, 'free');
 									<option value="<?php echo $option['nome']; ?>">
 										<?php echo gdrcd_filter('out', $option['nome']) . " " . gdrcd_filter('out', $option['cognome']); ?>
 									</option>
-									<?php } //while 
-										gdrcd_query($nomi, 'free');
-										?>
+								<?php } //while 
+									gdrcd_query($nomi, 'free');
+									?>
 							</select>
 						</div>
 						<div class='form_field'>
@@ -206,31 +208,31 @@ gdrcd_query($result, 'free');
 				<!-- Stipendio -->
 
 				<?php
-				if ($ultimo >= date("d/m/Y H:M")) {
+				if ($ultimo >= date("Y-m-d")) {
 					echo gdrcd_filter('out', $MESSAGE['interface']['bank']['credit_no']);
 				} else if ($stipendio > 0) { ?>
-					<div class="form_gioco">
-						<form action="main.php?page=servizi_banca" method="post">
-							<div class="form_label">
+						<div class="form_gioco">
+							<form action="main.php?page=servizi_banca" method="post">
+								<div class="form_label">
 								<?php echo gdrcd_filter('out', $MESSAGE['interface']['bank']['pay']) . ' (' . gdrcd_filter('out', $MESSAGE['interface']['bank']['credit']) . ': ' . $stipendio . ' ' . $PARAMETERS['names']['currency']['plur'] . ') '; ?>
-							</div>
-							<div class='form_submit'>
-								<input name="ammontare" type="hidden" class="form_gestione_input"
-									value="<?php echo $stipendio; ?>" />
-								<input name="op" type="hidden" class="form_gestione_input" value="incassa" />
-								<input name="conferma" type="submit" class="form_gestione_input"
-									value="<?php echo gdrcd_filter('out', $MESSAGE['interface']['bank']['execute']) ?>" />
-							</div>
-						</form>
-					</div>
+								</div>
+								<div class='form_submit'>
+									<input name="ammontare" type="hidden" class="form_gestione_input"
+										value="<?php echo $stipendio; ?>" />
+									<input name="op" type="hidden" class="form_gestione_input" value="incassa" />
+									<input name="conferma" type="submit" class="form_gestione_input"
+										value="<?php echo gdrcd_filter('out', $MESSAGE['interface']['bank']['execute']) ?>" />
+								</div>
+							</form>
+						</div>
 
 
-					<?php } else {
+				<?php } else {
 					echo gdrcd_filter('out', $MESSAGE['interface']['bank']['credit']) . ": " . $stipendio . " " . $PARAMETERS['names']['currency']['plur'] . " ";
 				} ?>
 
 			</div>
-			<?php } ?>
+		<?php } ?>
 
 
 
