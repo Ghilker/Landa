@@ -111,7 +111,9 @@ div.innertube h2, div.output h2, div.page_title h2{
 	border-bottom: 1px solid #D9D9D9;
     padding-bottom: 4px;
     margin-top:0;
+    float: center;
 }
+
 
 
 /* * Stile dei contenitori grigi con i bordini arrotondati
@@ -314,7 +316,7 @@ div.controlli_elenco{
 
 div.controllo_elenco{
 	width:20px;
-	float:left;
+	float:center; /*era left*/
 }
 
 div.controllo_elenco input[type='image']{
@@ -335,7 +337,16 @@ div.user_ambientazione td.casella_titolo div.elementi_elenco, div.servizi_abilit
 }
 
 
+/*prova bottoni indice delle varie sezioni --> FUNZIONANTE IN HOMEPAGE.CSS ..> THEMES TOK1
 
+button {
+    width: auto;
+    margin: 6px 0 0 5px;
+    border: #7B859F solid 1px;
+    background-color: #263956;
+    color: #D3E3F0;
+    height: 19px;
+}*/
 
 /* * Generico per elenchi, bacheche, regolamento, ambientazione etc */
 div.capitolo_elenco{

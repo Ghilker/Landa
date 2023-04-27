@@ -21,8 +21,8 @@ if ($_SESSION['permessi']<ADMIN){
 	   /*Processo le informazioni ricevute dal form*/
        if ((isset($_POST['chat'])==TRUE)&&($_POST['chat']=='is_chat')){$is_chat=1;}
        else {$is_chat=0;}
-	   if ((isset($_POST['privata'])==TRUE)&&($_POST['privata']=='is_privat')){$is_privat=1;}
-       else {$is_privat=0;}
+	   if ((isset($_POST['privata'])==TRUE)&&($_POST['privata']=='is_privata')){$is_privata=1;}
+       else {$is_privata=0;}
 	   if ($_POST['immagine']==""){$immagine="standard_luogo.png";}
 	   else{$immagine=gdrcd_filter('in',$_POST['immagine']);}
        /*Eseguo l'inserimento*/

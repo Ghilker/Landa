@@ -6,7 +6,6 @@
  * @author Breaker
  */
 
-
 /*
  * HELP [-- IMPORTANTE!!! --]: Il corrente file contiene un elenco di parametri essenziali alla configurazione
  *  ed al funzionamento di GDRCD. E' richiesto che vengano configurati i parametri alla voce "parametri di 
@@ -375,7 +374,7 @@ $PARAMETERS['mode']['alert_password_change'] = 'ON';
 
 /* * Solo se 'alert_password_change' è impostato su ON:
  */
-$PARAMETERS['settings']['alert_password_change']['alert_from_signup'] = 'OFF';
+$PARAMETERS['settings']['alert_password_change']['alert_from_signup'] = 'ON';
 //ON: fa comparire l'avviso di cambio password anche se appena iscritti, così da invitare a modificare la password generata autonomamente per l'iscrizione
 //OFF: non avverte l'utente appena iscritto di cambiare la password di default assegnatagli
 
@@ -428,8 +427,8 @@ $PARAMETERS['mode']['spymessages'] = 'ON';
 //OFF: I messaggi istantanei tra giocatori non appaiono nei log della scheda
 $PARAMETERS['mode']['privaterooms'] = 'ON';
 //ON: Il gioco prevede stanze private temporanee prenotabili dai giocatori.
-//ON: Il gioco non prevede stanze private prenotabili dai giocatori.
-$PARAMETERS['mode']['spyprivaterooms'] = 'OFF';
+//OFF: Il gioco non prevede stanze private prenotabili dai giocatori.
+$PARAMETERS['mode']['spyprivaterooms'] = 'ON';
 //ON: Gli amministratori possono leggere e scrivere nelle stanze private altrui.
 //OFF:  Gli amministratori non possono leggere e scrivere nelle stanze private altrui.
 $PARAMETERS['mode']['chatsave'] = 'OFF';
@@ -593,147 +592,3 @@ $PARAMETERS['menu']['quit']['image_file_onclick'] = ''; */
  * image_file - File dell'immagine che appare come voce di menu. L'immagine deve trovarsi nella cartella themes/[nome tema]/img/menu (per il template preimpostato themes/extreme/img/menu)*/
 
 
-/* PANNELLO SERVIZI */
-$PARAMETERS['office_page_name'] = 'Uffici';
-$PARAMETERS['office']['image_file'] = '';
-$PARAMETERS['office']['pg_list']['text'] = 'Anagrafe';
-$PARAMETERS['office']['pg_list']['url'] = 'main.php?page=servizi_anagrafe';
-$PARAMETERS['office']['pg_list']['access_level'] = USER;
-$PARAMETERS['office']['prestavolto']['text'] = 'Lista Prestavolti';
-$PARAMETERS['office']['prestavolto']['url'] = 'main.php?page=prestavolto';
-$PARAMETERS['office']['prestavolto']['access_level'] = USER; /*3 voci aggiuntive PRESTAVOLTO*/
-$PARAMETERS['office']['bank']['text'] = 'Banca di Giada';
-$PARAMETERS['office']['bank']['url'] = 'main.php?page=servizi_banca';
-$PARAMETERS['office']['bank']['access_level'] = USER;
-$PARAMETERS['office']['market']['text'] = 'Mercato';
-$PARAMETERS['office']['market']['url'] = 'main.php?page=servizi_mercato';
-$PARAMETERS['office']['market']['access_level'] = USER;
-$PARAMETERS['office']['job']['text'] = 'Lavoro';
-$PARAMETERS['office']['job']['url'] = 'main.php?page=servizi_lavoro';
-$PARAMETERS['office']['job']['access_level'] = USER;
-$PARAMETERS['office']['guilds']['text'] = $PARAMETERS['names']['guild_name']['plur'];
-$PARAMETERS['office']['guilds']['url'] = 'main.php?page=servizi_gilde';
-$PARAMETERS['office']['guilds']['access_level'] = USER;
-$PARAMETERS['office']['guilds_adm']['text'] = "Amministrazione " . strtolower($PARAMETERS['names']['guild_name']['sing']);
-$PARAMETERS['office']['guilds_adm']['url'] = 'main.php?page=servizi_adm_gilde';
-$PARAMETERS['office']['guilds_adm']['access_level'] = CAPOGILDA;
-if ($PARAMETERS['mode']['privaterooms'] == 'ON') {
-    $PARAMETERS['office']['hotel']['text'] = 'Prenotazione stanze';
-    $PARAMETERS['office']['hotel']['url'] = 'main.php?page=servizi_prenotazioni';
-    $PARAMETERS['office']['hotel']['access_level'] = USER;
-}
-$PARAMETERS['office']['pass']['text'] = 'Cambio password';
-$PARAMETERS['office']['pass']['url'] = 'main.php?page=user_cambio_pass';
-$PARAMETERS['office']['pass']['access_level'] = USER;
-
-
-/* PANNELLO UTENTE */
-$PARAMETERS['user_page_name'] = 'Documenti';
-if ($PARAMETERS['mode']['skillsystem'] == 'ON') {
-    $PARAMETERS['user']['skill_list']['text'] = 'Abilità';
-    $PARAMETERS['user']['skill_list']['url'] = 'main.php?page=user_abilita';
-    $PARAMETERS['user']['skill_list']['access_level'] = GESTORE;
-}
-$PARAMETERS['user']['basic_rules']['text'] = 'Regolamento Base';
-$PARAMETERS['user']['basic_rules']['url'] = 'main.php?page=user_regolamento_base';
-$PARAMETERS['user']['basic_rules']['access_level'] = USER;
-$PARAMETERS['user']['adv_rules']['text'] = 'Regolamento Avanzato';
-$PARAMETERS['user']['adv_rules']['url'] = 'main.php?page=user_regolamento_avanzato';
-$PARAMETERS['user']['adv_rules']['access_level'] = USER;
-$PARAMETERS['user']['plot']['text'] = 'Ambientazione';
-$PARAMETERS['user']['plot']['url'] = 'main.php?page=user_ambientazione';
-$PARAMETERS['user']['plot']['access_level'] = USER;
-$PARAMETERS['user']['desc_luoghi']['text'] = 'Luoghi Continente';
-$PARAMETERS['user']['desc_luoghi']['url'] = 'main.php?page=user_luoghi_continente';
-$PARAMETERS['user']['desc_luoghi']['access_level'] = USER;
-$PARAMETERS['user']['races']['text'] = 'Elenco razze';
-$PARAMETERS['user']['races']['url'] = 'main.php?page=user_razze';
-$PARAMETERS['user']['races']['access_level'] = USER;
-/*$PARAMETERS['user']['name']['text'] = 'Cambio nome';
-$PARAMETERS['user']['name']['url'] = 'main.php?page=user_cambio_nome';
-$PARAMETERS['user']['name']['access_level'] = ADMIN;
-IL CAMBIO PASSWORD PRIMA ERA QUI
---->  $PARAMETERS['user']['pass']['text'] = 'Cambio password';
-$PARAMETERS['user']['pass']['url'] = 'main.php?page=user_cambio_pass';
-$PARAMETERS['user']['pass']['access_level'] = USER;  <--
-$PARAMETERS['user']['delete']['text'] = 'Cancella account';
-$PARAMETERS['user']['delete']['url'] = 'main.php?page=user_cancella_pg';
-$PARAMETERS['user']['delete']['access_level'] = ADMIN;*/
-$PARAMETERS['user']['stats']['text'] = 'Statistiche del sito';
-$PARAMETERS['user']['stats']['url'] = 'main.php?page=user_stats&links=yes';
-$PARAMETERS['user']['stats']['access_level'] = USER;
-
-/* PANNELLO GESTIONE */
-$PARAMETERS['administration_page_name'] = 'Gestione';
-$PARAMETERS['administration']['image_file'] = '';
-$PARAMETERS['administration']['log_chat']['text'] = 'Log chat';
-$PARAMETERS['administration']['log_chat']['url'] = 'main.php?page=log_chat';
-$PARAMETERS['administration']['log_chat']['access_level'] = MASTER;
-$PARAMETERS['administration']['log_eventi']['text'] = 'Log eventi';
-$PARAMETERS['administration']['log_eventi']['url'] = 'main.php?page=log_eventi';
-$PARAMETERS['administration']['log_eventi']['access_level'] = MASTER;
-if ($PARAMETERS['mode']['spymessages'] == 'ON') {
-    $PARAMETERS['administration']['log_messaggi']['text'] = 'Log messaggi';
-    $PARAMETERS['administration']['log_messaggi']['url'] = 'main.php?page=log_messaggi';
-    $PARAMETERS['administration']['log_messaggi']['access_level'] = ADMIN;
-}
-/*AGGIUNTE*/
-$PARAMETERS['administration']['name']['text'] = 'Cambio nome';
-$PARAMETERS['administration']['name']['url'] = 'main.php?page=user_cambio_nome';
-$PARAMETERS['administration']['name']['access_level'] = ADMIN;
-$PARAMETERS['administration']['delete']['text'] = 'Cancella account';
-$PARAMETERS['administration']['delete']['url'] = 'main.php?page=user_cancella_pg';
-$PARAMETERS['administration']['delete']['access_level'] = ADMIN;
-/*FINE AGGIUNTE*/
-$PARAMETERS['administration']['skills']['text'] = 'Gestione abilità';
-$PARAMETERS['administration']['skills']['url'] = 'main.php?page=gestione_abilita';
-$PARAMETERS['administration']['skills']['access_level'] = GESTORE;
-$PARAMETERS['administration']['plot']['text'] = 'Gestione ambientazione';
-$PARAMETERS['administration']['plot']['url'] = 'main.php?page=gestione_ambientazione';
-$PARAMETERS['administration']['plot']['access_level'] = ADMIN;
-$PARAMETERS['administration']['desc_luoghi']['text'] = 'Gestione descrizione luoghi continente';
-$PARAMETERS['administration']['desc_luoghi']['url'] = 'main.php?page=gestione_luoghi_continente';
-$PARAMETERS['administration']['desc_luoghi']['access_level'] = ADMIN;
-$PARAMETERS['administration']['forums']['text'] = 'Gestione forum';
-$PARAMETERS['administration']['forums']['url'] = 'main.php?page=gestione_bacheche';
-$PARAMETERS['administration']['forums']['access_level'] = ADMIN;
-$PARAMETERS['administration']['guilds']['text'] = 'Gestione gilde';
-$PARAMETERS['administration']['guilds']['url'] = 'main.php?page=gestione_gilde';
-$PARAMETERS['administration']['guilds']['access_level'] = ADMIN;
-$PARAMETERS['administration']['locations']['text'] = 'Gestione luoghi';
-$PARAMETERS['administration']['locations']['url'] = 'main.php?page=gestione_luoghi';
-$PARAMETERS['administration']['locations']['access_level'] = ADMIN;
-$PARAMETERS['administration']['maps']['text'] = 'Gestione mappe';
-$PARAMETERS['administration']['maps']['url'] = 'main.php?page=gestione_mappe';
-$PARAMETERS['administration']['maps']['access_level'] = ADMIN;
-$PARAMETERS['administration']['items']['text'] = 'Gestione oggetti';
-$PARAMETERS['administration']['items']['url'] = 'main.php?page=gestione_mercato';
-$PARAMETERS['administration']['items']['access_level'] = MODERATORE;
-$PARAMETERS['administration']['levels']['text'] = 'Gestione permessi';
-$PARAMETERS['administration']['levels']['url'] = 'main.php?page=gestione_permessi';
-$PARAMETERS['administration']['levels']['access_level'] = ADMIN;
-$PARAMETERS['administration']['races']['text'] = 'Gestione razze';
-$PARAMETERS['administration']['races']['url'] = 'main.php?page=gestione_razze';
-$PARAMETERS['administration']['races']['access_level'] = ADMIN;
-$PARAMETERS['administration']['basic_rules']['text'] = 'Gestione regolamento base';
-$PARAMETERS['administration']['basic_rules']['url'] = 'main.php?page=gestione_regolamento_base';
-$PARAMETERS['administration']['basic_rules']['access_level'] = ADMIN;
-$PARAMETERS['administration']['adv_rules']['text'] = 'Gestione regolamento avanzato';
-$PARAMETERS['administration']['adv_rules']['url'] = 'main.php?page=gestione_regolamento_avanzato';
-$PARAMETERS['administration']['adv_rules']['access_level'] = ADMIN;
-$PARAMETERS['administration']['news']['text'] = 'Gestione News';
-$PARAMETERS['administration']['news']['url'] = 'main.php?page=gestione_news';
-$PARAMETERS['administration']['news']['access_level'] = MASTER;
-$PARAMETERS['administration']['maintenance']['text'] = 'Manutenzione';
-$PARAMETERS['administration']['maintenance']['url'] = 'main.php?page=gestione_manutenzione';
-$PARAMETERS['administration']['maintenance']['access_level'] = GESTORE;
-
-
-
-/* HELP: Elenco delle voci dei menu' dei servizi e di gestione. E' sconsigliato operare modifiche. Le opzioni sono disponibili solo agli account con il livello d'accesso specificato o superiore.
-Livelli di accesso utente:
-USER: Utente normale.
-SUPERUSER: Gestore
-MODERATORE: Admin.
-MASTER: Master.
-CAPOGILDA: Capogilda.*/

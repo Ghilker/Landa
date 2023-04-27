@@ -33,7 +33,7 @@ div.presente{
 }
 
 div.link_presenti{
-	margin-top:0px; /*prima era -5px*/
+	margin-top:-5px; /*prima era 0px*/
 }
 
 
@@ -44,7 +44,7 @@ div.pagina_presenti img.disponibile,
 div.pagina_presenti_estesa img.sesso_ico, 
 div.pagina_presenti_estesa img.status_ico, 
 div.pagina_presenti_estesa img.disponibile{
-   margin: 0 2px 0 0;
+   margin: 0 2px 0 0; 
 }
 
 div.pagina_presenti{
@@ -99,7 +99,7 @@ div.pagina_presenti_estesa ul.elenco_presenti{
 
 div.pagina_presenti ul.elenco_presenti li.luogo, 
 div.pagina_presenti_estesa ul.elenco_presenti li.luogo{
-   font-size: 12px;
+   font-size: 14px; /*era 12*/
    font-weight: bold;
    text-align:center;
    margin: 10px 0px 5px 0px; /*3px 0 1px 8px;*/
@@ -111,7 +111,7 @@ div.pagina_presenti_estesa ul.elenco_presenti li.luogo{
 }
 
 div.pagina_presenti_estesa ul.elenco_presenti li.mappa{
-   font-size: 13px;
+   font-size: 15px;
    font-weight: bold;
    margin: 10px 0px 5px 0px; /*3px 0 1px 0; distanza tra le tabelle presenti estesi*/
    /*text-transform: uppercase;*/
@@ -127,9 +127,9 @@ div.pagina_presenti_estesa ul.elenco_presenti li.mappa{
 /* Nomi dei personaggi */
 div.pagina_presenti ul.elenco_presenti li.presente,
    div.pagina_presenti_estesa ul.elenco_presenti li.presente{
-   margin: 5px 72px 0px 72px;
+   margin: 5px 72px 4px 72px; /*la terza era 0*/
     text-align:center;
-    font-size: 12px;
+    font-size: 13px;
        /*border: 1px dashed #263243 #0a1228 #B6C7D5*/;
        /*background: #263243;*/
           font-style: italic;
@@ -148,8 +148,9 @@ div.pagina_presenti_estesa div.presenti_estesi{
 /*Icone presenti*/
 img.presenti_ico{
   margin-left: 2px;
-  width: 13px;
-  height: 13px;
+  margin-top: 2px;
+  width: 16px;
+  height: 16px; /*era 13*/
   border:none;
   padding-right: 2px;
 }

@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.tabella_menu .link_menu 
+{ 
+	/* color: #F03 !important; 
+	float: left;*/
+	padding: 5px 20px 19px 20px;
+	border: 1px dotted #990000;
+	width: 245px;
+	height: 10px;
+	margin: 0 20px 20px 20px;
+	margin-right: auto;
+	margin-left: auto;
+	
+	
+}
+
+
+.tabella_menu .link_menu a
+{ 
+	color: #000;
+	text-align: center;
+}
+
+.tabella_menu .link_menu a: visited
+{ 
+	color: #000;
+	text-align: center;
+}
+
+.tabella_menu .link_menu a:hover
+{ 
+	color: #906;
+	font-weight:bolder;
+	text-align: center;
+}
+
+
+/*Tabella Gestione*/
+
+.tabella_menu2 .link_menu2 
+{ 
+	padding: 9px 20px 15px 20px;
+	border: 1px dotted #990000;
+	width: 245px;
+	height: 11px;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	float: left;
+	font-size: 12px;
+}
+
+
+.tabella_menu2 .link_menu2 a
+{ 
+	color: #000;
+	text-align: center;
+}
+
+.tabella_menu2 .link_menu2 a: visited
+{ 
+	color: #000;
+	text-align: center;
+}
+
+.tabella_menu2 .link_menu2 a:hover
+{ 
+	color: #906;
+	font-weight:bolder;
+	text-align: center;
+}
+
+
+/*Tabella Documenti*/
+
+.tabella_menu3 .link_menu3 
+{ 
+	padding: 9px 20px 15px 20px;
+	border: 1px dotted #990000;
+	width: 245px;
+	height: 11px;
+	margin: auto;
+	margin-top: 20px;
+	font-size: 12px;
+}
+
+
+.tabella_menu3 .link_menu3 a
+{ 
+	color: #000;
+	text-align: center;
+}
+
+.tabella_menu3 .link_menu3 a: visited
+{ 
+	color: #000;
+	text-align: center;
+}
+
+.tabella_menu3 .link_menu3 a:hover
+{ 
+	color: #906;
+	font-weight:bolder;
+	text-align: center;
+}

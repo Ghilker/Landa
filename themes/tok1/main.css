@@ -87,6 +87,36 @@ select.day, select.month, select.year{
 	display:inline-block;
 }
 
+/*prova bottoni indice*/
+
+button {
+    width: auto;
+    margin: 6px 0 0 5px;
+    border: #7B859F solid 1px;
+    background-color: #263956;
+    color: #D3E3F0;
+    height: 19px;
+}
+
+/*button#button1 {
+    width: auto;
+    margin: 6px 0 0 5px;
+    border: #7B859F solid 1px;
+    background-color: #263956;
+    color: #D3E3F0;
+    height: 19px;
+}
+
+button#button2 {
+    width: auto;
+    margin: 6px 0 0 5px;
+    border: #7B859F solid 1px;
+    background-color: #263956;
+    color: #D3E3F0;
+    height: 19px;
+}*/
+
+
 /* * Stile dei messaggi d'avviso dell'engine */ 
 div.warning, div.error{
 	background-color:#cf8888;

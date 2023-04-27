@@ -5,11 +5,11 @@ $last_message = $_SESSION['last_message'];
 
 
 //Includio i parametri, la configurazione, la lingua e le funzioni
-require( 'includes/constant_values.inc.php');
-require( 'config.inc.php');
+require('includes/constant_values.inc.php');
+require('config.inc.php');
 require('db_parameters.inc.php');
-require( 'vocabulary/' . $PARAMETERS['languages']['set'] . '.vocabulary.php');
-require( 'includes/functions.inc.php');
+require('vocabulary/' . $PARAMETERS['languages']['set'] . '.vocabulary.php');
+require('includes/functions.inc.php');
 
 //Eseguo la connessione al database
 $handleDBConnection = gdrcd_connect();
@@ -248,12 +248,13 @@ if ((gdrcd_filter_get($_REQUEST['chat']) == 'yes') && (empty($_SESSION['login'])
 	* Per stanze non private ora_prenotazione equivarrà ad un tempo sempre inferiore all'orario dell'azione inviata
 	* facendo risultare quindi sempre veritiero il controllo in questo caso.
 	* @author Blancks
-	*/
+	
+    PERMANENZA AZIONI IN CHAT 24H=1440 MINUTI*/
 	$query = gdrcd_query("	SELECT chat.id, chat.imgs, chat.mittente, chat.destinatario, chat.tipo, chat.ora, chat.testo, personaggio.url_img_chat, mappa.ora_prenotazione
 						FROM chat
 						INNER JOIN mappa ON mappa.id = chat.stanza
 						LEFT JOIN personaggio ON personaggio.nome = chat.mittente
-						WHERE chat.id > " . $last_message . " AND stanza = " . $_SESSION['luogo'] . " AND chat.ora > IFNULL(mappa.ora_prenotazione, '0000-00-00 00:00:00') AND DATE_SUB(NOW(), INTERVAL 1440 MINUTE) < ora ORDER BY id " . $typeOrder, 'result');
+						WHERE chat.id > " . $last_message . " AND stanza = " . $_SESSION['luogo'] . " AND chat.ora > IFNULL(mappa.ora_prenotazione, '0000-00-00 00:00:00') AND DATE_SUB(NOW(), INTERVAL 10080 MINUTE) < ora ORDER BY id " . $typeOrder, 'result');
 
 	while ($row = gdrcd_query($query, 'fetch')) {
 		//Impedisci XSS nelle immagini
@@ -336,19 +337,19 @@ if ((gdrcd_filter_get($_REQUEST['chat']) == 'yes') && (empty($_SESSION['login'])
 				if ($_SESSION['login'] == $row['destinatario']) {
 					$add_chat .= '<div class="chat_row_' . $row['tipo'] . '">';
 					$add_chat .= '<span class="chat_name">' . $row['mittente'] . ' ' . $MESSAGE['chat']['whisper']['by'] . ': </span> ';
-					$add_chat .= '<span class="chat_msg">' . gdrcd_filter('out', $row['testo']) . '</span>';
+					$add_chat .= '<span class="chat_msg">' . gdrcd_chatcolor(gdrcd_filter('out', $row['testo'])) . '</span>';
 					$add_chat .= '</div>';
 
 				} else if ($_SESSION['login'] == $row['mittente']) {
 					$add_chat .= '<div class="chat_row_' . $row['tipo'] . '">';
 					$add_chat .= '<span class="chat_msg">' . $MESSAGE['chat']['whisper']['to'] . ' ' . gdrcd_filter('out', $row['destinatario']) . ': </span>';
-					$add_chat .= '<span class="chat_msg">' . gdrcd_filter('out', $row['testo']) . '</span>';
+					$add_chat .= '<span class="chat_msg">' . gdrcd_chatcolor(gdrcd_filter('out', $row['testo'])) . '</span>';
 					$add_chat .= '</div>';
 
 				} else if (($_SESSION['permessi'] >= ADMIN) && ($PARAMETERS['mode']['spyprivaterooms'] == 'ON')) {
 					$add_chat .= '<div class="chat_row_' . $row['tipo'] . '">';
 					$add_chat .= '<span class="chat_msg">' . $row['mittente'] . ' ' . $MESSAGE['chat']['whisper']['from_to'] . ' ' . gdrcd_filter('out', $row['destinatario']) . ' </span>';
-					$add_chat .= '<span class="chat_msg">' . gdrcd_filter('out', $row['testo']) . '</span>';
+					$add_chat .= '<span class="chat_msg">' . gdrcd_chatcolor(gdrcd_filter('out', $row['testo'])) . '</span>';
 					$add_chat .= '</div>';
 
 				}
@@ -364,7 +365,7 @@ if ((gdrcd_filter_get($_REQUEST['chat']) == 'yes') && (empty($_SESSION['login'])
 
 			case 'M':
 				$add_chat .= '<div class="chat_row_' . $row['tipo'] . '">';
-				$add_chat .= '<span class="chat_master">' . gdrcd_chatme_master($_SESSION['login'], gdrcd_filter('out', $row['testo'])) . '</span>';
+				$add_chat .= '<span class="chat_master">' . gdrcd_chatme_master($_SESSION['login'], gdrcd_chatcolor(gdrcd_filter('out', $row['testo'])) ). '</span>';
 				$add_chat .= '</div>';
 				break;
 

@@ -137,6 +137,19 @@ div.login_form_recupero input[type='submit']{
 /* * Contenuti principali della pagina
 */
 
+/*FORMATTAZIONE BOTTONI INDICE*/
+
+button {
+    width: auto;
+    margin: 6px 0 0 5px;
+    border: #7B859F solid 1px;
+    background-color: #263956;
+    color: #D3E3F0;
+    height: 19px;
+    float: center;
+}
+
+
 /* * Titolo della sezione */
 h2{
 	font-size:25px;
@@ -213,7 +226,7 @@ div.side_modules{
 	padding:10px;
 	text-align:center;
 	
-	-moz-border-radius:5px;		/* Bordi arrotondati */
+	-moz-border-radius:5px;		 /*Bordi arrotondati */
 	-webkit-border-radius:5px;
 	-khtml-border-radius: 5px;
 	border-radius:5px;
@@ -296,7 +309,7 @@ div#main{
 div#site_width{
 	margin:0 auto;
 	width:1008px;
-	text-align:left;
+	text-align:center; /*ERA LEFT, REGOLA ALLINEAMENTO TITOLI E PULSANTI*/
     /*margin-left:10px; --> sposta il box centrale a sinistra*/
 }
 
@@ -307,8 +320,8 @@ div#header{
 }
 
 
-/* * Corpo contenuti della pagina
-*/
+/* * Corpo contenuti della pagina*/
+
 div#content{
 	padding:0px 60px 6px 60px;
 	background:url("imgs/sfondoBOX2.png") left top no-repeat;
@@ -334,8 +347,7 @@ div.content_body{
 	width:560px;
 	overflow: auto;
 	padding:10px;
-	float:left;
-	
+	float:left;	
 }
 
 div.social{

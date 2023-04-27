@@ -5,10 +5,11 @@
 
 
 	//Includio i parametri, la configurazione, la lingua e le funzioni
-	require 'includes/constant_values.inc.php';
-	require 'config.inc.php';
-	require 'vocabulary/'.$PARAMETERS['languages']['set'].'.vocabulary.php';
-	require 'includes/functions.inc.php';
+	require('includes/constant_values.inc.php');
+	require('config.inc.php');
+	require('db_parameters.inc.php');
+	require('vocabulary/' . $PARAMETERS['languages']['set'] . '.vocabulary.php');
+	require('includes/functions.inc.php');
 
 	//Eseguo la connessione al database
 	$handleDBConnection = gdrcd_connect();

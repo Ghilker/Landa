@@ -6,7 +6,7 @@
 		<div style="margin-top: 15px; margin-bottom: 20px"><img src="/imgs/connessi.png"></div>
 	</div>
 
-	<!--CODICE HDY-->
+	<!--CODICE HDY
 	<div class="container">
 		<div class="presenti_estesi">
 			<div id="descriptionLoc"></div>
@@ -46,13 +46,12 @@
 						</td>
 					</tr>
 				</table>
-			</form>
+			</form>-->
 
 			<!--<table class="elenco_presenti"><tr><td class="mappa" colspan="8">Fuori Citt&agrave;</td></tr><tr class="stile_tabella" ><td class="icone_colonne"><img class="presenti_ico_2" src="imgs/icons/blank.png" alt="" title="" /></td><td class="icone_colonne"><img class="presenti_ico_2" src="themes/advanced/imgs/races/standard_razza_kemo.png" alt="Kemonomimi" title="Kemonomimi" /></td><td class="presente"onmouseover="show_desc(event, 'Let\'s Play ♡ | I\'m back.');" onmouseout="hide_desc();""><img class="presenti_ico_3" src="imgs/icons/permessi3.gif" alt="Master" title="Master" /><a href="main.php?page=scheda&pg=Ren" class="link_sheet">Ren Shirokami</a></td><td><img class="presenti_ico" src="imgs/icons/testaminim.png" alt="Maschio" title="Maschio" /></td><td><a href="main.php?page=messages_center&newmessage=yes&reply_dest=Ren"><img class="presenti_ico" src="imgs/icons/mail_new.png" alt="" title="Invia un messaggio" /></a></td><td class="icone_colonne_lavori"><img class="presenti_ico_4" src="../themes/advanced/imgs/guilds/standard_gilda_universitario.png" alt="Studente Universitario" title="Studente Universitario" /></td><td class="icone_colonne_lavori"><img class="presenti_ico" src="../themes/advanced/imgs/guilds/capoprogetto.png" alt="Capo Progetto" title="Capo Progetto" /></td><td><img class="presenti_ico_dispon" src="imgs/icons/disponibile0.png" alt="Non disponibile" title="Non disponibile" /></td></tr></table>-->
-		</div>
+	<!--	</div>
 
 	</div>
-
 
 	<script language="javascript">
 		var selectFunctionListaPresenti = function (filtro) {
@@ -60,7 +59,8 @@
 			document.forms['filtro_presenti'].submit();
 
 		}
-	</script>
+	</script>-->
+
 	<!-- Chiudura finestra del gioco --> <!--</div>
 </div>-->
 

@@ -32,14 +32,12 @@ input, textarea, select{
 	width:80%;
 	margin-bottom:10px;
     background-color: #7B859F;
-    border: none;
 }
 
 input[type='submit']{
 	border: 1px solid #041328;
 	background: transparent;
 	margin:5px 5px 5px 0;
-
     color: transparent;
 }
 
@@ -60,7 +58,6 @@ margin-left: 188px;
 
 textarea{
 	height:100px;
-
 }
 
 div.form_label{
@@ -126,7 +123,7 @@ div.logout_box a{
 div.innertube h2, div.output h2, div.page_title h2{
 	font-size:14px;
 	font-weight:bolder;
-	border-bottom: 1px dashed #B6C7D5; /*1px solid #D9D9D9;*/
+	border-bottom: 1px dashed #B6C7D5;  /*1px solid #D9D9D9;*/
     padding-bottom: 4px;
     margin-top:0;
 }
@@ -304,7 +301,7 @@ div.elenco_record_gioco{
 
 div.elenco_record_gioco table{
 	width:100%;
-	background-color:#d1d1d1;
+	/*background-color:#d1d1d1; --> RIMUOVE IL FUCKING SFONDO/BORDO NEI MENU' IN HOME*/ 
 	-moz-border-radius:5px;		/* Bordi arrotondati */
 	-webkit-border-radius:5px;
 	-khtml-border-radius: 5px;
@@ -361,7 +358,7 @@ div.capitolo_elenco{
 	font-size:13px;
 	text-align:left;
 	padding:5px 5px 5px 20px;
-	background-color:#c9c9c9;
+	/*background-color:#c9c9c9;*/
 }
 
 div.elementi_elenco{
@@ -369,11 +366,11 @@ div.elementi_elenco{
 }
 
 td.casella_elemento, div.elementi_elenco{
-	font-size:12px;
-	/*background-color: #7B859F; /*d9d9d9;*/
-    background-color: #273956;
+	font-size:14px;
+	/*background-color: #7B859F;*/ /*d9d9d9; PROVE VECCHIE*/
+    background-color: #14112c /* ERA QUESTO #273956*/;
     color: #7B859F;
-
+    margin-bottom: 5px;
 }
 
 

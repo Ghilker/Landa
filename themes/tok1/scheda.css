@@ -141,8 +141,8 @@ div.profilo_voce div.profilo_voce_valore{
 
 /*Icone gilda*/
 img.profilo_img_gilda{
-   height: 15px;
-   width: 15px;
+   height: 30px;
+   width: 30px; /*era 15*/
 }
 
 /*Box status*/

@@ -1,0 +1,790 @@
+/* * Skin advanced
+	* @author Blancks
+*/
+
+/* * Parametri di default nella pagina
+*/
+body{padding:0; margin:0; color:#B6C7D5; font-family:Verdana, Sans; font-size:11px; background:url("imgs/pattern.png") top left repeat;}
+
+body.transparent_body{background-color:transparent; background-image:none;}
+
+div, ul, li{margin:0; padding:0;}
+
+div.titoli{margin:0; padding:0; text-align: center }
+div.titolo_presenti{margin-right:5px; margin-bottom: 3px; padding:0; text-align: center}
+
+.blank{clear:both;}
+
+a, a:visited{
+	color:#B6C7D5;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#B6C7D5;
+	font-weight:bolder;
+	text-decoration:underline;
+}
+
+nome_chat a, a:visited{
+	color:#d3e3f0;
+	text-decoration:none;
+}
+
+nome_chat a:hover{
+	color:#d3e3f0;
+	text-decoration:none;
+}
+
+div.form_field table{
+	margin:5px auto;
+}
+
+input, textarea, select{
+	width:160px; /*prima era 130px*/
+    margin-top: 6px;
+	margin-bottom:3px;
+    margin-left: 5px;
+    background-color: #7B859F;
+    border: 1px solid #263956;
+    color: #0A1228;
+    margin-right: 3px;
+}
+
+input[type='submit']{
+	width:auto;
+	margin: 6px 0 0 5px;
+    border: #7B859F solid 1px;
+    background-color: #263956;
+    color: #D3E3F0;
+    height: 19px;
+}
+
+textarea{
+    width: 500px;
+	height:100px;
+    background-color: #7B859F;
+    color: #0a1228;
+    border: 1px solid #263956;
+}
+
+div.form_label{
+	font-size:13px;
+	font-weight:bolder;
+	margin-top:5px;
+}
+
+div.form_info{
+	font-size:12px;
+	margin-bottom:15px;
+}
+
+select.day, select.month, select.year{
+	width:60px;
+	display:inline-block;
+}
+
+/* * Stile dei messaggi d'avviso dell'engine */ 
+div.warning, div.error{
+	background-color:#cf8888;
+	font-size:12px;
+	text-align:center;
+	margin:15px;
+	font-weight:bolder;
+	padding:10px;
+	border:solid 1px #800;
+	color:#970b0b;
+}
+
+div.link_back{
+	text-align:center;
+	background-color: #0a1228;
+	padding:2px;
+}
+
+
+
+/* * Logout */
+div.logout_box{
+	margin:20px auto;
+	padding:230px 0 0 0;
+	text-align:center;
+    background: url("imgs/logout.png") top center no-repeat;
+    background-size: auto 600px;
+    height: 360px;
+    width: 600px;
+    font-size: 20px;
+    
+	border:transparent;
+	-moz-border-radius:5px;		/* Bordi arrotondati */
+	-webkit-border-radius:5px;
+	-khtml-border-radius: 5px;
+	border-radius:5px;
+}
+
+div.logout_box a{
+	text-decoration:underline;
+	font-style:italic;
+}
+
+div.nome_logout {
+	font-size: 40px;
+    color: #B6C7D5;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+/* * Titoli delle sezioni
+*/
+div.innertube h2{
+	font-size:14px;
+	font-weight:bolder;
+    padding-bottom: 4px;
+    margin-top:0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7b859f;
+}
+
+div.page_title h2{
+	font-size:14px;
+	font-weight:bolder;
+    padding-bottom: 4px;
+    margin-top:0;
+}
+
+div.utenti h2{
+	font-size:13px;
+	font-weight:bolder;
+    padding-bottom: 4px;
+    padding-top: 3px;
+    margin-left: -6px;
+    background: url("/imgs/bottonepresenti.png") center no-repeat;
+    text-align: center;
+}
+
+div.page_title_info{
+	font-size:14px;
+	font-weight:bolder;
+	margin-bottom: 3px;
+    background: url("/imgs/boxsopra.png") center no-repeat;
+    background-size: 194px 20px;
+    height: 20px;
+}
+
+div.page_title_info_testo h2{
+	font-size:14px;
+	font-weight:bolder;
+    padding-top: 4px;
+    color: #0a1228;
+    width: 168px;
+    margin-left: 12px;
+}
+
+div.output h2{
+	font-size:14px;
+	font-weight:bolder;
+    text-transform: uppercase;
+	border-bottom: 1px solid #7b859f;
+    padding: 4px;
+    margin-top:0;
+    color: #7b859f;
+}
+
+p.output:first-letter {
+    font-size: 18px;
+
+}
+
+img.left{
+    display:inline;
+    float: left;
+}
+
+img.right{
+    display:inline;
+    float: right;
+}
+
+
+
+/* * Stile dei contenitori grigi con i bordini arrotondati
+*/
+div.pagina_info_location{
+	margin:5px auto;
+	padding:0px;
+	width:190px;
+	background-color:transparent;
+	-moz-border-radius:px;		/* Bordi arrotondati */
+	-webkit-border-radius:px;
+	-khtml-border-radius: px;
+	border-radius:px;
+} 
+
+div.msgs{
+	margin:5px auto;
+	padding:4px 0 0 4px;
+	width:180px;
+	background-color:transparent;
+	-moz-border-radius:px;		/* Bordi arrotondati */
+	-webkit-border-radius:px;
+	-khtml-border-radius: px;
+	border-radius:px;
+}
+
+div.menu{
+	margin:5px;
+	padding:0px;
+	width:180px;
+	background-color:transparent;
+	-moz-border-radius:px;		/* Bordi arrotondati */
+	-webkit-border-radius:px;
+	-khtml-border-radius: px;
+	border-radius:px;
+}
+
+div.presenti{
+	margin:0px auto;
+	padding:7px 10px 10px 7px;
+	width:200px;
+	background-color:transparent;
+	border:none;
+	-moz-border-radius:px;		/* Bordi arrotondati */
+	-webkit-border-radius:px;
+	-khtml-border-radius: px;
+	border-radius:px;
+}
+
+
+div.output{
+	margin:5px auto;
+    /*height: 580px;*/
+	padding:0;
+	width:180px;
+	background-color:#0a1228;
+	border:solid 2px #7b859f;
+	-moz-border-radius:px;		/* Bordi arrotondati */
+	-webkit-border-radius:px;
+	-khtml-border-radius: px;
+	border-radius:px;
+
+}
+
+div.output{
+	position:absolute;
+	top:20px;
+	bottom:0;
+	right:0px;
+	left:0px;
+	width:auto;
+	overflow:auto;
+	text-align:center;
+	background: #0a1228;
+}
+
+
+/* Nome PG in cima */
+div.nome_main{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 9px;
+
+    font-style: oblique;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-weight: bolder;
+    color: #0A1228;
+    text-transform: uppercase;
+    }
+
+div.output_testo{
+	text-align:left;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.scroller {
+  overflow: scroll;
+  scrollbar-color: transparent;
+  width: 0px;
+  height: 0px;
+}
+
+.scroller::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.scroller::-webkit-scrollbar-track-piece  {
+    background-color: transparent;
+}
+
+.scroller::-webkit-scrollbar-thumb:vertical {
+    height: 0px;
+    background-color: transparent;
+}
+
+
+/* * Informazioni con anteprima luogo
+*/
+div.info_image{
+	text-align:center;
+}
+
+div.box_stato_luogo{
+	margin-top:1px;
+	margin-bottom:8px;
+    background: url("/imgs/boxsotto.png") center no-repeat;
+    background-size: 194px 20px;
+    height: 20px;
+}
+
+div.box_stato_luogo_marquee{
+	width: 168px;
+    margin-left: 12px;
+    color: #0a1228;
+}
+
+div.meteo{
+	text-align:center;
+	font-size:12px;
+    float: left;
+    width: 50px;
+    font-style: italic;
+    color: #0A1228;
+    margin-left: 19px;
+    margin-top: 2px;
+
+}
+
+/*hovering - testo al passaggio del mouse*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+div.gradi{
+	text-align:center;
+	font-size:12px;
+    float: left;
+    width: 60px;
+    font-style: italic;
+    color: #0A1228;
+	padding-top: 7px; //*prima era 5*//
+    margin-left: -7px;
+}
+
+div.meteo_date{
+	padding-top:5px;
+	text-align:center;
+	font-size:14px;
+	font-weight: bold;
+    font-style: italic;
+    color: #0A1228;
+}
+
+/* * Frame Messaggi 
+*/
+iframe.iframe_messaggi{
+    height: 77px;
+    width: 180px;
+}
+
+div.pagina_messaggi{
+	text-align:center;
+	font-size:14px;
+}
+
+div.pagina_messaggi a, div.pagina_messaggi a:visited{
+	text-decoration:none;
+	color:#444;
+}
+
+div.messaggio_forum_nuovo a, div.messaggio_forum_nuovo a:visited{
+	font-weight:bolder;
+	font-style:italic;
+	color:#111;
+}
+
+
+/* * Men� di gioco
+*/
+select#gotomap{
+	display:block;
+	width:160px;
+	margin:1px;
+}
+
+div.link_menu{
+	padding:0 0 0 0px;
+	font-size:14px;
+        position: inline;
+}
+
+div.link_menu a{
+	display:block;
+	text-align:left;
+        position: inline;
+}
+
+div.link_menu_gestione a{
+	display:block;
+	text-align:center;
+    margin: auto;
+    width: 50%;
+    border: #C5D8E7 1px solid;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 6px;
+}
+
+div.link_menu_gestione a:hover{
+	text-decoration:none;
+}
+
+div.link_menu a:hover{
+	text-decoration:none;
+}
+
+div.link_menu a.sprite {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: no-repeat top left;
+}
+
+div.link_menu a.sprite:hover {
+	background-position: 0 100%;
+}
+
+
+/* * Mappa cliccabile */
+
+/* * Posizionamento mappa cliccabile 
+*/
+div.mappaclick_map{
+	margin:0px auto; /* prima era 20px auto */
+    border:solid 1px #7b859f;
+    position: center;
+
+}
+
+
+/* * Link testuali sulla mappa */
+div.mappaclick_map a{
+	font-size:15px;
+	font-weight:bolder;
+}
+
+/* * stile della tooltip di descrizione sulla mappa 
+*/
+div#descriptionLoc{
+	position:absolute; 
+	width:200px;
+	background-color:#cfcfcf;
+	padding:20px;
+	font-size:12px;
+	border:solid 1px #666;
+	font-family:Verdana,Sans;
+	text-align:left;
+	
+	-moz-border-radius:5px;		/* Bordi arrotondati */
+	-webkit-border-radius:5px;
+	-khtml-border-radius: 5px;
+	border-radius:5px;
+	
+	display:none;/*NON TOCCARE* Di configurazione: nasconde la tip in partenza */
+	z-index:9999;/*NON TOCCARE* Di configurazione: mostra la tooltip sopra gli altri link */
+}
+
+
+/* * Stili relativi all'elenco delle mappe in basso*/
+
+/*div.mappaclick_more{
+    float: right;
+    text-align: right;
+    height: 300px;
+    width: 150px;
+    background:url("") center no-repeat;
+    padding: 10px;
+    margin-left: 20px;
+    right: 0;
+    position: absolute;
+    margin-top: -420px;
+}*/
+
+div.mappaclick_more a{
+	background: url("https://provalice.altervista.org/imgs/bg_vicino.png") center no-repeat;
+    height: 61px;
+    width: 153px;
+	padding:8px;
+    display: table;
+}
+
+
+
+/* * Messages center
+*/
+div.elenco_record_gioco{
+	padding:4px 6px 5px 5px;
+}
+
+div.news_box{
+	padding:5px;
+    color: #0a1228;
+}
+
+div.elenco_record_gioco table{
+	width:100%;
+	background-color:#0a1228;
+	-moz-border-radius:5px;		/* Bordi arrotondati */
+	-webkit-border-radius:5px;
+	-khtml-border-radius: 5px;
+	border-radius:5px;
+}
+
+div.elementi_elenco{
+	padding-top:5px;
+	text-align:center;
+}
+
+div.titoli_elenco{
+	font-size:13px;
+	font-weight:bolder;
+}
+
+div.titoli_elenco_oggetto{
+	font-size:13px;
+	font-weight:bolder;
+	border: 1px solid #7b859f;
+    padding: 3px;
+    width: 142px;
+}
+
+div.titoli_elenco_parametri{
+	font-size:13px;
+	font-weight:bolder;
+	border: 1px solid #7b859f;
+    padding: 3px;
+
+}
+
+div.titoli_elenco_descrizione{
+	font-size:13px;
+	font-weight:bolder;
+	border: 1px solid #7b859f;
+    padding: 3px;
+
+}
+
+div.titoli_elenco_prezzo{
+	font-size:13px;
+	font-weight:bolder;
+	border: 1px solid #7b859f;
+    padding: 3px;
+        width: 62px;
+}
+
+img.colonna_elengo_messaggi_icon{
+	width:30px;
+	height:30px;
+}
+
+div.controlli_elenco{
+	width:60px;
+}
+
+div.controllo_elenco{
+	width:20px;
+	float:left;
+}
+
+div.controllo_elenco input[type='image']{
+	width:15px;
+}
+
+
+/* * Ambientazione/Regolamento */
+div.user_ambientazione div.elementi_elenco, div.servizi_abilita div.elementi_elenco{
+	text-align:left;
+	padding:5px;
+}
+
+div.user_ambientazione td.casella_titolo div.elementi_elenco, div.servizi_abilita td.casella_titolo div.elementi_elenco{
+	font-size:14px;
+	font-weight:bolder;
+	padding:2px 0 2px 10px;
+}
+
+
+
+
+/* * Generico per elenchi, bacheche, regolamento, ambientazione etc */
+div.capitolo_elenco{
+	font-weight:bolder;
+	font-size:13px;
+	text-align:left;
+	padding:5px 5px 5px 4px;
+	background-color:#0a1228;
+    border: 1px solid #7b859f;
+    width: 99%;
+}
+
+div.elementi_elenco{
+	min-height:20px;
+}
+
+td.casella_elemento{
+	font-size:12px;
+	background-color:#7B859F;
+    width: 65%;
+}
+
+td.casella_elemento_parametri{
+	font-size:12px;
+	background-color:#7B859F;
+    width: 23%;
+    border: 1px solid #0A1228;
+    color: #031127;
+}
+
+td.casella_elemento_descrizione{
+	font-size:12px;
+	background-color:#7B859F;
+    width: 60%;
+    border: 1px solid #0A1228;
+}
+
+div.inventario_nome{
+	font-size:14px;
+    font-weight: bold;
+}
+
+div.inventario_riga_descrizione{
+	font-size:12px;
+    margin-top: 20px;
+	padding: 0px 10px 0px 10px;
+    color: #031127;
+}
+
+div.inventario_quantita{
+	background-color: #7B859F;
+    color:#031127;
+    padding: 3px;
+    font-weight: bold;
+}
+
+div.elementi_elenco{
+	font-size:12px;
+	background-color:#7B859F;
+    color: #031127;
+}
+
+
+div.controllo_elenco input[type='image']{
+	height:15px;
+	width:15px;
+	display:block;
+	margin: 2px 5px;
+}
+
+
+div.elementi_elenco a{
+	color: #031127;
+}
+
+
+div.elementi_elenco a:hover{
+	text-decoration:none;
+}
+
+
+
+/* * Stile tabelle nei moduli di gestione */
+div.elenco_record_gestione table{
+	width:95%;
+	margin:10px auto;
+}
+
+
+/* * Accorgimenti Layout */
+
+/* * Allineamento verticale delle colonne 
+*/
+#framecontentLeft, #framecontentRight { display:table; }
+
+/* * margine delle colonne */
+div.innertube{
+	margin:0;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+/*Fasi lunari*/
+div.luna{
+    position: center;
+    height: 30px;        /* Altezza IFRAME Sx */
+    width: 30px;
+    color:#fff;
+}
+
+div.sfondo{
+    background: url("/imgs/sfondometeo.png") top center no-repeat;
+    background-size: 180px 70px ;/*180px 65px*/
+}
+
+div.inline{
+	display: inline;
+	width: 150px;
+	color:#fff;
+	clear: both;
+}
+
+div.pagina_news_info{
+    font-size:12px;
+	margin-left:6px;
+	overflow:auto;
+	width:195px;
+	height:164px;
+    border: 1px solid #b6c7d5;
+    overflow: auto;
+   background: url("/imgs/patternbox.png") repeat;
+}
+
+div.news_titolo{
+    font-size:12px;
+	font-weight: bold;
+	color: #0a1228;
+    font-style: italic;
+}
+
+td.html{
+    font-size:14px;
+	font-weight: bold;
+    text-align: center;
+}
+
+td.html2{
+    font-size:12px;
+    text-align: center;
+}
+

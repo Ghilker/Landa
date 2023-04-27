@@ -1,0 +1,250 @@
+/***************************************************************************/
+/* STILE DELLA FINESTRA PRESENTI */
+
+/* HELP: Da qui è possibile modificare:
+- I font ed i colori dei presenti
+- Le dimensioni e la posizione della finestra dei presenti
+- Lo sfondo della finestra dei presenti */
+
+/*Frame dei presenti*/
+div.presenti iframe.iframe_presenti{
+   width: 200px;
+   height: 420px;
+   overflow: hidden; 
+   margin-left:4px;
+}
+
+div.presenti iframe.iframe_presenti body.transparent_body{
+   background-color: none;
+}
+
+
+div.luogo{
+	margin:10px 0 0 0;
+	font-size:13px;
+	font-weight:bolder;
+        color: #031127;
+}
+
+
+div.presente{
+	font-weight:normal;
+	font-size:12px;
+}
+
+div.link_presenti{
+	margin-top:-5px;
+}
+
+
+/*Icone di stato dei presenti*/
+div.pagina_presenti img.sesso_ico, 
+div.pagina_presenti img.status_ico, 
+div.pagina_presenti img.disponibile,
+div.pagina_presenti_estesa img.sesso_ico, 
+div.pagina_presenti_estesa img.status_ico, 
+div.pagina_presenti_estesa img.disponibile{
+   margin: 0 2px 0 0;
+}
+
+div.pagina_presenti{
+   width: 190px;
+   height: 395px;
+   border: 1px solid #b6c7d5;
+   overflow: auto;
+   background: url("/imgs/patternbox.png") repeat;
+   padding-left: 5px;
+}
+
+div.pagina_presenti img.disponibile_switch{
+
+}
+
+/*Link nella colonna presenti */
+div.pagina_presenti a, 
+div.pagina_presenti a:visited{
+   border: none;
+   color: #031127;
+}
+
+div.pagina_presenti_estesa a, 
+div.pagina_presenti_estesa a:visited{
+   border: none;
+}
+
+div.pagina_presenti a:hover{
+   border: none;
+   color: #031127;
+}
+
+div.pagina_presenti_estesa a:hover{
+   border: none;
+}
+/*Testo nella colonna presenti*/
+div.pagina_presenti ul.elenco_presenti,
+div.pagina_presenti_estesa ul.elenco_presenti{
+   list-style-type: none;
+   list-style-position:inside;
+   padding: 0px;
+   margin: 0px;
+   text-align:left;
+}
+
+/*Nomi dei luoghi*/
+div.pagina_presenti ul.elenco_presenti li.luogo, 
+div.pagina_presenti_estesa ul.elenco_presenti li.luogo{
+   font-size: 12px;
+   font-weight: bold;
+   margin: 3px 0 1px 8px;
+   text-transform: uppercase;
+   background: #7B859F;
+   font-style: italic;
+   font-weight: bold;
+   position: center;
+}
+
+div.pagina_presenti_estesa ul.elenco_presenti li.mappa{
+   font-size: 13px;
+   font-weight: bold;
+   margin: 3px 0 1px 0;
+   text-transform: uppercase;
+   background: #7B859F;
+   font-weight: bold;
+   position: center;
+}
+/* Nomi dei personaggi */
+div.pagina_presenti ul.elenco_presenti li.presente,
+div.pagina_presenti_estesa ul.elenco_presenti li.presente{
+   font-size: 11px;
+   margin: 0 0 0 5px;
+       border: 1px dashed #B6C7D5;
+}
+div.pagina_presenti_estesa div.presenti_estesi{
+   margin-left: 150px;
+   margin-right: 150px;
+}
+/*Icone presenti*/
+img.presenti_ico{
+  margin-left: 2px;
+  width: 13px;
+  height: 13px;
+  border:none;
+}
+/***************************************************************************/
+
+/*Icone presenti*/
+img.presenti_ico_menu{
+  margin-left: 2px;
+  width: 13px;
+  height: 13px;
+  border:none;
+}
+
+img.presenti_ico{
+  margin: auto;
+  width: 13px;
+  height: 13px;
+  border:none;
+}
+
+img.presenti_ico_4{
+  margin: auto;
+  padding-right: 2px;
+  width: 13px;
+  height: 13px;
+  border:none;
+}
+
+img.presenti_ico_2{
+  margin: auto;
+  width: 13px;
+  height: 13px;
+  border:none;
+}
+
+img.presenti_ico_3{
+  margin-left: 2px;
+  margin-right: 3px;
+  width: 13px;
+  height: 13px;
+  border:none;
+}
+
+img.presenti_ico_dispon{
+  /*margin-left: 12px;
+  float: right;*/
+  width: 13px;
+  height: 13px;
+  border:none;
+}
+
+/***************************************************************************/
+
+
+/*PER TABELLA PRESENTI*/
+
+
+table.elenco_presenti {
+	margin: auto;
+	line-height: 13px;
+	width: 600px;
+	
+	
+}
+
+
+
+td.mappa{
+   	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	
+	padding: 5px;
+	text-transform: uppercase;
+	
+	
+	background-image: url(imgs/divisorio-presenti.png);
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+
+td.icone_colonne{
+	border: none;
+	
+	
+}
+
+td.icone_colonne_lavori{
+	width: 46px;
+	
+	
+}
+
+
+td.luogo {
+	font-size: 13px;
+	font-weight: bold;
+	padding: 4px 0px 5px 0px;
+	text-transform: uppercase;
+	/*background-image: url(imgs/divisorio-luoghi.png);
+	background-position:center;
+	background-repeat:no-repeat;*/
+	
+}
+
+td.presente{
+	font-weight:normal;
+	padding: 5px;
+	font-size:13px;
+	text-align: left;
+}
+
+
+tr.stile_tabella {
+	background-color: rgba(255, 255, 255, 0.71);
+}
+ 
+tr.stile_tabella hover {
+    background-color: #dedede;
+}
