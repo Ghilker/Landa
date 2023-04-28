@@ -1,13 +1,10 @@
 name: Deploy via FTP
 
-on:
-  pull_request:
-    types: [closed]
+on: push
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2.7.0
