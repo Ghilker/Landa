@@ -2,11 +2,11 @@
 session_start();
 header('Content-Type:text/html; charset=UTF-8');
 
+//TEST
 
 /* * Se il personaggio è connesso avvio la gestione dei suoi spostamenti nella land
 * Il controllo va messo qui e non in main poichè in main risulterebbe trovarsi dopo l'inclusione del config
 * dando vita ad un bug sul tastino di aggiornamento della pagina corrente.
-
 * @author Blancks
 */
 if (!empty($_SESSION['login'])) {
@@ -35,7 +35,6 @@ $handleDBConnection = gdrcd_connect();
 * Il controllo viene lanciato solo in index e nelle pagine di installer/upgrade.
 * Dopo l'aggiornamento non dovrebbe dare noie.
 * Nel qual caso vogliate risparmiare risorse quando si visita la homepage però è possibile modificare la variabile $check_for_update in index.php e settarla a FALSE.
-
 * @author Blancks
 */
 if (isset($check_for_update) && $check_for_update) {
@@ -98,7 +97,7 @@ if (($PARAMETERS['mode']['user_bbcode'] == 'ON' && $PARAMETERS['settings']['user
 	if (!empty($_GET['ref'])) {
 		?>
 
-		<?php } ?>
+	<?php } ?>
 </head>
 
 <body class="main_body">

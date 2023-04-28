@@ -32,6 +32,8 @@ $PARAMETERS['mode']['encriptalgorithm'] = 'BCRYPT';
 /* HELP: decidere se criptare la password prima di aprire le iscrizioni, altrimenti, se l'impostazione sarà cambiata in seguito, sarà necessario procedere a reinserire manualmente tutte le password.*/
 
 
+
+
 /* INFORMAZIONI SUL SITO */
 $PARAMETERS['info']['site_name'] = 'Crossroads GDR'; //nome del gioco
 $PARAMETERS['info']['site_url'] = 'https://provalice.altervista.org/'; //indirizzo URL del gioco
@@ -590,5 +592,3 @@ $PARAMETERS['menu']['quit']['image_file_onclick'] = ''; */
  * text - Testo visualizzato come voce di menu o testo alternativo dell'immagine
  * url - Destinazione del link. E' sconsigliato modificare questa voce.
  * image_file - File dell'immagine che appare come voce di menu. L'immagine deve trovarsi nella cartella themes/[nome tema]/img/menu (per il template preimpostato themes/extreme/img/menu)*/
-
-

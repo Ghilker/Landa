@@ -71,10 +71,10 @@
             </div>
             <?php if ((isset($record['stato']) === TRUE) || (isset($record['descrizione']) === TRUE)) {
 
-            echo '<div class="box_stato_luogo"><div class="box_stato_luogo_marquee"><marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3" class="stato_luogo">&nbsp;' . $MESSAGE['interface']['maps']['Status'] . ': ' . gdrcd_filter('out', $record['stato']) . ' -  ' . gdrcd_filter('out', $record['descrizione']) . '</marquee></div></div>';
-        } else {
-            echo '<div class="box_stato_luogo">&nbsp;</div>';
-        } ?>
+                echo '<div class="box_stato_luogo"><div class="box_stato_luogo_marquee"><marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="3" class="stato_luogo">&nbsp;' . $MESSAGE['interface']['maps']['Status'] . ': ' . gdrcd_filter('out', $record['stato']) . ' -  ' . gdrcd_filter('out', $record['descrizione']) . '</marquee></div></div>';
+            } else {
+                echo '<div class="box_stato_luogo">&nbsp;</div>';
+            } ?>
 
 
             <?php
@@ -221,7 +221,7 @@
                             </script>
                             <!--?php echo $meteo;?-->
                         </div>
-                        <?php } ?>
+                    <?php } ?>
 
                     <div class="gradi">
                         <?php echo $gradi . "&deg;C "; ?>
@@ -266,13 +266,13 @@
                          * $ore_cambio_vento, viene generato un nuovo vento casuale.
                          **/
                         if ($currentH == 0) {
-                            $currentH == 24;
+                            $currentH = 24;
                         }
                         $ore_cambio_vento = 1;
                         if ($currentH - $_SESSION['oldH'] >= $ore_cambio_vento) {
                             /* ...imposto il random seed  e genero il numero casuale tra 0 e 99*/
                             if ($currentH == 24) {
-                                $currentH == 0;
+                                $currentH = 0;
                             }
                             mt_srand($giorno + $currentH);
                             $r = mt_rand(0, 99);
@@ -308,7 +308,7 @@
             </div>
         </div>
 
-        <?php } else {
+    <?php } else {
             echo '<div class="error">' . gdrcd_filter('out', $MESSAGE['error']['location_doesnt_exist']) . '</div>';
         } ?>
 
